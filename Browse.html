@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>b4traders</title>
+    <link rel="icon" href="content/images/logo/favicon.png" type="image/png">
+    <link rel="stylesheet preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link type='text/css' href='http://fonts.googleapis.com/css?family=Lato:400,500,600,700,800,900' rel="stylesheet" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="content/css/custom.css">
+</head>
+<body>
+  <header class="fixed-top">
+    <nav class="navbar navbar-expand-lg p-md-2 navwhite">
+    <div class="container-fluid position-relative">
+      <a class="navbar-brand" href="/">
+        <img src="content/images/logo/isspl-logo.svg" height="36" width="95" alt="bynry_logo" title="bynry_logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <span class="top-line"></span>
+      <span class="middle-line"></span>
+      <span class="bottom-line"></span>
+  </button>
+      <div class="collapse navbar-collapse dnmd" id="navbarCollapse">
+          <ul class="navbar-nav ms-auto mb-2 mb-md-0 d-flex align-items-center">
+            <li class="nav-item">
+              <a href="/product-list.html" class="nav-link">Shop All Auctions</a>
+          </li>
+          <li class="nav-item">
+              <a href="buyers.html" class="nav-link">For Buyers</a>
+          </li>
+       <li class="nav-item ">
+      <a href="sellers.html" class="nav-link">For Sellers</a>
+      </li>
+              <li class="nav-item"><a class="nav-link" href="support.html">Support  </a></li>
+             
+                <li>
+                  <ul class="d-flex justify-content-between align-items-center">
+                    <li class="nav-item ps-2 pe-0"> <a class="btn btn-primary blink" href="Browse.html">BROWSE MARKETPLACES <i class="bi bi-arrow-up-right"></i>
+                    </a></li>
+                 
+                    <li class="nav-item btnmrgn user position-relative">
+                      <a  href="form.html" class="btn btn-secondary">
+                        SIGN IN 
+                      </a>
+                      <div class="user-box">
+                        <div class="user-hdr">
+                          <i class="bi bi-person-circle"></i>
+                          <div class="user-name">
+                            <h6>Anuj Singh</h6>
+                            <p>@anuj9876</p>
+                          </div>
+                        </div>
+                        <div class="routeopt">
+                          <div class="switch">
+                           <div> <i class="bi bi-people"></i>  Switch Account </div><i class="bi bi-chevron-right"></i>
+                          </div>
+                          <div class="out">
+                            <i class="bi bi-box-arrow-right"></i> Sign Out
+                          </div>
+                        </div>
+                      </div>
+                   </li>
+                    <li class="nav-item d-flex align-items-center p-0">
+                  <div id="translate"></div>
+                   </li>
+                  </ul>
+                </li>
+              
+          </ul>
+      </div>
+  </div>
+</nav>
+
+</header>
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+<div class="modal-dialog modal-fullscreen-lg-down">
+<div class="modal-content">
+<div class="modal-header">
+  <h4 class="modal-title"><a class="navbar-brand" href="/"><img src="" height="28" alt="b4traders" title="b4traders" /></a></h4>
+  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body pt-0">
+  <ul>
+    <li class="pb-0"><div class="user">
+      <i class="bi bi-person-circle"></i>
+      Welcome
+    </div></li>
+    <li class="hvrlnk"><a href="/product-list.html">Shop All Auctions</a></li>
+    <li class="hvrlnk"><a href="buyers.html">For Buyers</a></li>
+    <li class="hvrlnk"><a href="sellers.html">For Sellers</a></li>
+    <li class="hvrlnk"><a href="support.html">Support</a></li>
+    <li class="hvrlnk"><a href="Browse.html">Browse MarketPlaces</a></li>
+    
+      <li class="d-flex align-items-center">
+        <div class="dropdown">
+             <a class="btn btn-primary dropdown-toggle" href="form.html" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+               Select Language
+             </a>
+             <ul class="dropdown-menu langdiv">
+               <li>
+                 <h6 class="mb-0">Select Language</h6>
+               <div class="row">
+                 <div class="col-6">
+                   <ul class="language-drop">
+               <li><a class="dropdown-item" href="#">Assamese</a></li>
+               <li><a class="dropdown-item" href="#">Bengali</a></li>
+               <li><a class="dropdown-item" href="#">Bhojpuri</a></li>
+               <li><a class="dropdown-item" href="#">Gujrati</a></li>
+               <li><a class="dropdown-item" href="#">Hindi</a></li>
+               <li><a class="dropdown-item" href="#">Kannad</a></li>
+               <li><a class="dropdown-item" href="#">Maithili</a></li>
+               <li><a class="dropdown-item" href="#">Malyalam</a></li>
+             </ul>
+           </div>
+           <div class="col-6">
+             <ul class="language-drop">
+                     <li><a class="dropdown-item" href="#">Marathi</a></li>
+                     <li><a class="dropdown-item" href="#">Nepali</a></li>
+               <li><a class="dropdown-item" href="#">Punjabi</a></li>
+               <li><a class="dropdown-item" href="#">Sanskrit</a></li>
+               <li><a class="dropdown-item" href="#">Tamil</a></li>
+               <li><a class="dropdown-item" href="#">Telgu</a></li>
+               <li><a class="dropdown-item" href="#">Urdu</a></li>
+             </ul>
+           </div>
+         </div>
+       </li>
+             </ul>
+           </div>
+      </li>
+    
+    <li class="d-flex">
+      <a href="#" class="nav-link btn btn-secondary">
+        SIGN IN 
+      </a>
+   </li>
+  </ul>
+</div>
+</div>
+</div>
+</div>
+
+  <section class="feature">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-11 col-md-9">
+          <div class="sechead aos-init aos-animate" data-aos="fade-up" data-aos-duration="2000">
+            <h4>Featured Marketplaces</h4>
+                </div>
+        </div>
+      </div>
+  
+  
+      <div class="row">
+         <div class="col-6 col-md-4 col-lg-3 d-flex ">
+      <div class="card-wrap mb-4">
+        <div class="card-top">
+          <div class="text-white">204
+            <span>Active Lots</span>
+          </div>
+          <span class="new">New</span>
+        </div>
+          <div class="card-header one">
+             <img src="https://www.pngall.com/wp-content/uploads/15/Amazon-Logo-White-PNG-Photo.png" alt="logo">
+          </div>
+          <div class="card-content">
+            <h1 class="card-title">Title</h1>
+            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <a href="buyers.html" class="card-btn one">REGISTER</a>
+         </div>
+        </div>
+        </div>
+         <div class="col-6 col-md-4 col-lg-3 d-flex ">
+        <div class="card-wrap mb-4">
+          <div class="card-top">
+            <div class="text-white">204
+              <span>Active Lots</span>
+            </div>
+            <span class="new">New</span>
+          </div>
+          <div class="card-header two">
+             <img src="content/images/udaan-logo.png" alt="udaan">
+          </div>
+          <div class="card-content">
+            <h1 class="card-title">Title</h1>
+            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <a href="buyers.html" class="card-btn two">REGISTER</a>
+         </div>
+        </div>
+        </div>
+         <div class="col-6 col-md-4 col-lg-3 d-flex ">
+        <div class="card-wrap mb-4">
+          <div class="card-top">
+            <div class="text-white">204
+              <span>Active Lots</span>
+            </div>
+            <span class="new">New</span>
+          </div>
+          <div class="card-header three">
+             <img src="content/images/croma.png" alt="logo">
+          </div>
+          <div class="card-content">
+            <h1 class="card-title">Title</h1>
+            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <a href="buyers.html" class="card-btn three">REGISTER</a>
+         </div>
+        </div>
+        </div>
+         <div class="col-6 col-md-4 col-lg-3 d-flex ">
+        <div class="card-wrap mb-4">
+          <div class="card-top">
+            <div class="text-white">204
+              <span>Active Lots</span>
+            </div>
+            <span class="new">New</span>
+          </div>
+          <div class="card-header four">
+             <img src="content/images/blubirch.svg" alt="logo">
+          </div>
+          <div class="card-content">
+            <h1 class="card-title">Title</h1>
+            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <a href="buyers.html" class="card-btn four">REGISTER</a>
+         </div>
+        </div>
+        </div>
+         <div class="col-6 col-md-4 col-lg-3 d-flex ">
+        <div class="card-wrap mb-4">
+          <div class="card-top">
+            <div class="text-white">204
+              <span>Active Lots</span>
+            </div>
+            <span class="new">New</span>
+          </div>
+          <div class="card-header two">
+             <img src="content/images/inventory.jpg" alt="logo">
+          </div>
+          <div class="card-content">
+            <h1 class="card-title">Title</h1>
+            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <a href="buyers.html" class="card-btn two">REGISTER</a>
+         </div>
+        </div>
+        </div>
+         <div class="col-6 col-md-4 col-lg-3 d-flex ">
+        <div class="card-wrap mb-4">
+          <div class="card-top">
+            <div class="text-white">204
+              <span>Active Lots</span>
+            </div>
+            <span class="new">New</span>
+          </div>
+          <div class="card-header three">
+             <img src="https://1000logos.net/wp-content/uploads/2021/05/Tata-Cliq-logo.png" alt="logo">
+          </div>
+          <div class="card-content">
+            <h1 class="card-title">Title</h1>
+            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <a href="buyers.html" class="card-btn three">REGISTER</a>
+         </div>
+        </div>
+        </div>
+         <div class="col-6 col-md-4 col-lg-3 d-flex ">
+        <div class="card-wrap mb-4">
+          <div class="card-top">
+            <div class="text-white">204
+              <span>Active Lots</span>
+            </div>
+            <span class="new">New</span>
+          </div>
+          <div class="card-header four">
+             <img src="content/images/blubirch.svg" alt="logo">
+          </div>
+          <div class="card-content">
+            <h1 class="card-title">Title</h1>
+            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <a href="buyers.html" class="card-btn four">REGISTER</a>
+         </div>
+        </div>
+        </div>
+        
+        
+      </div>
+    </div>
+  </section>
+
+<footer>
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-sm-6 col-md-2 d-flex">
+        <div class="hdr-img mb-4">
+          <img src="hdr-logo" alt="hdr-logo">
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="row">
+            <div class="col-3">
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+            </div>
+            <div class="col-4">
+              <ul>
+                <li><a href="#">Terms of Purchase</a></li>
+                <li><a href="#">Items Condition</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </div>
+            <div class="col-5">
+              <ul class="mailli">
+                <li><a href="tel:1800-419-0431"><i class="bi bi-telephone-fill"></i> 1800-419-0431</a></li>
+                <li><a href="mailto: support@b4traders.com"><i class="bi bi-envelope"></i>  support@b4traders.com</a></li>
+              </ul>
+            </div>
+         </div>
+        
+      </div>
+      <div class="col-sm-6 col-md-3 d-flex">
+        <div class="adrs">
+          <a href="#">
+            <i class="bi bi-geo-alt-fill"></i>
+            No. 565, Axis Pennmark building, 2nd, 3rd & 4th Floor, 9th cross road, Sarakki, 3rd phase, JP Nagar, Bangalore, Karnataka - 560078
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="btn-hdng">
+      <p class="text-center">© B4traders - Trade mark of Green Enabled IT Solutions Pvt. Ltd</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>        <!-- slick javascript cdn --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="content/js/custom.js"></script>
+</body>
+</html>
