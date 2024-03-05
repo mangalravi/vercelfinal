@@ -8,6 +8,10 @@ $(window).scroll(function() {
     }
 });
 
+
+
+
+
 $(document).ready(function(){
     $('.projetos-slider').slick({
         slidesToShow: 1,
@@ -84,7 +88,7 @@ $(".sidebar-dropdown > a").click(function() {
 });
   
 
-"use strict";
+
 
 var Cookie = {
   set: function set(name, value, days) {
@@ -248,3 +252,6 @@ function magnify(imgID, zoom) {
 /* Initiate Magnify Function
 with the id of the image, and the strength of the magnifier glass:*/
 magnify("myimage", 3);
+
+
+

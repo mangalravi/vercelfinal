@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>b2bstop</title>
+    <link rel="icon" href="content/images/logo/favicon.png" type="image/png">
+    <link rel="stylesheet preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link type='text/css' href='http://fonts.googleapis.com/css?family=Lato:400,500,600,700,800,900' rel="stylesheet" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="content/css/custom.css">
+</head>
+<body>
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg p-md-2 navwhite">
+        <div class="container-fluid position-relative">
+          <a class="navbar-brand" href="/">
+            <img src="content/images/logo/isspl-logo.svg" height="36" width="95" alt="bynry_logo" title="bynry_logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <span class="top-line"></span>
+          <span class="middle-line"></span>
+          <span class="bottom-line"></span>
+      </button>
+          <div class="collapse navbar-collapse dnmd" id="navbarCollapse">
+              <ul class="navbar-nav ms-auto mb-2 mb-md-0 d-flex align-items-center">
+                <li class="nav-item">
+                  <a href="/product-list.html" class="nav-link">Shop All Auctions</a>
+              </li>
+              <li class="nav-item">
+                  <a href="buyers.html" class="nav-link">For Buyers</a>
+              </li>
+           <li class="nav-item ">
+          <a href="sellers.html" class="nav-link">For Sellers</a>
+          </li>
+                  <li class="nav-item"><a class="nav-link" href="support.html">Support  </a></li>
+                 
+                    <li>
+                      <ul class="d-flex justify-content-between align-items-center">
+                        <li class="nav-item ps-2 pe-0"> <a class="btn btn-primary blink" href="Browse.html">BROWSE MARKETPLACES <i class="bi bi-arrow-up-right"></i>
+                        </a></li>
+                     
+                        <li class="nav-item btnmrgn user position-relative">
+                          <a  href="form.html" class="btn btn-secondary">
+                            SIGN IN 
+                          </a>
+                          <div class="user-box">
+                            <div class="user-hdr">
+                              <i class="bi bi-person-circle"></i>
+                              <div class="user-name">
+                                <h6>Anuj Singh</h6>
+                                <p>@anuj9876</p>
+                              </div>
+                            </div>
+                            <div class="routeopt">
+                              <div class="switch">
+                               <div> <i class="bi bi-people"></i>  Switch Account </div><i class="bi bi-chevron-right"></i>
+                              </div>
+                              <div class="out">
+                                <i class="bi bi-box-arrow-right"></i> Sign Out
+                              </div>
+                            </div>
+                          </div>
+                       </li>
+                        <li class="nav-item d-flex align-items-center p-0">
+                      <div id="translate"></div>
+                       </li>
+                      </ul>
+                    </li>
+                  
+              </ul>
+          </div>
+      </div>
+    </nav>
+    
+    </header>
+    
+    
+    
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen-lg-down">
+    <div class="modal-content">
+    <div class="modal-header">
+      <h4 class="modal-title"><a class="navbar-brand" href="/"><img src="" height="28" alt="b2bstop" title="b2bstop" /></a></h4>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body pt-0">
+      <ul>
+        <li class="pb-0"><div class="user">
+          <i class="bi bi-person-circle"></i>
+          Welcome
+        </div></li>
+        <li class="hvrlnk"><a href="product-list.html">Shop All Auctions</a></li>
+        <li class="hvrlnk"><a href="buyers.html">For Buyers</a></li>
+        <li class="hvrlnk"><a href="sellers.html">For Sellers</a></li>
+        <li class="hvrlnk"><a href="support.html">Support</a></li>
+        <li class="hvrlnk"><a href="Browse.html">Browse MarketPlaces</a></li>
+        <!-- <li class="hvrlnk">
+          <div id="translatemob"></div>
+           </li> -->
+          <li class="d-flex align-items-center">
+            <div class="dropdown">
+                 <a class="btn btn-primary dropdown-toggle" href="form.html" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Select Language
+                 </a>
+                 <ul class="dropdown-menu langdiv">
+                   <li>
+                     <h6 class="mb-0">Select Language</h6>
+                   <div class="row">
+                     <div class="col-6">
+                       <ul class="language-drop">
+                   <li><a class="dropdown-item" href="#">Assamese</a></li>
+                   <li><a class="dropdown-item" href="#">Bengali</a></li>
+                   <li><a class="dropdown-item" href="#">Bhojpuri</a></li>
+                   <li><a class="dropdown-item" href="#">Gujrati</a></li>
+                   <li><a class="dropdown-item" href="#">Hindi</a></li>
+                   <li><a class="dropdown-item" href="#">Kannad</a></li>
+                   <li><a class="dropdown-item" href="#">Maithili</a></li>
+                   <li><a class="dropdown-item" href="#">Malyalam</a></li>
+                 </ul>
+               </div>
+               <div class="col-6">
+                 <ul class="language-drop">
+                         <li><a class="dropdown-item" href="#">Marathi</a></li>
+                         <li><a class="dropdown-item" href="#">Nepali</a></li>
+                   <li><a class="dropdown-item" href="#">Punjabi</a></li>
+                   <li><a class="dropdown-item" href="#">Sanskrit</a></li>
+                   <li><a class="dropdown-item" href="#">Tamil</a></li>
+                   <li><a class="dropdown-item" href="#">Telgu</a></li>
+                   <li><a class="dropdown-item" href="#">Urdu</a></li>
+                 </ul>
+               </div>
+             </div>
+           </li>
+                 </ul>
+               </div>
+          </li>
+        
+        <li class="d-flex">
+          <a href="#" class="nav-link btn btn-secondary">
+            SIGN IN 
+          </a>
+       </li>
+      </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+<section class="faqsec" style="background: url(content/images/section-bg.webp) 0 0 / 100% no-repeat fixed;">
+    <div class="container">
+        <div class="row justify-content-center">
+        <div class="col-xxl-9 col-xl-10 col-lg-11">
+            <div class="faq" data-aos="fade-down" data-aos-duration="1400">
+        <h4> Blubirch </h4>
+        <h4> Lot Level Simplified T&amp;Cs for Blubirch Lots </h4>
+        <h6 class="faq-ques">Bid Value</h6>
+        <p> Bid value is inclusive of GST however it doesn’t include the logistics cost. </p>
+        <h6 class="faq-ques">Cancellation</h6>
+        <p> Once a you have won the lot you have to honour the payment. Failure in doing so could result in penalty and/or “blacklisting” on the platform. Blubirch (Seller) have the right, at our sole discretion, to refuse or cancel any auctioned lot or part of it for any reason. In the event that an auctioned lot be cancelled, we will notify you by email/phone/SMS/WhatsApp of such cancellation and your payment will be refunded within 24 hours. </p>
+        <h6 class="faq-ques">Payment Terms</h6>
+        <p> Once you have been informed of winning an auctioned lot, you have to make full payment in 48 hours. If you fail to make payment in time, then Blubirch (Seller) reserve the right to cancel the auctioned lot or offer it to another interested party. However, failure in making payment by you can result in penalty and/or “blacklisting” on the platform. Blubirch may revise the payment terms from time to time in its sole and absolute discretion; provided, however, that any change to payment terms will not be effective for any then-pending Sale, but will only be effective for the next Sale subsequent. </p>
+        <h6 class="faq-ques">Item Condition (Definitions)</h6>
+        <p class="text-underline">Brand New</p>
+        <p> A brand-new, unused, unopened item in its original packaging, with all original packaging materials included. Packaging might have minor scratches or damages. Since it is seal packed, functional &amp; physical condition of the item is not checked by Bulk4Traders team </p>
+        <p class="text-underline">Open Box</p>
+        <p> An apparently untouched item in perfect condition and fully functional. The original packaging is intact but could have minor scratches or damages. There are absolutely no signs of wear on the item.The product has been tested by the Bulk4Traders team </p>
+        <p class="text-underline">Very Good</p>
+        <p> The product is well-cared-for and is fully functional but may show minor physical or cosmetic blemishes and/ or the item may have some accessories missing. The packaging might have been replaced to protect the item. The product has been tested by the Bulk4Traders team </p>
+        <p class="text-underline">Good</p>
+        <p> The item shows normal marks from consistent use, but it remains in good condition and works fully. It may show other signs of previous use and/ or the item may have some accessories missing. The packaging might be missing or might have major damages. The product has been tested by the Bulk4Traders team. </p>
+        <p class="text-underline">Acceptable</p>
+        <p> The product may have minor functional issues and/ or the item is fairly worn. Signs of wear can include aesthetic issues such as scratches, dents, worn corners and cracks/damage on body. The item may have identifying markings on it or show other signs of previous use. Packaging may or may not be present and packaging condition may be bad. The product has been tested by the Bulk4Traders team. </p>
+        <p class="text-underline">Defective</p>
+        <p> The product may be functionally defective and/ or physically damaged. Packaging may or may not be present and packaging condition may be bad. The product has been tested by the Bulk4Traders team. </p>
+        <p class="text-underline">Not Tested</p>
+        <p> These items have not been inspected by Bulk4Traders team or have been physically inspected but not functionally checked. These are being sold in “As-is” condition. Some of these items could be working order while some may not be fully functional. These may not come with original packaging, manuals and/or supplementary accessories such as batteries and chargers </p>
+        <h6 class="faq-ques">Shipment</h6>
+        <p> Post payment for the won lot, buyer will receive the invoice and information for inventory pickup. Logistics cost has to be borne by the buyer over and above the bid value. </p>
+        <h6 class="faq-ques">Claims:</h6>
+        <h6 class="faq-ques">Self Pickup</h6>
+        <p> Claims can be filed ONLY for shortage of items when the inventory is being picked up from the Blubirch warehouse. The buyer cannot file claims for any other situations such as grade mismatch or item mismatch, however, he can reject such units during pickup and these will not be invoiced by Blubirch. </p>
+        <h6 class="faq-ques">Is b2bstop the seller?</h6>
+        <p> No. As mentioned earlier, b2bstop is an enablement platform for retailers, OEMs and brands to liquidate their excess, returned, and refurbished inventory. The inventory is owned by the seller and b2bstop only provides a marketplace for auctions. </p>
+        <p> The buyer or buyer’s representative should clearly account for all the items included in the winning lot and what they are picking up. If there is a shortage of units, the buyer should inform Blubirch representative immediately. The details of the shortage such as number and type of shortage should be noted on the invoice document given to the buyer at the pick-up location itself. </p>
+        <h6 class="faq-ques">3P Dispatch</h6>
+        <p> If 3P logistics is used for shipping the units from Blubirch to buyer, no claim in any form will be entertained. </p>
+        <h6 class="faq-ques">Claim Procedure:</h6>
+        <p>To make a claim, please follow the following process:</p>
+        <p>
+        <ol class="px-5">
+           <li> As noted above, the buyer should have the details of the discrepancy clearly noted in the invoice provided by Blubirch </li>
+           <li> Invoice should be signed by the Blubirch Warehouse Point of Contact </li>
+           <li> Email the signed invoice to the Blubirch Customer Service Team on <a href="mailto:support@b2bstop.com">support@b2bstop.com</a> and get the confirmation before leaving Blubirch’s warehouse </li>
+           <li>Blubirch will refund the money within 10-12 working days.</li>
+        </ol>
+        </p>
+        <h6 class="faq-title mb-10">TATA CLiQ</h6>
+        <h6 class="faq-title mb-10">Lot Level Simplified T&amp;Cs for TATA CLiQ Lots</h6>
+        <p>Bid Value</p>
+        <p>Bid value is inclusive of GST however it doesn’t include the logistics cost.</p>
+        <p>Cancellation</p>
+        <p>Once a you have won the lot you have to honour the payment. Failure in doing so could result in penalty and/or “blacklisting” on the platform. Blubirch (Seller) have the right, at our sole discretion, to refuse or cancel any auctioned lot or part of it for any reason. In the event that an auctioned lot be cancelled, we will notify you by email/phone/SMS/WhatsApp of such cancellation and your payment will be refunded within 24 hours.</p>
+        <p>Payment Terms</p>
+        <p>Once you have been informed of winning an auctioned lot, you have to make full payment in 48 hours. If you fail to make payment in time, then Blubirch (Seller) reserve the right to cancel the auctioned lot or offer it to another interested party. However, failure in making payment by you can result in penalty and/or “blacklisting” on the platform. Blubirch may revise the payment terms from time to time in its sole and absolute discretion; provided, however, that any change to payment terms will not be effective for any then-pending Sale, but will only be effective for the next Sale subsequent.</p>
+        <p>Item Condition (Definitions)</p>
+        <p><u>Brand New</u></p>
+        <p>A brand-new, unused, unopened item in its original packaging, with all original packaging materials included. Packaging might have minor scratches or damages. Since it is seal packed, functional &amp; physical condition of the item is not checked by Bulk4Traders team</p>
+        <p><u>Open Box</u></p>
+        <p>An apparently untouched item in perfect condition and fully functional. The original packaging is intact but could have minor scratches or damages. There are absolutely no signs of wear on the item.The product has been tested by the Bulk4Traders team</p>
+        <p><u>Very Good</u></p>
+        <p>The product is well-cared-for and is fully functional but may show minor physical or cosmetic blemishes and/ or the item may have some accessories missing. The packaging might have been replaced to protect the item. The product has been tested by the Bulk4Traders team</p>
+        <p><u>Good</u></p>
+        <p>The item shows normal marks from consistent use, but it remains in good condition and works fully. It may show other signs of previous use and/ or the item may have some accessories missing. The packaging might be missing or might have major damages. The product has been tested by the Bulk4Traders team.</p>
+        <p><u>Acceptable</u></p>
+        <p>The product may have minor functional issues and/ or the item is fairly worn. Signs of wear can include aesthetic issues such as scratches, dents, worn corners and cracks/damage on body. The item may have identifying markings on it or show other signs of previous use. Packaging may or may not be present and packaging condition may be bad. The product has been tested by the Bulk4Traders team.</p>
+        <p><u>Defective</u></p>
+        <p>The product may be functionally defective and/ or physically damaged. Packaging may or may not be present and packaging condition may be bad. The product has been tested by the Bulk4Traders team.</p>
+        <p><u>Not Tested</u></p>
+        <p>These items have not been inspected by Bulk4Traders team or have been physically inspected but not functionally checked. These are being sold in “As-is” condition. Some of these items could be working order while some may not be fully functional. These may not come with original packaging, manuals and/or supplementary accessories such as batteries and chargers</p>
+        <p>Shipment</p>
+        <p>Post payment for the won lot, buyer will receive the invoice and information for inventory pickup. Logistics cost has to be borne by the buyer over and above the bid value.</p>
+        <p>Claims:</p>
+        <p>Self Pickup</p>
+        <p>Claims can be filed ONLY for shortage of items when the inventory is being picked up from the Blubirch warehouse. The buyer cannot file claims for any other situations such as grade mismatch or item mismatch, however, he can reject such units during pickup and these will not be invoiced by Blubirch.</p>
+        <p>Self Pickup</p>
+        <p>Claims can be filed ONLY for shortage of items when the inventory is being picked up from the Blubirch warehouse. The buyer cannot file claims for any other situations such as grade mismatch or item mismatch, however, he can reject such units during pickup and these will not be invoiced by Blubirch.</p>
+        <p>The buyer or buyer’s representative should clearly account for all the items included in the winning lot and what they are picking up. If there is a shortage of units, the buyer should inform Blubirch representative immediately. The details of the shortage such as number and type of shortage should be noted on the invoice document given to the buyer at the pick-up location itself.</p>
+        <p>3P Dispatch</p>
+        <p>If 3P logistics is used for shipping the units from Blubirch to buyer, no claim in any form will be entertained.</p>
+        <p>Claim Procedure:</p>
+        <p>To make a claim, please follow the following process:</p>
+        <p>
+        <ol>
+           <li>As noted above, the buyer should have the details of the discrepancy clearly noted in the invoice provided by Blubirch</li>
+           <li>Invoice should be signed by the Blubirch Warehouse Point of Contact</li>
+           <li>Email the signed invoice to the Blubirch Customer Service Team on <a href="mailto:support@b2bstop.com">support@b2bstop.com</a> and get the confirmation before leaving Blubirch’s warehouse</li>
+           <li>Blubirch will refund the money within 10-12 working days.</li>
+        </ol>
+        </p>
+        <h6 class="faq-title mb-10">Udaan</h6>
+        <h6 class="faq-title mb-10">Lot Level Simplified T&amp;Cs for Udaan Lots</h6>
+        <p>Bid Value</p>
+        <p>Bid value is inclusive of GST however it doesn’t include the logistics cost.</p>
+        <p>Cancellation</p>
+        <p>Once a you have won the lot you have to honour the payment. Failure in doing so could result in penalty and/or “blacklisting” on the platform. Blubirch (Seller) have the right, at our sole discretion, to refuse or cancel any auctioned lot or part of it for any reason. In the event that an auctioned lot be cancelled, we will notify you by email/phone/SMS/WhatsApp of such cancellation and your payment will be refunded within 24 hours.</p>
+        <p>Payment Terms</p>
+        <p>Once you have been informed of winning an auctioned lot, you have to make full payment in 48 hours. If you fail to make payment in time, then Blubirch (Seller) reserve the right to cancel the auctioned lot or offer it to another interested party. However, failure in making payment by you can result in penalty and/or “blacklisting” on the platform. Blubirch may revise the payment terms from time to time in its sole and absolute discretion; provided, however, that any change to payment terms will not be effective for any then-pending Sale, but will only be effective for the next Sale subsequent.</p>
+        <p>Item Condition (Definitions)</p>
+        <p><u>Brand New</u></p>
+        <p>A brand-new, unused, unopened item in its original packaging, with all original packaging materials included. Packaging might have minor scratches or damages. Since it is seal packed, functional &amp; physical condition of the item is not checked by Bulk4Traders team</p>
+        <p><u>Brand New</u></p>
+        <p>A brand-new, unused, unopened item in its original packaging, with all original packaging materials included. Packaging might have minor scratches or damages. Since it is seal packed, functional &amp; physical condition of the item is not checked by Bulk4Traders team</p>
+        <p><u>Open Box</u></p>
+        <p>An apparently untouched item in perfect condition and fully functional. The original packaging is intact but could have minor scratches or damages. There are absolutely no signs of wear on the item.The product has been tested by the Bulk4Traders team</p>
+        <p><u>Very Good</u></p>
+        <p>The product is well-cared-for and is fully functional but may show minor physical or cosmetic blemishes and/ or the item may have some accessories missing. The packaging might have been replaced to protect the item. The product has been tested by the Bulk4Traders team</p>
+        <p><u>Good</u></p>
+        <p>The item shows normal marks from consistent use, but it remains in good condition and works fully. It may show other signs of previous use and/ or the item may have some accessories missing. The packaging might be missing or might have major damages. The product has been tested by the Bulk4Traders team.</p>
+        <p><u>Acceptable</u></p>
+        <p>The product may have minor functional issues and/ or the item is fairly worn. Signs of wear can include aesthetic issues such as scratches, dents, worn corners and cracks/damage on body. The item may have identifying markings on it or show other signs of previous use. Packaging may or may not be present and packaging condition may be bad. The product has been tested by the Bulk4Traders team.</p>
+        <p><u>Defective</u></p>
+        <p>The product may be functionally defective and/ or physically damaged. Packaging may or may not be present and packaging condition may be bad. The product has been tested by the Bulk4Traders team.</p>
+        <p><u>Not Tested</u></p>
+        <p>These items have not been inspected by Bulk4Traders team or have been physically inspected but not functionally checked. These are being sold in “As-is” condition. Some of these items could be working order while some may not be fully functional. These may not come with original packaging, manuals and/or supplementary accessories such as batteries and chargers</p>
+        <p>Shipment</p>
+        <p>Post payment for the won lot, buyer will receive the invoice and information for inventory pickup. Logistics cost has to be borne by the buyer over and above the bid value.</p>
+        <p>Claims:</p>
+        <p>Self Pickup</p>
+        <p>Claims can be filed ONLY for shortage of items when the inventory is being picked up from the Blubirch warehouse. The buyer cannot file claims for any other situations such as grade mismatch or item mismatch, however, he can reject such units during pickup and these will not be invoiced by Blubirch.</p>
+        <p>The buyer or buyer’s representative should clearly account for all the items included in the winning lot and what they are picking up. If there is a shortage of units, the buyer should inform Blubirch representative immediately. The details of the shortage such as number and type of shortage should be noted on the invoice document given to the buyer at the pick-up location itself.</p>
+        <p>3P Dispatch</p>
+        <p>If 3P logistics is used for shipping the units from Blubirch to buyer, no claim in any form will be entertained.</p>
+        <p>Claim Procedure:</p>
+        <p>To make a claim, please follow the following process:</p>
+        <p>
+        <ol>
+           <li> As noted above, the buyer should have the details of the discrepancy clearly noted in the invoice provided by Blubirch </li>
+           <li>Invoice should be signed by the Blubirch Warehouse Point of Contact</li>
+           <li> Email the signed invoice to the Blubirch Customer Service Team on <a href="mailto:support@b2bstop.com">support@b2bstop.com</a> and get the confirmation before leaving Blubirch’s warehouse </li>
+           <li>Blubirch will refund the money within 10-12 working days.</li>
+        </ol>
+        </p>
+        <h6 class="faq-title mb-10">Croma</h6>
+        <h6 class="faq-title mb-10">Lot Level Simplified T&amp;Cs for Croma Lots</h6>
+        <p>Bid Value</p>
+        <p>Bid value is inclusive of GST however it doesn’t include the logistics cost.</p>
+        <p>Cancellation</p>
+        <p>Once a you have won the lot you have to honour the payment. Failure in doing so could result in penalty and/or “blacklisting” on the platform. Croma (Seller) or Blubirch have the right, at our sole discretion, to refuse or cancel any auctioned lot or part of it for any reason. In the event that an auctioned lot be cancelled, we will notify you by email/phone/SMS/WhatsApp of such cancellation and your payment will be refunded within 24 hours.</p>
+        <p>Payment Terms</p>
+        <p>Once you have been informed of winning an auctioned lot, you have to make full payment in 48 hours. If you fail to make payment in time, then Croma (Seller) or Blubirch reserve the right to cancel the auctioned lot or offer it to another interested party. However, failure in making payment by you can result in penalty and/or “blacklisting” on the platform. Blubirch may revise the payment terms from time to time in its sole and absolute discretion; provided, however, that any change to payment terms will not be effective for any then-pending Sale, but will only be effective for the next Sale subsequent.</p>
+        <p>Item Condition (Definitions)</p>
+        <p><u>Brand New</u></p>
+        <p>A brand-new, unused, unopened item in its original packaging, with all original packaging materials included. Packaging might have minor scratches or damages. Since it is seal packed, functional &amp; physical condition of the item is not checked by Bulk4Traders team</p>
+        <p><u>Open Box</u></p>
+        <p>An apparently untouched item in perfect condition and fully functional. The original packaging is intact but could have minor scratches or damages. There are absolutely no signs of wear on the item.The product has been tested by the Bulk4Traders team</p>
+        <p><u>Very Good</u></p>
+        <p>The product is well-cared-for and is fully functional but may show minor physical or cosmetic blemishes and/ or the item may have some accessories missing. The packaging might have been replaced to protect the item. The product has been tested by the Bulk4Traders team</p>
+        <p><u>Good</u></p>
+        <p>The item shows normal marks from consistent use, but it remains in good condition and works fully. It may show other signs of previous use and/ or the item may have some accessories missing. The packaging might be missing or might have major damages. The product has been tested by the Bulk4Traders team.</p>
+        <p><u>Acceptable</u></p>
+        <p>The product may have minor functional issues and/ or the item is fairly worn. Signs of wear can include aesthetic issues such as scratches, dents, worn corners and cracks/damage on body. The item may have identifying markings on it or show other signs of previous use. Packaging may or may not be present and packaging condition may be bad. The product has been tested by the Bulk4Traders team.</p>
+        <p><u>Defective</u></p>
+        <p>The product may be functionally defective and/ or physically damaged. Packaging may or may not be present and packaging condition may be bad. The product has been tested by the Bulk4Traders team.</p>
+        <p><u>Not Tested</u></p>
+        <p>These items have not been inspected by Bulk4Traders team or have been physically inspected but not functionally checked. These are being sold in “As-is” condition. Some of these items could be working order while some may not be fully functional. These may not come with original packaging, manuals and/or supplementary accessories such as batteries and chargers</p>
+        <p>Shipment</p>
+        <p>Post payment for the won lot, buyer will receive the invoice and information for inventory pickup. Logistics cost has to be borne by the buyer over and above the bid value.</p>
+        <p>Claims:</p>
+        <p>Self Pickup</p>
+        <p>Claims can be filed ONLY for shortage of items when the inventory is being picked up from the Blubirch warehouse. The buyer cannot file claims for any other situations such as grade mismatch or item mismatch, however, he can reject such units during pickup and these will not be invoiced by Blubirch.</p>
+        <p>Self Pickup</p>
+        <p>Claims can be filed ONLY for shortage of items when the inventory is being picked up from the Blubirch warehouse. The buyer cannot file claims for any other situations such as grade mismatch or item mismatch, however, he can reject such units during pickup and these will not be invoiced by Blubirch.</p>
+        <p>The buyer or buyer’s representative should clearly account for all the items included in the winning lot and what they are picking up. If there is a shortage of units, the buyer should inform Blubirch representative immediately. The details of the shortage such as number and type of shortage should be noted on the invoice document given to the buyer at the pick-up location itself.</p>
+        <p>3P Dispatch</p>
+        <p>If 3P logistics is used for shipping the units from Blubirch to buyer, no claim in any form will be entertained.</p>
+        <p>Claim Procedure:</p>
+        <p>To make a claim, please follow the following process:</p>
+        <p>
+        <ol>
+           <li>As noted above, the buyer should have the details of the discrepancy clearly noted in the invoice provided by Blubirch</li>
+           <li>Invoice should be signed by the Blubirch Warehouse Point of Contact</li>
+           <li>Email the signed invoice to the Blubirch Customer Service Team on <a href="mailto:support@b2bstop.com">support@b2bstop.com</a> and get the confirmation before leaving Blubirch’s warehouse</li>
+           <li>Blubirch will refund the money within 10-12 working days.</li>
+        </ol>
+        </p>
+        <h6 class="faq-title mb-10">eCom Inventory</h6>
+        <h6 class="faq-title mb-10">Lot Level Simplified T&amp;Cs for eCom Inventory Lots</h6>
+        <p>Bid Value</p>
+        <p>Bid value is inclusive of GST however it doesn’t include the logistics cost.</p>
+        <p>Cancellation</p>
+        <p>Once a you have won the lot you have to honour the payment. Failure in doing so could result in penalty and/or “blacklisting” on the platform. Seller or Blubirch have the right, at our sole discretion, to refuse or cancel any auctioned lot or part of it for any reason. In the event that an auctioned lot be cancelled, we will notify you by email/phone/SMS/WhatsApp of such cancellation and your payment will be refunded within 24 hours, else it will be available in the Blubirch books of accounts and can be utilised for buying next LOT.</p>
+        <p>Payment terms and purchase</p>
+        <p>Once your bid is approved and you are declared the winner of the relevant bid, you would be required to pay 40% of the total bid price/value within a period of 24 hours from the time of approval of your bid, failing which the bid shall stand cancelled</p>
+        <p>You will be required to pay 60% of the amount representing the bid price/value within 24 hours from the time of communication from our side requiring you to pay the remaining 60%. In case you do not pay the remaining 60% amount within 7 days from the date of communication for the same from our side, the bid shall stand cancelled and we will be liable to return only an amount equal to 20% of the bid price/value paid by you in advance, and retain the remaining 20% as cancellation charges. The said amount equivalent to 20% of the bid price/value shall stand forfeited.</p>
+        <p>Subject to you making the payment of the remaining 60% of bid price/value within the above-mentioned 7 day period, in case you do not pick up the goods on the date specified by us to you, you may collect the same only within 7 days from the date of collection specified by us by paying such logistics, warehousing and holding charges as specified by us. In case you fail to pick-up the goods within the above-mentioned 7 day period, then the bid shall stand cancelled and we will be entitled to retain the 20% of the total bid price/value paid by you as cancellation charges, and shall return the remaining amount to you. The said amount equivalent to 20% of the bid price/value shall stand forfeited</p>
+        <p>Item Condition</p>
+        <p>Inventory condition will be mentioned in manifest, which means the products may be functionally good with Minor or Major Scratches, Defective or damaged condition. The inventory will be shipped to the buyer in “As-Is” condition.</p>
+        <p>Shipment</p>
+        <p>Post payment for the won lot, buyer will receive the invoice and information for inventory pickup.Logistics cost has to be borne by the buyer over and above the bid value.H&amp;B inventory has to be picked by buyer directly from Blubirch warehouse.</p>
+        <p>Claims</p>
+        <p>The seller will not entertain any type of claims.</p>
+        <h6 class="faq-title mb-10">Amazon</h6>
+        <h6 class="faq-title mb-10">Lot Level Simplified T&amp;Cs for Amazon Lots</h6>
+        <p><strong>Bid Value</strong></p>
+        <p>Bid value is inclusive of GST however it doesn’t include the logistics cost.</p>
+        <p><strong>Cancellation</strong></p>
+        <p>Once a you have won the lot you have to honour the payment. Failure in doing so could result in penalty and/or “blacklisting” on the platform. Amazon (Seller) or Blubirch have the right, at our sole discretion, to refuse or cancel any auctioned lot or part of it for any reason. In the event that an auctioned lot be cancelled, we will notify you by email/phone/SMS/WhatsApp of such cancellation and your payment will be refunded within 24 hours, else it will be available in the Blubirch books of accounts and can be utilised for buying next LOT.</p>
+        <p><strong>Payment terms and purchase</strong></p>
+        <p>Once your bid is approved and you are declared the winner of the relevant bid, you would be required to pay advance of the total bid price/value within a period of 24 hours from the time of approval of your bid, failing which the bid shall stand cancelled</p>
+        <p>You will be required to pay the balance of the amount representing the bid price/value within 24 hours from the time of communication from our side requiring you to pay the remaining amount. In case you do not pay the remaining amount within 7 days from the date of communication for the same from our side, the bid shall stand cancelled and we are not liable to refund any advance and all the advances shall stand forfeited.</p>
+        <p>Subject to you making the payment of the remaining amount of bid price/value within the above-mentioned 7 day period, in case you do not pick up the goods on the date specified by us to you, you may collect the same only within 7 days from the date of collection specified by us by paying such logistics, warehousing and holding charges as specified by us. In case you fail to pick-up the goods within the above-mentioned 7 day period, then the bid shall stand cancelled and we are not liable to refund any advance and all the advances shall stand forfeited.</p>
+        <p><strong>Item Condition</strong></p>
+        <p>Amazon inventory will be in “AS IS” Open Box condition, which means the products may be functionally good with Minor or Major Scratches, Defective or damaged condition. The inventory will be shipped to the buyer in “As-Is” condition.</p>
+        <p><strong>Shipment</strong></p>
+        <p>Post payment for the won lot, buyer will receive the invoice and information for inventory pickup. Logistics cost has to be borne by the buyer over and above the bid value.</p>
+        <p>H&amp;B inventory has to be picked by buyer directly from Amazon warehouse.</p>
+        <p><strong>Claims</strong></p>
+        <p>In Amazon there can be broadly six types of claims that can be filed:</p>
+        <ol>
+           <li>Less number of master cartons received as per POD.</li>
+           <li>Master carton received in open condition</li>
+           <li>Units inside the box are fake. </li>
+           <li>Empty unit box received.Empty unit box received.</li>
+           <li>Mismatch Units received</li>
+           <li>Units not received (Missing Item</li>
+        </ol>
+        <p>There is a separate process for raising a claim for each of these six reasons. Any claim must be submitted within three days of receiving the material. Following process must be followed while raising claims:</p>
+        <ol>
+           <li>
+              Less Number of master cartons received : 
+              <ol>
+                 <li>Identify the AWB of the carton that is missing. In case of multiple cartons that are missing, identify the AWB of each.</li>
+                 <li>Clearly write on the POD, all the AWBs of the missing cartons and received cartons separately.</li>
+                 <li>Ensure the transporter signs the POD with the missing AWBs identified</li>
+                 <li>Please take the clear images of POD.</li>
+                 <li>Share details of missing AWB numbers and images of POD to <a href="mailto:support@b2bstop.com">support@b2bstop.com</a></li>
+              </ol>
+           </li>
+           <li>
+              Open master carton received: 
+              <ol>
+                 <li>Receive the box under video camera</li>
+                 <li>Take images of the box</li>
+                 <li>You can choose to reject the open box. In such a case, clearly mention this in POD as “Box rejected due to being in damaged/open condition”. Take the signature of the carrier and image of this signed doc.</li>
+                 <li>If you choose to accept the box, count the units inside the box under camera. For any missing units, follow steps mentioned in point number (6. Units Not Received (missing items)) above.</li>
+              </ol>
+           </li>
+           <li>
+              Units inside the box are fake 
+              <ol>
+                 <li>Unbox the master carton under the video camera with AWB number and SLAM label clearly visible.</li>
+                 <li>It should be clearly visible that the box is being opened for the first time with Amazon seal tape clearly visible </li>
+                 <li>Carefully take out units one by one under camera</li>
+                 <li>Identify fake units and show it very clearly under camera.</li>
+                 <li>Take images of fake products from 6 sides - top, bottom and four sides</li>
+                 <li>Mark the images with missing attributes or additional attributes that indicate that the unit is fake. For example, if the serial number is normally available on the unit but not available on units delivered by Amazon, you must highlight in the image where the serial number is missing. </li>
+                 <li>Rename the images with ASIN number and LPN number.</li>
+                 <li>Share the unboxing videos along with images with to <a href="mailto:support@b2bstop.com">support@b2bstop.com</a></li>
+              </ol>
+           </li>
+           <li>
+              Empty box inside master carton 
+              <ol>
+                 <li>Unbox the master carton under video camera with AWB number and SLAM label clearly visible</li>
+                 <li>It should be clearly visible that the box is being opened for the first time with Amazon seal tape clearly visible</li>
+                 <li>Carefully take out units one by one under camera.</li>
+                 <li>Identify the Empty boxes and show it very clearly under camera.</li>
+                 <li>Take images of empty box from six sides</li>
+                 <li>Mark the images with missing attributes or additional attributes that indicate that the unit is fake. For example, if the serial number is normally available on the unit but not available on units delivered by Amazon, you must highlight in the image where the serial number is missing. </li>
+                 <li>Rename the images with ASIN number and LPN number.</li>
+                 <li>Share the unboxing videos along with images with to <a href="mailto:support@b2bstop.com">support@b2bstop.com</a>.</li>
+              </ol>
+           </li>
+           <li>
+              Mismatch units received 
+              <ol>
+                 <li>Unbox the master carton under video camera with AWB number and SLAM label clearly visible</li>
+                 <li>It should be clearly visible that the box is being opened for the first time with Amazon seal tape clearly visible</li>
+                 <li>Carefully take out units one by one under camera</li>
+                 <li>Identify mismatched units and show it very clearly under camera.</li>
+                 <li>Take images of mismatched products from 6 sides.</li>
+                 <li>Note down the name of the product received physically.</li>
+                 <li>Rename the images with ASIN number and LPN number.</li>
+                 <li>Share images, videos and details of actual products received to <a href="mailto:support@b2bstop.com">support@b2bstop.com</a>.</li>
+              </ol>
+           </li>
+           <li>
+              Product not received (Missing Item) 
+              <ol>
+                 <li>Unbox the master carton under video camera with AWB number and SLAM label clearly visible</li>
+                 <li>It should be clearly visible that the box is being opened for the first time with Amazon seal tape clearly visible</li>
+                 <li>Carefully take out units one by one under camera</li>
+                 <li>Share the details of the unit not received along with video to <a href="mailto:support@b2bstop.com">support@b2bstop.com</a>.</li>
+              </ol>
+           </li>
+        </ol>
+        <p>Please note in all the instances, size of 6 images must not exceed 20 MB and size of video must not exceed 24 MB or Google link for videos. Amazon will verify and process the claims as per its internal policies. This may take up to three weeks for closure. In exceptional cases it can take even longer. Written communication will be shared by Blubirch on the claim decision taken by Amazon. If claim is approved the payment will be processed to buyer.</p>
+        <p><strong>Claim process for Heavy &amp; Bulky units</strong></p>
+        <p>Inventory offered through Amazon partners will be on ‘As Is’ basis. H&amp;B inventory has to be picked by buyer directly from Amazon warehouse. Amazon team will load the inventory in the vehicle organized by the Buyer and seal the truck. Buyer should check the seal and take image of the same if it is broken. Buyer can raise claims for missing fake and mismatch items except in case of Air conditioners where no claim will be entertained for mismatch cases of Indoor and outdoor units.</p>
+        <p>All shipments received by the buyer have to be unloaded and opened under a clear video recording right from breaking of the Amazon seal put on the truck . At that time the buyer has to show under the camera that items are missing or fake. If the box is opened without video recording and video is taken later where original seal on the box is already tampered then no claims will be entertained. For mismatch items along with the video recording need photograph from all six sides of the mismatch items. Amazon will verify and process the claims as per its internal policies, this may take up to three weeks for closure. In exceptional cases it can take even longer. Written communication will be shared by Blubirch on the claim decision taken by Amazon. If claim is approved the payment will be processed to buyer.</p>
+        <p>Following points to be ensured while claiming for Heavy and Bulky units.</p>
+        <ol>
+           <li>Vehicle Open Video – You must open the seal of the vehicle under camera clearly and unload all the units without any cuts in video.</li>
+           <li>Unboxing Video of Units – Unbox all the units under camera clearly.</li>
+           <li>Six side photos – Please take images from six sides for mismatch units. Please note different outdoor and Indoor units in an Air conditioner won’t be considered as mismatch and no claims will be entertained for such cases.</li>
+           <li>No Claim for damaged units.</li>
+        </ol>
+        <p>Share all the details with us at <a href="mailto:support@b2bstop.com">support@b2bstop.com</a> and share video over google link.</p>
+        <p>Post your submission, we will review the attachments and validate internally. We will reach out to you within two working days if any further details are required. If everything is in order, we will submit your claims to Amazon. Amazon team takes upto 30 days to review the claims and take a decision. If any further information is sought from Amazon’s side, we will reach out to you for the same and your response must be provided within 1 day. Failure to do so can result in rejection of claim.</p>
+        <p>Please note, approval or rejection of claims is purely Amazon's decision. However, we always try our best to ensure timely approval of claims. Once claims are approved, you can expect a credit note within 3-5 working days.</p>
+        <p>You can reach out to us on 1800 419 0431 or <a href="mailto:support@b2bstop.com">support@b2bstop.com</a> for any concerns.</p>
+     </div>
+    </div>
+    </div>
+    </div>
+</section>
+
+
+
+
+<footer>
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-sm-6 col-md-2 d-flex">
+          <div class="hdr-img mb-4">
+            <img src="hdr-logo" alt="hdr-logo">
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="row">
+              <div class="col-3">
+                <ul>
+                  <li><a href="aboutus.html">About Us</a></li>
+                  <li><a href="contact-us.html">Contact Us</a></li>
+                  <li><a href="faq.html">FAQ</a></li>
+                </ul>
+              </div>
+              <div class="col-4">
+                <ul>
+                  <li><a href="term-and-condition.html">Terms of Purchase</a></li>
+                  <li><a href="item-condition.html">Items Condition</a></li>
+                  <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+              </div>
+              <div class="col-5">
+                <ul class="mailli">
+                  <li><a href="tel:1800-419-0431"><i class="bi bi-telephone-fill"></i> 1800-419-0431</a></li>
+                  <li><a href="mailto: support@b2bstop.com"><i class="bi bi-envelope"></i>  support@b2bstop.com</a></li>
+                </ul>
+              </div>
+           </div>
+          
+        </div>
+        <div class="col-sm-6 col-md-3 d-flex">
+          <div class="adrs">
+            <a href="#">
+              <i class="bi bi-geo-alt-fill"></i>
+              No. 565, Axis Pennmark building, 2nd, 3rd & 4th Floor, 9th cross road, Sarakki, 3rd phase, JP Nagar, Bangalore, Karnataka - 560078
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="btn-hdng">
+        <p class="text-center">© b2bstop - Trade mark of Green Enabled IT Solutions Pvt. Ltd</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<!-- <script src="content/js/second.js"></script> -->
+<script src="content/js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>b2bstop</title>
+    <link rel="icon" href="content/images/logo/favicon.png" type="image/png">
+    <link rel="stylesheet preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link type='text/css' href='http://fonts.googleapis.com/css?family=Lato:400,500,600,700,800,900' rel="stylesheet" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="content/css/custom.css">
+</head>
+<body>
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg p-md-2 navwhite">
+        <div class="container-fluid position-relative">
+          <a class="navbar-brand" href="/">
+            <img src="content/images/logo/isspl-logo.svg" height="36" width="95" alt="bynry_logo" title="bynry_logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <span class="top-line"></span>
+          <span class="middle-line"></span>
+          <span class="bottom-line"></span>
+      </button>
+          <div class="collapse navbar-collapse dnmd" id="navbarCollapse">
+              <ul class="navbar-nav ms-auto mb-2 mb-md-0 d-flex align-items-center">
+                <li class="nav-item">
+                  <a href="/product-list.html" class="nav-link">Shop All Auctions</a>
+              </li>
+              <li class="nav-item">
+                  <a href="buyers.html" class="nav-link">For Buyers</a>
+              </li>
+           <li class="nav-item ">
+          <a href="sellers.html" class="nav-link">For Sellers</a>
+          </li>
+                  <li class="nav-item"><a class="nav-link" href="support.html">Support  </a></li>
+                 
+                    <li>
+                      <ul class="d-flex justify-content-between align-items-center">
+                        <li class="nav-item ps-2 pe-0"> <a class="btn btn-primary blink" href="Browse.html">BROWSE MARKETPLACES <i class="bi bi-arrow-up-right"></i>
+                        </a></li>
+                     
+                        <li class="nav-item btnmrgn user position-relative">
+                          <a  href="form.html" class="btn btn-secondary">
+                            SIGN IN 
+                          </a>
+                          <div class="user-box">
+                            <div class="user-hdr">
+                              <i class="bi bi-person-circle"></i>
+                              <div class="user-name">
+                                <h6>Anuj Singh</h6>
+                                <p>@anuj9876</p>
+                              </div>
+                            </div>
+                            <div class="routeopt">
+                              <div class="switch">
+                               <div> <i class="bi bi-people"></i>  Switch Account </div><i class="bi bi-chevron-right"></i>
+                              </div>
+                              <div class="out">
+                                <i class="bi bi-box-arrow-right"></i> Sign Out
+                              </div>
+                            </div>
+                          </div>
+                       </li>
+                        <li class="nav-item d-flex align-items-center p-0">
+                      <div id="translate"></div>
+                       </li>
+                      </ul>
+                    </li>
+                  
+              </ul>
+          </div>
+      </div>
+    </nav>
+    
+    </header>
+    
+    
+    
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen-lg-down">
+    <div class="modal-content">
+    <div class="modal-header">
+      <h4 class="modal-title"><a class="navbar-brand" href="/"><img src="" height="28" alt="b2bstop" title="b2bstop" /></a></h4>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body pt-0">
+      <ul>
+        <li class="pb-0"><div class="user">
+          <i class="bi bi-person-circle"></i>
+          Welcome
+        </div></li>
+        <li class="hvrlnk"><a href="product-list.html">Shop All Auctions</a></li>
+        <li class="hvrlnk"><a href="buyers.html">For Buyers</a></li>
+        <li class="hvrlnk"><a href="sellers.html">For Sellers</a></li>
+        <li class="hvrlnk"><a href="support.html">Support</a></li>
+        <li class="hvrlnk"><a href="Browse.html">Browse MarketPlaces</a></li>
+        <!-- <li class="hvrlnk">
+          <div id="translatemob"></div>
+           </li> -->
+          <li class="d-flex align-items-center">
+            <div class="dropdown">
+                 <a class="btn btn-primary dropdown-toggle" href="form.html" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Select Language
+                 </a>
+                 <ul class="dropdown-menu langdiv">
+                   <li>
+                     <h6 class="mb-0">Select Language</h6>
+                   <div class="row">
+                     <div class="col-6">
+                       <ul class="language-drop">
+                   <li><a class="dropdown-item" href="#">Assamese</a></li>
+                   <li><a class="dropdown-item" href="#">Bengali</a></li>
+                   <li><a class="dropdown-item" href="#">Bhojpuri</a></li>
+                   <li><a class="dropdown-item" href="#">Gujrati</a></li>
+                   <li><a class="dropdown-item" href="#">Hindi</a></li>
+                   <li><a class="dropdown-item" href="#">Kannad</a></li>
+                   <li><a class="dropdown-item" href="#">Maithili</a></li>
+                   <li><a class="dropdown-item" href="#">Malyalam</a></li>
+                 </ul>
+               </div>
+               <div class="col-6">
+                 <ul class="language-drop">
+                         <li><a class="dropdown-item" href="#">Marathi</a></li>
+                         <li><a class="dropdown-item" href="#">Nepali</a></li>
+                   <li><a class="dropdown-item" href="#">Punjabi</a></li>
+                   <li><a class="dropdown-item" href="#">Sanskrit</a></li>
+                   <li><a class="dropdown-item" href="#">Tamil</a></li>
+                   <li><a class="dropdown-item" href="#">Telgu</a></li>
+                   <li><a class="dropdown-item" href="#">Urdu</a></li>
+                 </ul>
+               </div>
+             </div>
+           </li>
+                 </ul>
+               </div>
+          </li>
+        
+        <li class="d-flex">
+          <a href="#" class="nav-link btn btn-secondary">
+            SIGN IN 
+          </a>
+       </li>
+      </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+<section class="faqsec" style="background: url(content/images/section-bg.webp) 0 0 / 100% no-repeat fixed;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xxl-9 col-xl-10 col-lg-11">
+                <div class="faq" data-aos="fade-down" data-aos-duration="1400">
+                    <h4>Applying and Logging In</h4>
+                    <h6> How do I register as a buyer? What is the fee for registration? </h6>
+                  <p>  Blubirch is an enablement platform that helps retailers, OEMs and brands create their own branded marketplace
+                     on the platform. Each of these marketplaces will have their own specific requirements for registration. 
+                     You can register for one or more of these branded market place by following the instructions on “Register as a Buyer”. </p>
+                     <p>Registration as a buyer is free and carries no cost.</p>
+                     <p>Welcome to b2bstop : A platform owned and managed by Blubirch!</p>
+                     <h6>How long does it take to register on b2bstop?</h6>
+                     <p>You can register instantly on b2bstop using your mobile number.</p>
+                     <h6> What are some of the documents required for registration? </h6>
+                     <p> For registration you will only need your mobile number. However, once you have won a lot then you will have to update your GST to enable invoicing of the won lot. </p>
+                     <h4>Bidding</h4>
+                     <h6>How do I place a bid?</h6>
+                     <p> After logging in to Bulk4Traders marketplace, you will be able to navigate to any live auction in any marketplace 
+                        you are registered in. The auction will provide all the information you need to place a bid i.e. lot size, 
+                        lot location, few photographs of the inventory, condition of the inventory, the floor price, the current bid
+                         price, increments to bid, the buy now price, and the time the auction ends. You can obtain detailed information
+                          by line item detail by downloading the manifest. </p>
+                          <p class="mb-5"> Once you have studied the manifest and have made your decision to place a bid, you can click on the
+                             “Bid@ “ button and your bid will be recorded. All bids are considered as a serious commitment to
+                              pay and we expect all such commitments be honored. </p>
+                              <div class="faq-img">
+                                <img src="content/images/buyer_bidding.png" alt="buyer_bidding">
+                              </div>
+                              <h6> Why does Blubirch extend the time of the auction even after the bid time is closed? </h6>
+                              <p> This feature is to discourage buyers who try to “time” the auction by placing their 
+                                bid in last few seconds of the auction so that no one can put a counter bid. However,
+                                 this feature ensures that if any bid is placed in last few minutes of an auction then
+                                  the auction time will automatically get extended and all participating buyers will
+                                   be notified through SMS or in-app notification. </p>
+                                   <h6> Are the images you are displaying actual images of the inventory? </h6>
+                                   <p> Yes, the images that are shown are actual images of the inventory that is in the lot. However, in cases where seller doesn’t have real images then they can put other reference images. You are advised, however, to refer to the auction manifest for details and accurate information on the condition of each item in the lot. </p>
+                                   <h6>Is b2bstop the seller?</h6>
+                                   <p> No. As mentioned earlier, b2bstop is an enablement platform for retailers, OEMs and brands to liquidate their excess, returned, and refurbished inventory. The inventory is owned by the seller and b2bstop only provides a marketplace for auctions. </p>
+                                   <h6>Can I buy merchandise without bidding on it?</h6>
+                                   <p> Unfortunately No! We are a hosting platform for auctions only. However, if you find a particular lot very attractive, you can take it off the auction by clicking the “Buy Now” button. </p>
+                                   <p> We do not allow the inspection of inventory before a bid is placed. All the information you need to make an informed decision is in the manifest. </p>
+                                   <h6>Can I pick and choose items I want to buy?</h6>
+                                   <p> No, a lot is sacrosanct and can not be broken i.e. you can only buy a lot as a full unit. </p>
+                                   <h6> Can we inspect the inventory before placing a bid? </h6>
+                                   <p> Since our buyers and inventory sellers are from across India, its not possible to allow the inspection of inventory before a bid is placed. All the information you need to make an informed decision is in the manifest </p>
+                                   <h6>What is the meaning of “As-Is” inventory?</h6>
+                                   <p> Wherever it is not possible for Seller to Grade the inventory, it is marked as “As-Is” to be transparent to our buyers. Such lots may include inventories that are seal packed, open box, good, very good, defective or even damaged. Blubirch or the seller takes no responsibility of final grade of the material when the lot is offered on a AS-IS/ Where IS basis </p>
+                                   <h6>What is the condition of the lot being sold?</h6>
+                                   <p> We clearly display the condition of each lot. Each lot will have specific information on the grade, the mix and line item detail on the condition (grade) and grade of each item. We categorize our lots into the following conditions: </p>
+                                   <ul>
+                                    <li>Seal Packed</li>
+                                    <li>Open Box</li>
+                                    <li>Good: The item shows normal marks from consistent use, but it remains in good condition and works fully. </li>
+                                    <li>Very Good:</li>
+                                    <li>Defective:</li>
+                                    <li>Damaged</li>
+                                    <li>Mixed: Having items of different grades</li>
+                                    <li>AS-IS</li>
+                                   </ul>
+                                   <h6> How accurate is the listed condition on the inventory? </h6>
+                                   <p> Seller provides Inventory condition at the item level in the manifest. A variation of up (to 4% from what is stated in the manifest) should be considered acceptable. </p>
+                                   <h6> What is the retail price listed for the auctions? What does this mean? </h6>
+                                   <p> The Lot MRP is the original Maximum retail price. This is provided by the seller. b2bstop does not take responsibility for the accuracy of this listed MRP. We recommend buyers to always do their own research on product price in addition to what is provided in the manifest. </p>
+                                   <h6>Will I be notified if I win?</h6>
+                                   <p> At the auction close, the winning bidder is notified by email and text message. A won auction will also show up as an order on the “orders” page of the seller. </p>
+                                   <h6>Can I cancel my bid?</h6>
+                                   <p> As noted earlier, we expect you to place your bid with all the serious commitment it requires. Placing a bid means you intent to buy he lot at the bid price under the conditions included in the lot with regards to any additional costs such as shipping etc., </p>
+                                   <p> All bids are considered binding since they have an effect on the other bidders. If a current winning bid is disqualified for any reason, the next highest bid will be promoted as the winning status at the discretion of the seller. </p>
+                                   <p> b2bstop reserves the right in our sole discretion to cancel or not cancel a bid. </p>
+                                   <h4>Payment</h4>
+                                   <h6> When should I make the payment once I have won the auction? </h6>
+                                   <p>All payments are due within 24 hours of the winner being notified.</p>
+
+                                   <p> Please allow two business days for your payment to be processed.</p>
+                                   <h6>How can I make the payment?</h6>
+                                   <p> Payments have to be through a wire transfer or payment gateway. Detailed instructions are provided on your “Won” confirmation email. </p>
+
+                                    <p> If you use a different payment method that is not listed as an accepted payment method, it will increase the risk that your payment will be lost, delayed and/or returned, thus risking order cancellation for nonpayment. </p>
+                                    <h6>Can I combine multiple payments together?</h6>
+                                    <p> You can always combine payment for multiple “won” auctions as long as no payment is late. Payments should clearly indicate the bid number for which the payment is intended for. </p>
+                                    <h6> Why does the buyer have to pay 100% amount in advance when inventory is delivered in 20/25 days? </h6>
+                                    <p> Since the Seller has to invoice before shipping, it needs 100% payment before invoicing. The delivery timelines are defined on max time period it can take to ship the goods from across India. </p>
+                                    <h6> Can I pay 25% advance payment first and rest 75% at the time of pickup? </h6>
+                                    <p> No. Inventory is shipped only when 100% payment is received. If payment is not received on time, the confirmation will be cancelled and the auction awarded to the next highest bidder. </p>
+                                    <h6>What currency are auctions in?</h6>
+                                    <p>We accept payment only in Indian Rupees.</p>
+                                    <h6>Does my payment include GST?</h6>
+                                    <p>Payment include all applicable taxes and should be made in full.</p>
+                                    <p>If I am no longer interested in the auction I won, do I still have to pay?</p>
+                                    <p>As mentioned earlier, an auction you have won is a binding commitment. If you do not honor the commitment, you run the risk of being blacklisted and/or being asked for a reinstatement fee to reactivate your account. The reinstatement fee varies by seller and may include a penalty from b2bstop.</p>
+                                    <h4>Shipping</h4>
+                                    <h6>How does shipping work?</h6>
+                                    <p> Shipping method and charges for shipping will depend on the specific auction and the Seller. Since b2bstop does not own the inventory, we do not manage or facilitate the shipping of that product. Please familiarize yourself with the specific shipping charges, methods and time before the bid is placed </p>
+
+                                        <p>   Where the buyer is required to pick up the inventory or pay for shipping, it is the buyer’s responsibility to estimate the shipping cost. Once we have informed the processing of the payment, you may contact your logistics carrier to pick the inventory. </p>
+                                       
+                                            <p>    Unless specifically stated otherwise, you will not be able to collect the merchandise yourself or opt out of seller’s preferred shipping method. You must complete payment prior to making any shipping arrangements. </p>
+                                            <h6> What if I received any fake / Mismatch or missing items in the lot? </h6>
+                                            <p> A mismatch of upto 4% is expected and tolerated. If the mismatch is more than 4%, a claim should be filed with b2bstop. A best practice is to record the opening of all the inventory received. Please share the video of fake items with b2bstop. Please note that in all such cases, no replacement will be provided. You will have to raise the claim as per the claim process. The claim will be processed by the seller. Once the seller has approved the claim request, a refund will be made. If the seller rejects the claim, the buyer will be notified with the reason for the rejection. </p>
+
+                                                 <p> All shipments received by the buyer have to opened under a clear Video recording. At that time the buyer has to show under the camera that items were missing or fake or damaged. If the box is opened without Video recording and Video is taken later where original seal on the box is already tampered, no claims will be expected </p>
+                                               
+                                                 <p> The Video and details of Fake/Mismatch/missing items have to be sent to support@blubirch.com with auction numer in the subject</p>
+                                                 <h6> What are some of the best practices with regard to acceptance of orders where Shipping is done by Seller directly to Buyer warehouse? </h6>
+                                                 <ul>
+                                                    <li>Do not refuse the shipment unless it is absolutely the wrong order. </li>
+                                                    <li> Ensure that box count matches your invoice. Take note of all identification numbers including manifest number. </li>
+                                                    <li> Review the delivery receipt, and sign only for services performed. Keep a copy of your delivery receipt. </li>
+                                                    <li> If you have the ability, check the weight of what you received against the weight on the bill of lading. If there is a large discrepancy, count the inventory to confirm. </li>
+                                                    <li> Inspect the condition. If there are signs of excessive damage created by obvious carrier negligence, take pictures while the goods are in the truck. In addition to taking photos, take detailed notes. Describe the issues, including pallet ID(s), on the delivery receipt/POD. </li>
+                                                    <li> Keep copies of all forms and pictures for your records and in case you need to provide them to be reviewed. </li>
+                                                    <li> Keeping in mind the original auction lot condition description, if further inspection reveals damage, stop. Document the issues, take pictures, and submit details to <a href="mailto: support@b2bstop.com"> support@b2bstop.com</a></li>
+                                                 </ul>
+                                                 <h6> What Is the delivery timeline for orders shipped by the seller? </h6>
+                                                 <p> Delivery timeline varies from 5-25 working days dependent on the destination. This timelines are based on the maximum time period it can take to ship goods from one end of the country to another. Under normal circumstances, inter-city and inter-State, where the States are within one zone, inventory shipping takes less than 7 days. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<footer>
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-sm-6 col-md-2 d-flex">
+        <div class="hdr-img mb-4">
+          <img src="hdr-logo" alt="hdr-logo">
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="row">
+            <div class="col-3">
+              <ul>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+              </ul>
+            </div>
+            <div class="col-4">
+              <ul>
+                <li><a href="term-and-condition.html">Terms of Purchase</a></li>
+                <li><a href="item-condition.html">Items Condition</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+              </ul>
+            </div>
+            <div class="col-5">
+              <ul class="mailli">
+                <li><a href="tel:1800-419-0431"><i class="bi bi-telephone-fill"></i> 1800-419-0431</a></li>
+                <li><a href="mailto: support@b2bstop.com"><i class="bi bi-envelope"></i>  support@b2bstop.com</a></li>
+              </ul>
+            </div>
+         </div>
+        
+      </div>
+      <div class="col-sm-6 col-md-3 d-flex">
+        <div class="adrs">
+          <a href="#">
+            <i class="bi bi-geo-alt-fill"></i>
+            No. 565, Axis Pennmark building, 2nd, 3rd & 4th Floor, 9th cross road, Sarakki, 3rd phase, JP Nagar, Bangalore, Karnataka - 560078
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="btn-hdng">
+      <p class="text-center">© b2bstop - Trade mark of Green Enabled IT Solutions Pvt. Ltd</p>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<!-- <script src="content/js/second.js"></script> -->
+<script src="content/js/custom.js"></script>
+</body>
+</html>
