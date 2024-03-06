@@ -138,6 +138,10 @@ img{
     padding: 0 0.5rem;
     color: #333333ad;
 }
+.nav-item .nav-link{
+    padding: 0 0.5rem;
+    color: var(--bs-secondary);
+}
 .modal,.modal.show .modal-dialog{
     overflow-x:hidden;
 }
@@ -1002,11 +1006,24 @@ transition: all 0.4s ease-in-out;
     border-radius:100% 0% 100% 0% / 0% 50% 50% 100% !important;
     display: grid;
     place-items: center;
-  
+    position:relative;
   }
   
   .card-header img{
-    width: 72px;
+    width: 90px;
+    height: 90px;
+    z-index:2;
+  }
+  .card-header::before{
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    top: 42px;
+    left: 69px;
+    background: #fff;
+    content: "";
+    border-radius: 50%;
+    z-index: 1;
   }
   .card-content{
     display: flex;
@@ -1021,7 +1038,7 @@ transition: all 0.4s ease-in-out;
     font-size: 16px;
     margin-top: 10px;
     margin-bottom: 20px;
-    
+    color:var(--bs-secondary);
   }
   .card-text{
     text-align: center;
@@ -1187,26 +1204,7 @@ color:#fff;
     left: -18px;
     transition:all 0.4s linear;
   }
-  .layout .sidebar.collapsed .sidebar-collapser:after {
-    content:">";
-    position: absolute;
-    top:0;
-    left:50%;
-    transform: translate(-50%,20%);
-    color:#fff;
-    font-size: 1rem;
-    z-index: 9999;;
-  }
-  .layout .sidebar .sidebar-collapser:before {
-    content:"<";
-    position: absolute;
-    top:0;
-    left:50%;
-    transform: translate(-50%,20%);
-    color:#fff;
-    font-size: 1rem;
-    z-index: 9999;;
-  }
+
   .layout .sidebar.collapsed .sidebar-collapser:before {
     content:none;
   }
@@ -1558,7 +1556,7 @@ box-shadow:none;
   background: #13b88f8a; 
 }
 .bfltr{
-  padding:1rem;
+  padding: 1.6rem;
   border:0;
   background:#fff;
   position:fixed;
@@ -2227,6 +2225,9 @@ margin-bottom: 1rem;
   padding: 1rem;
   border-radius: 1rem;
   background:#fff;
+}
+.fxdtbl tr th{
+  color:var(--bs-secondary);
 }
 .Btn {
   width: 100%;
@@ -3642,12 +3643,14 @@ display:block;
   background-color: #fff;
   width: 450px;
   padding: 3rem;
-  position: absolute;
+  position: fixed;
   transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
   border-radius: 0.75rem;
   display: none;
+box-shadow: 0 0 23px -7px rgba(0,0,0,0.15);
+z-index:1098;
 }
 .popup button{
   display: block;
@@ -3695,9 +3698,62 @@ display:block;
    width: 350px;
    transform: translate(-50%, -30%);
   }
-}
-/* @media (max-width:768px){
-  .popup{
-   width: 350px;;
+  .adrs{
+    border-top: 1px solid #e1e1e2;
+    border-bottom: 1px solid #e1e1e2;
+    padding: 1rem 0;
+    margin-top: 0.6rem;
   }
-} */
+}
+
+
+.mainuser {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mainuser i{
+  font-size: 1rem;
+  margin-right: 0.35rem;
+}
+.mainuser h6{
+  font-size: 0.75rem;
+    margin-bottom: 0;
+}
+
+
+
+
+
+.aboutus{
+  background-image: url(../images/abt-banner.jpg);
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+   text-align: center;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.aboutus h4,.aboutus p{
+  font-size: 3rem;
+  background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  color:#fff;
+}
+.aboutus p{
+  font-size: 1.25rem;
+}
+
+.ndsec{
+  background: #1962D5;
+  color: #fff;
+}
+
+
+
+
+
+
+
+

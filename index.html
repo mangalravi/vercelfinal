@@ -248,7 +248,7 @@
         <span class="new">New</span>
       </div>
         <div class="card-header one">
-           <img src="https://www.pngall.com/wp-content/uploads/15/Amazon-Logo-White-PNG-Photo.png" alt="logo">
+           <img src="content/images/Amazon-logo.png" alt="logo">
         </div>
         <div class="card-content">
           <h1 class="card-title">Title</h1>
@@ -266,7 +266,7 @@
           <span class="new">New</span>
         </div>
         <div class="card-header two">
-           <img src="https://adanisportsline.com/-/media/Project/SportsLine/Home/ft-logo.png?la=en&hash=F83B5DF60487A79515D7E93E10B82D4D" alt="logo">
+           <img src="content/images/adani.png" alt="logo">
         </div>
         <div class="card-content">
           <h1 class="card-title">Title</h1>
@@ -284,7 +284,7 @@
           <span class="new">New</span>
         </div>
         <div class="card-header three">
-           <img src="https://1000logos.net/wp-content/uploads/2021/05/Tata-Cliq-logo.png" alt="logo">
+           <img src="content/images/Tata-Cliq.jpg" alt="logo">
         </div>
         <div class="card-content">
           <h1 class="card-title">Title</h1>
@@ -620,7 +620,7 @@
 
 
 <!-- popup after some time -->
-<div id="bkgOverlay" >
+<div id="bkgOverlay">
 <div class="popup" id="delayedPopup" >
   <button id="btnClose">&times;</button>
   <div class="mb-3">
@@ -658,44 +658,22 @@ AOS.init();
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <script>
-//   window.addEventListener("load", function(){
-// setTimeout(
-//     function open(event){
-//         document.querySelector(".popup").style.display = "block";
-//     },
-//     10000
-// )
-// });
-
-
-// document.querySelector("#close").addEventListener("click", function(){
-// document.querySelector(".popup").style.display = "none";
-// });
-
-
 $(document).ready(function ()
 {
-	//Fade in delay for the background overlay (control timing here)
 	$("#bkgOverlay").delay(4800).fadeIn(400);
-  //Fade in delay for the popup (control timing here)
 	$("#delayedPopup").delay(5000).fadeIn(400);
 	
-	//Hide dialouge and background when the user clicks the close button
 	$("#btnClose").click(function (e)
 	{
 		HideDialog();
 		e.preventDefault();
 	});
 });
-//Controls how the modal popup is closed with the close button
 function HideDialog()
 {
 	$("#bkgOverlay").fadeOut(400);
 	$("#delayedPopup").fadeOut(300);
 }
-// document.querySelector("#close").addEventListener("click", function(){
-// document.querySelector(".popup").style.display = "none";
-// });
 </script>
 <script src="content/js/custom.js"></script>
 </body>
