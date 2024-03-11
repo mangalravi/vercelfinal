@@ -1290,6 +1290,13 @@ color:#fff;
   font-weight: bold;
   font-size:0.875rem;
 }
+.box-set img{
+  border-radius: 0.75rem;
+}
+.box-set img:hover{
+transform: scale(1.03);
+transition: all 0.7s linear;
+}
 
 .box-set{
   height: 100%;
@@ -1718,8 +1725,9 @@ input:checked + span{background-color: var(--bs-primary);}
   margin-right: 5px;
 }
 .lvl{
-  font-size: 0.8rem;
+  font-size:1rem;
   color:#000;
+  font-weight: 600;
 }
 .lvl label{
   font-size: 0.875rem;
@@ -1939,7 +1947,7 @@ input:checked + span{background-color: var(--bs-primary);}
 
 button {
   font-size: 14px;
-  background: var(--bs-primary);
+  background: #13b88f;
   color: #fff;
   padding: 0.35rem 0.6rem;
   display: flex;
@@ -2063,28 +2071,16 @@ button:active {
 .maxHeading {
   font-weight: 600;
 }
-
-
-.cardContainer::before {
-  width: 100px;
-  height: 100px;
-  content: "";
-  position: absolute;
-  background-color: rgb(144, 161, 255);
-  z-index: -1;
-  border-radius: 50%;
-  left: 100px;
-  top: 50px;
-  transition: all 1s;
-}
-
 .cardContainer:hover::before {
   transform: translate(-50px, 50px);
 }
-
+.bdrbtm{
+  border-bottom: 1px solid #e7e7e8;
+}
 .btn-conteiner {
   display: flex;
 }
+
 
 .btn-content {
   display: flex;
@@ -2191,8 +2187,8 @@ button:active {
   background: #effffb;
   padding: 2.5rem;
   border-radius: 1rem;
-  height:150px;
-  overflow-y: scroll;
+  /* height:150px;
+  overflow-y: scroll; */
 }
 .grnbgc:hover{
   box-shadow: 0 0 30px -7px rgb(50 255 204 / 50%);
@@ -2220,10 +2216,11 @@ margin-bottom: 1rem;
 }
 .fxdtbl{
   overflow-y: scroll;
-  height: 320px;
+  height: 1053px;
   box-shadow: 0 0 25px -4px rgba(0,0,0,0.15);
   padding: 1rem;
-  border-radius: 1rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
   background:#fff;
 }
 .fxdtbl tr th{
@@ -2249,11 +2246,17 @@ margin-bottom: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: transparent;
+  background-color: #2ab13f;
   backdrop-filter: blur(96px);
   border-radius: 0.75rem;
   transition: all 0.3s;
   border: 1px solid #a0b5c1;
+}
+
+.Btn:hover .svgContainer {
+  backdrop-filter: blur(4px);
+ transform: scale(1.1);
+ transition: all 0.7s ease-in-out;
 }
 
 .BG {
@@ -2273,10 +2276,7 @@ margin-bottom: 1rem;
   transform-origin: bottom;
 }
 
-.Btn:hover .svgContainer {
-  background-color: rgba(156, 156, 156, 0.466);
-  backdrop-filter: blur(4px);
-}
+
 button:hover span.svgContainer{
   transform: translateX(0);
 }
@@ -2932,10 +2932,7 @@ label.required:after {
   .mrp::before{
     left: -9px;
   }
-  /* .grnbgc{
-    padding: 1.5rem 1rem;
-    margin-bottom:1.5rem;
-  } */
+
 }
 
 @media (max-width:991px){
