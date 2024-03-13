@@ -970,28 +970,15 @@ footer .adrs a{
        }
 }
 .card-wrap{
-    --color-text: #616161;
-    --color-text-btn: #ffffff;
-    --card1-gradient-color1: #f12711;
-    --card1-gradient-color2: #f5af19;
-    --card2-gradient-color1: #7F00FF;
-    --card2-gradient-color2: #E100FF;
-    --card3-gradient-color1: #3f2b96;
-    --card3-gradient-color2: #a8c0ff;
-    --card4-gradient-color1: #11998e;
-    --card4-gradient-color2: #38ef7d;
-    background: #fff;
-    border-radius: 20px;
-    border: 5px solid #fff;
-    overflow: hidden;
-    color: var(--color-text);
-    box-shadow:0 0 20px -4px rgba(0,0,0,0.15);
-    cursor: pointer;
-    transition: all .2s ease-in-out;
-    position: relative;
+  background: #fff;
+ box-shadow: 0 0 20px -4px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  position: relative;
+  border-radius: 0.75rem;
   }
   .card-wrap:hover{
-    transform: scale(1.2,1.1);
+    transform: scale(1.1,1.05);
     z-index: 1;
 transition: all 0.4s ease-in-out;
   }
@@ -1002,99 +989,60 @@ transition: all 0.4s ease-in-out;
   .card-header{
     height: 200px;
     width: 100%;
-    background: red;
-    border-radius:100% 0% 100% 0% / 0% 50% 50% 100% !important;
-    display: grid;
-    place-items: center;
-    position:relative;
   }
   
   .card-header img{
-    width: 90px;
-    height: 90px;
-    z-index:2;
-  }
-  .card-header::before{
-    width: 110px;
-    height: 110px;
-    position: absolute;
-    top: 42px;
-    left: 69px;
-    background: #fff;
-    content: "";
-    border-radius: 50%;
-    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    z-index: 2;
+    background: #ddf6ff;
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+    padding: 1rem;
   }
   .card-content{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 60%;
-    margin: 0 auto;
+padding:1rem 1.5rem;
+padding-bottom: 1.5rem;
   }
   .card-title{
     text-align: center;
     text-transform: uppercase;
     font-size: 16px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 0.5rem;
     color:var(--bs-secondary);
   }
   .card-text{
     text-align: center;
     font-size: 12px;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
   }
   .card-btn{
     border: none;
     border-radius:5px;
     padding: 5px 30px;
     color: #fff;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
     text-transform: uppercase;
     font-size: 0.75rem;
   }
   .card-btn:hover{
     color:#fff;
   }
-  .card-header.one{
-    background: linear-gradient(to bottom left, var(--card1-gradient-color1), var(--card1-gradient-color2));
+  .card-top .main{
+    position: absolute;
+    top: 0.5rem;
+    left: 0.625rem;
+    font-weight: bolder;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    z-index: 99;
   }
-  .card-header.two{
-    background: linear-gradient(to bottom left, var(--card2-gradient-color1), var(--card2-gradient-color2));
-  }
-  .card-header.three{
-    background: linear-gradient(to bottom left, var(--card3-gradient-color1), var(--card3-gradient-color2));
-  }
-  .card-header.four{
-    background: linear-gradient(to bottom left, var(--card4-gradient-color1), var(--card4-gradient-color2));
-  }
-  
-  .card-btn.one{
-    background: linear-gradient(to left, var(--card1-gradient-color1), var(--card1-gradient-color2));
-  }
-  .card-btn.two{
-    background: linear-gradient(to left, var(--card2-gradient-color1), var(--card2-gradient-color2));
-  }
-  .card-btn.three{
-    background: linear-gradient(to left, var(--card3-gradient-color1), var(--card3-gradient-color2));
-  }
-  .card-btn.four{
-    background: linear-gradient(to left, var(--card4-gradient-color1), var(--card4-gradient-color2));
-  }
-  .card-btn.one:hover{
-    background: linear-gradient(to left , var(--card1-gradient-color2) , var(--card1-gradient-color1));
-  }
-  .card-btn.two:hover{
-    background: linear-gradient(to left , var(--card2-gradient-color2) , var(--card2-gradient-color1));
-  }
-  .card-btn.three:hover{
-    background: linear-gradient(to left , var(--card3-gradient-color2) , var(--card3-gradient-color1));
-  }
-  .card-btn.four:hover{
-    background: linear-gradient(to left , var(--card4-gradient-color2) , var(--card4-gradient-color1));
-  }
-.card-top .text-white{
+ .card-top .main{
     position: absolute;
 top:0.5rem;
 left:10px;  
@@ -1102,8 +1050,9 @@ font-weight: bolder;
     font-size: 1.25rem;   
     display:flex;
     align-items:center;
+    z-index: 99;
 }
-.card-top .text-white span{
+ .card-top .main span{
 font-weight: normal;
     font-size: 0.85rem; 
     margin-left: 0.3rem;           
@@ -1112,7 +1061,8 @@ font-weight: normal;
     position: absolute;
 top:0.5rem;
 right:15px;
-color:#fff;
+color:var(--bs-primary);
+z-index: 99;
 }
 
 
