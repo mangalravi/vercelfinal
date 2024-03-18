@@ -3150,13 +3150,6 @@ label.required:after {
       transition: 0.7s;
 }
 
-.workitem:hover {
-  background: #3a8ce9;
-  transform: scale(1.025) !important;
-  z-index: 9;
-  color:#fff;
-}
-
 
 .workitem:before {
   content: "";
@@ -3713,7 +3706,7 @@ body.modal-open {
   display: none; 
 }
 
-#delayedPopup {
+#popup {
   position: fixed;
   top: 50%;
   left: 50%;
