@@ -18,7 +18,7 @@
     <nav class="navbar navbar-expand-lg p-md-2 navwhite">
     <div class="container-fluid position-relative">
       <a class="navbar-brand" href="/">
-        <img src="content/images/logo/isspl-logo.svg" height="36" width="95" alt="bynry_logo" title="bynry_logo">
+        <img src="content/images/b2blogo2.png" class="sitelogo" alt="b2blogo2" title="b2blogo2">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
       <span class="top-line"></span>
@@ -84,7 +84,7 @@
 <div class="modal-dialog modal-fullscreen-lg-down">
 <div class="modal-content">
 <div class="modal-header">
-  <h4 class="modal-title"><a class="navbar-brand" href="/"><img src="" height="28" alt="b2bstop" title="b2bstop" /></a></h4>
+  <h4 class="modal-title"><a class="navbar-brand" href="/"><img src="content/images/b2blogo2.png" class="sitelogo" alt="b2bstop" title="b2bstop" /></a></h4>
   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
 <div class="modal-body pt-0">
@@ -149,7 +149,7 @@
 </div>
 
 
-<section class="top-banner  position-relative">
+<section class="top-banner  position-relative overflow-x-hidden">
 <div class="container">
   <div class="row align-items-center">
     <div class="col-md-6 order-1 text-white">
@@ -615,7 +615,7 @@
       </div>
       <div class="col-sm-6 col-md-3 d-flex">
         <div class="adrs">
-          <a href="#">
+          <a href="http://maps.google.com/?q=1200 Pennsylvania Ave SE, Washington, District of Columbia, 20003"">
             <i class="bi bi-geo-alt-fill"></i>
             No. 565, Axis Pennmark building, 2nd, 3rd & 4th Floor, 9th cross road, Sarakki, 3rd phase, JP Nagar, Bangalore, Karnataka - 560078
           </a>
@@ -669,23 +669,26 @@
 AOS.init();
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
 <script>
-$(document).ready(function ()
-{
-	$("#bkgOverlay").delay(4800).fadeIn(400);
-	$("#delayedPopup").delay(5000).fadeIn(400);
-	
-	$("#btnClose").click(function (e)
-	{
-		HideDialog();
-		e.preventDefault();
-	});
+  $(document).ready(function () {
+    $("#bkgOverlay").delay(4800).fadeIn(400);
+    $("#delayedPopup").delay(5000).fadeIn(400);
+
+    $("body").addClass("modal-open"); // Add class to prevent scrolling
+
+    $("#btnClose").click(function (e) {
+        HideDialog();
+        e.preventDefault();
+    });
 });
-function HideDialog()
-{
-	$("#bkgOverlay").fadeOut(400);
-	$("#delayedPopup").fadeOut(300);
+
+function HideDialog() {
+    $("#bkgOverlay").fadeOut(400);
+    $("#delayedPopup").fadeOut(300);
+    $("body").removeClass("modal-open"); // Remove class to allow scrolling
 }
+
 </script>
 <script src="content/js/custom.js"></script>
 </body>
