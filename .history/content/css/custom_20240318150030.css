@@ -3713,7 +3713,7 @@ body.modal-open {
   display: none; 
 }
 
-#popup {
+#delayedPopup {
   position: fixed;
   top: 50%;
   left: 50%;
