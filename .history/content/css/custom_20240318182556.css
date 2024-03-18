@@ -1,5 +1,6 @@
 :root {
-    --bs-primary: #45a9e7;
+    /* --bs-primary: #45a9e7; */
+    --bs-primary: #4295c9;
     --bs-secondary: #2a2a61;
     --bs-heading: #183B56;
     --bs-para: #595959;
@@ -3067,7 +3068,7 @@ label.required:after {
   transition: 0.7s;
 }
 .workitem:hover {
-  background: #3a8ce9;
+  background: var(--bs-primary);
   transform: scale(1.025) !important;
   z-index: 9;
   color: #fff;
@@ -3202,7 +3203,7 @@ label.required:after {
   content: '';
   width: 1rem;
   height: 1rem;
-  background: #2381ea;
+  background: var(--bs-primary);
   border-radius: 50%;
   top: 38%;
   right: -9px;
