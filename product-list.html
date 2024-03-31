@@ -151,7 +151,7 @@
 
 <section class="p-0">
   <div class="layout has-sidebar fixed-sidebar fixed-header">
-    <aside id="sidebar" class="sidebar break-point-sm has-bg-image">
+    <aside id="sidebar" class="sidebar break-point-sm has-bg-image d-none d-lg-block">
       <a id="btn-collapse" class="sidebar-collapser" data-aos="fade-left" data-aos-duration="1400">
         <i class="bi bi-filter-left"></i>
       </a>
@@ -465,13 +465,24 @@
           <div class="col-md-3 mb-4">
             <span class="live">255 Live Lots (Hybrid)</span>
           </div>
-          <div class="col-md-6 mb-4">
-            <div class="inpbox">
-<input type="text" placeholder="Search for Lots">
-<button class="btn btn-primary">Search</button>
-          </div>
+          <div class="col-md-7 mb-4">
+            <div class="row">
+              <div class="col-8">
+                <div class="inpbox me-3">
+                  <input type="text" placeholder="Search for Lots">
+                  <button class="btn btn-primary">Search</button>
+                            </div>
+              </div>
+         <div class="col-4">
+          <a href="#" class="btn btn-secondary w-100 otrbtn" data-bs-toggle="modal" data-bs-target="#graded">
+            <!-- <img src="content/images/category-list.svg" alt="category"> -->
+            <i class="bi bi-search"></i>
+            Search By
+  </a>
+</div>
+</div>
         </div>
-          <div class="col-md-3 mb-4">
+          <div class="col-md-2 mb-4">
             <div class="drpdwn">
 <div class="btn-group">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -486,7 +497,7 @@
 </div>
             </div>
           </div>
-           <div class="col-sm-6 col-md-4 col-xl-3 d-flex"  data-aos="fade-up" data-aos-duration="1400">
+           <div class="col-sm-6 col-md-4 col-xl-3 d-flex">
             <div class="d-block marketplace-img box-set">
               <div class="tophdrimg">
               <img src="content/images/Amazon-logo.png" class="img-fluid amazon">
@@ -590,9 +601,38 @@
                   <i class="bi bi-box"></i>Hybrid
                 </p>
               </div>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <div class="otrbtn extrpdng">
+                  <a href="#" class="btn btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#prodlistgraded1">
+                            <img src="content/images/category-list.svg" alt="category">
+                            Graded
+                  </a>
+                </div>
+                <div class="heart-container" title="Like">
+                  <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+                  <div class="svg-container">
+                      <svg viewBox="0 0 24 24" class="svg-outline" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                          </path>
+                      </svg>
+                      <svg viewBox="0 0 24 24" class="svg-filled" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                          </path>
+                      </svg>
+                      <svg class="svg-celebrate" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                          <polygon points="10,10 20,20"></polygon>
+                          <polygon points="10,50 20,50"></polygon>
+                          <polygon points="20,80 30,70"></polygon>
+                          <polygon points="90,10 80,20"></polygon>
+                          <polygon points="90,50 80,50"></polygon>
+                          <polygon points="80,80 70,70"></polygon>
+                      </svg>
+                  </div>
+              </div>
+              </div>
             </div>
           </div>
-           <div class="col-sm-6 col-md-4 col-xl-3 d-flex"  data-aos="fade-up" data-aos-duration="1400">
+           <div class="col-sm-6 col-md-4 col-xl-3 d-flex">
             <div class="d-block marketplace-img box-set">
               <div class="tophdrimg">
               <img src="content/images/Amazon-logo.png" class="img-fluid amazon">
@@ -696,9 +736,38 @@
                   <i class="bi bi-box"></i>Hybrid
                 </p>
               </div>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <div class="otrbtn extrpdng">
+                  <a href="#" class="btn btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#prodlistgraded1">
+                    <img src="content/images/same.svg" alt="same">
+                    As It Is
+          </a>
+                </div>
+                <div class="heart-container" title="Like">
+                  <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+                  <div class="svg-container">
+                      <svg viewBox="0 0 24 24" class="svg-outline" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                          </path>
+                      </svg>
+                      <svg viewBox="0 0 24 24" class="svg-filled" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                          </path>
+                      </svg>
+                      <svg class="svg-celebrate" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                          <polygon points="10,10 20,20"></polygon>
+                          <polygon points="10,50 20,50"></polygon>
+                          <polygon points="20,80 30,70"></polygon>
+                          <polygon points="90,10 80,20"></polygon>
+                          <polygon points="90,50 80,50"></polygon>
+                          <polygon points="80,80 70,70"></polygon>
+                      </svg>
+                  </div>
+              </div>
+              </div>
             </div>
           </div>
-           <div class="col-sm-6 col-md-4 col-xl-3 d-flex"  data-aos="fade-up" data-aos-duration="1400">
+           <div class="col-sm-6 col-md-4 col-xl-3 d-flex">
             <div class="d-block marketplace-img box-set">
               <div class="tophdrimg">
               <img src="content/images/Amazon-logo.png" class="img-fluid amazon">
@@ -802,9 +871,38 @@
                   <i class="bi bi-box"></i>Hybrid
                 </p>
               </div>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <div class="otrbtn extrpdng">
+                  <a href="#" class="btn btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#prodlistgraded1">
+                    <img src="content/images/right-logo.svg" alt="right">
+                    Seal Packed
+          </a>
+                </div>
+                <div class="heart-container" title="Like">
+                  <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+                  <div class="svg-container">
+                      <svg viewBox="0 0 24 24" class="svg-outline" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                          </path>
+                      </svg>
+                      <svg viewBox="0 0 24 24" class="svg-filled" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                          </path>
+                      </svg>
+                      <svg class="svg-celebrate" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                          <polygon points="10,10 20,20"></polygon>
+                          <polygon points="10,50 20,50"></polygon>
+                          <polygon points="20,80 30,70"></polygon>
+                          <polygon points="90,10 80,20"></polygon>
+                          <polygon points="90,50 80,50"></polygon>
+                          <polygon points="80,80 70,70"></polygon>
+                      </svg>
+                  </div>
+              </div>
+              </div>
             </div>
           </div>
-           <div class="col-sm-6 col-md-4 col-xl-3 d-flex"  data-aos="fade-up" data-aos-duration="1400">
+           <div class="col-sm-6 col-md-4 col-xl-3 d-flex">
             <div class="d-block marketplace-img box-set">
               <div class="tophdrimg">
               <img src="content/images/Amazon-logo.png" class="img-fluid amazon">
@@ -908,9 +1006,38 @@
                   <i class="bi bi-box"></i>Hybrid
                 </p>
               </div>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <div class="otrbtn extrpdng">
+                  <a href="#" class="btn btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#prodlistgraded1">
+                    <img src="content/images/open-box.svg" alt="open">
+                    Open Box
+          </a>
+                </div>
+                <div class="heart-container" title="Like">
+                  <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+                  <div class="svg-container">
+                      <svg viewBox="0 0 24 24" class="svg-outline" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                          </path>
+                      </svg>
+                      <svg viewBox="0 0 24 24" class="svg-filled" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                          </path>
+                      </svg>
+                      <svg class="svg-celebrate" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                          <polygon points="10,10 20,20"></polygon>
+                          <polygon points="10,50 20,50"></polygon>
+                          <polygon points="20,80 30,70"></polygon>
+                          <polygon points="90,10 80,20"></polygon>
+                          <polygon points="90,50 80,50"></polygon>
+                          <polygon points="80,80 70,70"></polygon>
+                      </svg>
+                  </div>
+              </div>
+              </div>
             </div>
           </div>
-           <div class="col-sm-6 col-md-4 col-xl-3 d-flex"  data-aos="fade-up" data-aos-duration="1400">
+           <div class="col-sm-6 col-md-4 col-xl-3 d-flex">
             <div class="d-block marketplace-img box-set">
               <div class="tophdrimg">
               <img src="content/images/Amazon-logo.png" class="img-fluid amazon">
@@ -1014,9 +1141,38 @@
                   <i class="bi bi-box"></i>Hybrid
                 </p>
               </div>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <div class="otrbtn extrpdng">
+                  <a href="#" class="btn btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#prodlistgraded1">
+                    <img src="content/images/thumb.svg" alt="thumb">
+                    All
+          </a>
+                </div>
+                <div class="heart-container" title="Like">
+                  <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+                  <div class="svg-container">
+                      <svg viewBox="0 0 24 24" class="svg-outline" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                          </path>
+                      </svg>
+                      <svg viewBox="0 0 24 24" class="svg-filled" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                          </path>
+                      </svg>
+                      <svg class="svg-celebrate" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                          <polygon points="10,10 20,20"></polygon>
+                          <polygon points="10,50 20,50"></polygon>
+                          <polygon points="20,80 30,70"></polygon>
+                          <polygon points="90,10 80,20"></polygon>
+                          <polygon points="90,50 80,50"></polygon>
+                          <polygon points="80,80 70,70"></polygon>
+                      </svg>
+                  </div>
+              </div>
+              </div>
             </div>
           </div>
-           <div class="col-sm-6 col-md-4 col-xl-3 d-flex"  data-aos="fade-up" data-aos-duration="1400">
+           <div class="col-sm-6 col-md-4 col-xl-3 d-flex">
             <div class="d-block marketplace-img box-set">
               <div class="tophdrimg">
               <img src="content/images/Amazon-logo.png" class="img-fluid amazon">
@@ -1120,9 +1276,38 @@
                   <i class="bi bi-box"></i>Hybrid
                 </p>
               </div>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <div class="otrbtn extrpdng">
+                   <a href="#" class="btn btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#prodlistgraded1">
+                            <img src="content/images/category-list.svg" alt="category">
+                            Graded
+                  </a>
+                </div>
+                <div class="heart-container" title="Like">
+                  <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+                  <div class="svg-container">
+                      <svg viewBox="0 0 24 24" class="svg-outline" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                          </path>
+                      </svg>
+                      <svg viewBox="0 0 24 24" class="svg-filled" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                          </path>
+                      </svg>
+                      <svg class="svg-celebrate" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                          <polygon points="10,10 20,20"></polygon>
+                          <polygon points="10,50 20,50"></polygon>
+                          <polygon points="20,80 30,70"></polygon>
+                          <polygon points="90,10 80,20"></polygon>
+                          <polygon points="90,50 80,50"></polygon>
+                          <polygon points="80,80 70,70"></polygon>
+                      </svg>
+                  </div>
+              </div>
+              </div>
             </div>
           </div>
-           <div class="col-sm-6 col-md-4 col-xl-3 d-flex"  data-aos="fade-up" data-aos-duration="1400">
+           <div class="col-sm-6 col-md-4 col-xl-3 d-flex">
             <div class="d-block marketplace-img box-set">
               <div class="tophdrimg">
               <img src="content/images/Amazon-logo.png" class="img-fluid amazon">
@@ -1226,9 +1411,38 @@
                   <i class="bi bi-box"></i>Hybrid
                 </p>
               </div>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <div class="otrbtn extrpdng">
+                   <a href="#" class="btn btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#prodlistgraded1">
+                    <img src="content/images/same.svg" alt="same">
+                    As It Is
+          </a>
+                </div>
+                <div class="heart-container" title="Like">
+                  <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+                  <div class="svg-container">
+                      <svg viewBox="0 0 24 24" class="svg-outline" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                          </path>
+                      </svg>
+                      <svg viewBox="0 0 24 24" class="svg-filled" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                          </path>
+                      </svg>
+                      <svg class="svg-celebrate" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                          <polygon points="10,10 20,20"></polygon>
+                          <polygon points="10,50 20,50"></polygon>
+                          <polygon points="20,80 30,70"></polygon>
+                          <polygon points="90,10 80,20"></polygon>
+                          <polygon points="90,50 80,50"></polygon>
+                          <polygon points="80,80 70,70"></polygon>
+                      </svg>
+                  </div>
+              </div>
+              </div>
             </div>
           </div>
-           <div class="col-sm-6 col-md-4 col-xl-3 d-flex"  data-aos="fade-up" data-aos-duration="1400">
+           <div class="col-sm-6 col-md-4 col-xl-3 d-flex">
             <div class="d-block marketplace-img box-set">
               <div class="tophdrimg">
               <img src="content/images/Amazon-logo.png" class="img-fluid amazon">
@@ -1332,9 +1546,38 @@
                   <i class="bi bi-box"></i>Hybrid
                 </p>
               </div>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <div class="otrbtn extrpdng">
+                   <a href="#" class="btn btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#prodlistgraded1">
+                    <img src="content/images/right-logo.svg" alt="right">
+                    Seal Packed
+          </a>
+                </div>
+                <div class="heart-container" title="Like">
+                  <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+                  <div class="svg-container">
+                      <svg viewBox="0 0 24 24" class="svg-outline" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                          </path>
+                      </svg>
+                      <svg viewBox="0 0 24 24" class="svg-filled" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                          </path>
+                      </svg>
+                      <svg class="svg-celebrate" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                          <polygon points="10,10 20,20"></polygon>
+                          <polygon points="10,50 20,50"></polygon>
+                          <polygon points="20,80 30,70"></polygon>
+                          <polygon points="90,10 80,20"></polygon>
+                          <polygon points="90,50 80,50"></polygon>
+                          <polygon points="80,80 70,70"></polygon>
+                      </svg>
+                  </div>
+              </div>
+              </div>
             </div>
           </div>
-           <div class="col-sm-6 col-md-4 col-xl-3 d-flex"  data-aos="fade-up" data-aos-duration="1400">
+           <div class="col-sm-6 col-md-4 col-xl-3 d-flex">
             <div class="d-block marketplace-img box-set">
               <div class="tophdrimg">
               <img src="content/images/Amazon-logo.png" class="img-fluid amazon">
@@ -1438,9 +1681,38 @@
                   <i class="bi bi-box"></i>Hybrid
                 </p>
               </div>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <div class="otrbtn extrpdng">
+                   <a href="#" class="btn btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#prodlistgraded1">
+                    <img src="content/images/open-box.svg" alt="open">
+                    Open Box
+          </a>
+                </div>
+                <div class="heart-container" title="Like">
+                  <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+                  <div class="svg-container">
+                      <svg viewBox="0 0 24 24" class="svg-outline" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                          </path>
+                      </svg>
+                      <svg viewBox="0 0 24 24" class="svg-filled" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                          </path>
+                      </svg>
+                      <svg class="svg-celebrate" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                          <polygon points="10,10 20,20"></polygon>
+                          <polygon points="10,50 20,50"></polygon>
+                          <polygon points="20,80 30,70"></polygon>
+                          <polygon points="90,10 80,20"></polygon>
+                          <polygon points="90,50 80,50"></polygon>
+                          <polygon points="80,80 70,70"></polygon>
+                      </svg>
+                  </div>
+              </div>
+              </div>
             </div>
           </div>
-           <div class="col-sm-6 col-md-4 col-xl-3 d-flex"  data-aos="fade-up" data-aos-duration="1400">
+           <div class="col-sm-6 col-md-4 col-xl-3 d-flex">
             <div class="d-block marketplace-img box-set">
               <div class="tophdrimg">
               <img src="content/images/Amazon-logo.png" class="img-fluid amazon">
@@ -1544,9 +1816,38 @@
                   <i class="bi bi-box"></i>Hybrid
                 </p>
               </div>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <div class="otrbtn extrpdng">
+                   <a href="#" class="btn btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#prodlistgraded1">
+                    <img src="content/images/thumb.svg" alt="thumb">
+                    All
+          </a>
+                </div>
+                <div class="heart-container" title="Like">
+                  <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+                  <div class="svg-container">
+                      <svg viewBox="0 0 24 24" class="svg-outline" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                          </path>
+                      </svg>
+                      <svg viewBox="0 0 24 24" class="svg-filled" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                          </path>
+                      </svg>
+                      <svg class="svg-celebrate" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                          <polygon points="10,10 20,20"></polygon>
+                          <polygon points="10,50 20,50"></polygon>
+                          <polygon points="20,80 30,70"></polygon>
+                          <polygon points="90,10 80,20"></polygon>
+                          <polygon points="90,50 80,50"></polygon>
+                          <polygon points="80,80 70,70"></polygon>
+                      </svg>
+                  </div>
+              </div>
+              </div>
             </div>
           </div>
-           <div class="col-sm-6 col-md-4 col-xl-3 d-flex"  data-aos="fade-up" data-aos-duration="1400">
+           <div class="col-sm-6 col-md-4 col-xl-3 d-flex">
             <div class="d-block marketplace-img box-set">
               <div class="tophdrimg">
               <img src="content/images/Amazon-logo.png" class="img-fluid amazon">
@@ -1650,9 +1951,38 @@
                   <i class="bi bi-box"></i>Hybrid
                 </p>
               </div>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <div class="otrbtn extrpdng">
+                   <a href="#" class="btn btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#prodlistgraded1">
+                            <img src="content/images/category-list.svg" alt="category">
+                            Graded
+                  </a>
+                </div>
+                <div class="heart-container" title="Like">
+                  <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+                  <div class="svg-container">
+                      <svg viewBox="0 0 24 24" class="svg-outline" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                          </path>
+                      </svg>
+                      <svg viewBox="0 0 24 24" class="svg-filled" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                          </path>
+                      </svg>
+                      <svg class="svg-celebrate" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                          <polygon points="10,10 20,20"></polygon>
+                          <polygon points="10,50 20,50"></polygon>
+                          <polygon points="20,80 30,70"></polygon>
+                          <polygon points="90,10 80,20"></polygon>
+                          <polygon points="90,50 80,50"></polygon>
+                          <polygon points="80,80 70,70"></polygon>
+                      </svg>
+                  </div>
+              </div>
+              </div>
             </div>
           </div>
-           <div class="col-sm-6 col-md-4 col-xl-3 d-flex"  data-aos="fade-up" data-aos-duration="1400">
+           <div class="col-sm-6 col-md-4 col-xl-3 d-flex">
             <div class="d-block marketplace-img box-set">
               <div class="tophdrimg">
               <img src="content/images/Amazon-logo.png" class="img-fluid amazon">
@@ -1756,9 +2086,38 @@
                   <i class="bi bi-box"></i>Hybrid
                 </p>
               </div>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <div class="otrbtn extrpdng">
+                   <a href="#" class="btn btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#prodlistgraded1">
+                    <img src="content/images/same.svg" alt="same">
+                    As It Is
+          </a>
+                </div>
+                <div class="heart-container" title="Like">
+                  <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+                  <div class="svg-container">
+                      <svg viewBox="0 0 24 24" class="svg-outline" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                          </path>
+                      </svg>
+                      <svg viewBox="0 0 24 24" class="svg-filled" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                          </path>
+                      </svg>
+                      <svg class="svg-celebrate" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                          <polygon points="10,10 20,20"></polygon>
+                          <polygon points="10,50 20,50"></polygon>
+                          <polygon points="20,80 30,70"></polygon>
+                          <polygon points="90,10 80,20"></polygon>
+                          <polygon points="90,50 80,50"></polygon>
+                          <polygon points="80,80 70,70"></polygon>
+                      </svg>
+                  </div>
+              </div>
+              </div>
             </div>
           </div>
-           <div class="col-sm-6 col-md-4 col-xl-3 d-flex"  data-aos="fade-up" data-aos-duration="1400">
+           <div class="col-sm-6 col-md-4 col-xl-3 d-flex">
             <div class="d-block marketplace-img box-set">
               <div class="tophdrimg">
               <img src="content/images/Amazon-logo.png" class="img-fluid amazon">
@@ -1862,9 +2221,38 @@
                   <i class="bi bi-box"></i>Hybrid
                 </p>
               </div>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <div class="otrbtn extrpdng">
+                   <a href="#" class="btn btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#prodlistgraded1">
+                    <img src="content/images/right-logo.svg" alt="right">
+                    Seal Packed
+          </a>
+                </div>
+                <div class="heart-container" title="Like">
+                  <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+                  <div class="svg-container">
+                      <svg viewBox="0 0 24 24" class="svg-outline" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                          </path>
+                      </svg>
+                      <svg viewBox="0 0 24 24" class="svg-filled" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                          </path>
+                      </svg>
+                      <svg class="svg-celebrate" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                          <polygon points="10,10 20,20"></polygon>
+                          <polygon points="10,50 20,50"></polygon>
+                          <polygon points="20,80 30,70"></polygon>
+                          <polygon points="90,10 80,20"></polygon>
+                          <polygon points="90,50 80,50"></polygon>
+                          <polygon points="80,80 70,70"></polygon>
+                      </svg>
+                  </div>
+              </div>
+              </div>
             </div>
           </div>
-           <div class="col-sm-6 col-md-4 col-xl-3 d-flex"  data-aos="fade-up" data-aos-duration="1400">
+           <div class="col-sm-6 col-md-4 col-xl-3 d-flex">
             <div class="d-block marketplace-img box-set">
               <div class="tophdrimg">
               <img src="content/images/Amazon-logo.png" class="img-fluid amazon">
@@ -1968,9 +2356,38 @@
                   <i class="bi bi-box"></i>Hybrid
                 </p>
               </div>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <div class="otrbtn extrpdng">
+                   <a href="#" class="btn btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#prodlistgraded1">
+                    <img src="content/images/open-box.svg" alt="open">
+                    Open Box
+          </a>
+                </div>
+                <div class="heart-container" title="Like">
+                  <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+                  <div class="svg-container">
+                      <svg viewBox="0 0 24 24" class="svg-outline" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                          </path>
+                      </svg>
+                      <svg viewBox="0 0 24 24" class="svg-filled" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                          </path>
+                      </svg>
+                      <svg class="svg-celebrate" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                          <polygon points="10,10 20,20"></polygon>
+                          <polygon points="10,50 20,50"></polygon>
+                          <polygon points="20,80 30,70"></polygon>
+                          <polygon points="90,10 80,20"></polygon>
+                          <polygon points="90,50 80,50"></polygon>
+                          <polygon points="80,80 70,70"></polygon>
+                      </svg>
+                  </div>
+              </div>
+              </div>
             </div>
           </div>
-           <div class="col-sm-6 col-md-4 col-xl-3 d-flex"  data-aos="fade-up" data-aos-duration="1400">
+           <div class="col-sm-6 col-md-4 col-xl-3 d-flex">
             <div class="d-block marketplace-img box-set">
               <div class="tophdrimg">
               <img src="content/images/Amazon-logo.png" class="img-fluid amazon">
@@ -2074,9 +2491,38 @@
                   <i class="bi bi-box"></i>Hybrid
                 </p>
               </div>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <div class="otrbtn extrpdng">
+                   <a href="#" class="btn btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#prodlistgraded1">
+                    <img src="content/images/thumb.svg" alt="thumb">
+                    All
+          </a>
+                </div>
+                <div class="heart-container" title="Like">
+                  <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+                  <div class="svg-container">
+                      <svg viewBox="0 0 24 24" class="svg-outline" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                          </path>
+                      </svg>
+                      <svg viewBox="0 0 24 24" class="svg-filled" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                          </path>
+                      </svg>
+                      <svg class="svg-celebrate" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                          <polygon points="10,10 20,20"></polygon>
+                          <polygon points="10,50 20,50"></polygon>
+                          <polygon points="20,80 30,70"></polygon>
+                          <polygon points="90,10 80,20"></polygon>
+                          <polygon points="90,50 80,50"></polygon>
+                          <polygon points="80,80 70,70"></polygon>
+                      </svg>
+                  </div>
+              </div>
+              </div>
             </div>
           </div>
-           <div class="col-sm-6 col-md-4 col-xl-3 d-flex"  data-aos="fade-up" data-aos-duration="1400">
+           <div class="col-sm-6 col-md-4 col-xl-3 d-flex">
             <div class="d-block marketplace-img box-set">
               <div class="tophdrimg">
               <img src="content/images/Amazon-logo.png" class="img-fluid amazon">
@@ -2179,6 +2625,35 @@
                 <p class="d-flex flex-column">
                   <i class="bi bi-box"></i>Hybrid
                 </p>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <div class="otrbtn extrpdng">
+                   <a href="#" class="btn btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#prodlistgraded1">
+                    <img src="content/images/right-logo.svg" alt="right">
+                    Seal Packed
+          </a>
+                </div>
+                <div class="heart-container" title="Like">
+                  <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+                  <div class="svg-container">
+                      <svg viewBox="0 0 24 24" class="svg-outline" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                          </path>
+                      </svg>
+                      <svg viewBox="0 0 24 24" class="svg-filled" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                          </path>
+                      </svg>
+                      <svg class="svg-celebrate" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                          <polygon points="10,10 20,20"></polygon>
+                          <polygon points="10,50 20,50"></polygon>
+                          <polygon points="20,80 30,70"></polygon>
+                          <polygon points="90,10 80,20"></polygon>
+                          <polygon points="90,50 80,50"></polygon>
+                          <polygon points="80,80 70,70"></polygon>
+                      </svg>
+                  </div>
+              </div>
               </div>
             </div>
           </div>
@@ -2258,7 +2733,7 @@
 </footer>
 
 <!--bottom filter -->
-<button class="bfltr" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><i class="bi bi-filter-left"></i>Sort</button>
+<button class="bfltr d-flex justify-content-center d-none-lg" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><i class="bi bi-filter-left"></i>Sort</button>
 
 <div class="offcanvas offcanvas-bottom offhgt" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
   <div class="offcanvas-header">
@@ -2563,6 +3038,452 @@
   <button class="navbar-toggler  bfltr mdlcat" type="button" data-bs-toggle="modal" data-bs-target="#catagory">
     <i class="bi bi-funnel"></i> Filter
 </button>
+
+
+
+
+
+<!-- search by pop-up -->
+
+
+<div class="modal fade" id="graded" tabindex="-1" aria-labelledby="gradedLabel" aria-hidden="true">
+  <div class="modal-dialog customwidthmodel">
+    <div class="modal-content lsttype">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="gradedLabel">Grad A</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 pt-3">
+       <h4>Select Any one</h4>
+       <div class="glass">
+        <div class="row">
+          <div class="col-md-6 col-lg">
+            <div class="otrbtn">
+              <a href="#" class="btn btn-secondary w-100">
+                        <img src="content/images/category-list.svg" alt="category">
+                        Graded
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg">
+            <div class="otrbtn">
+              <a href="#" class="btn btn-secondary w-100">
+                        <img src="content/images/same.svg" alt="same">
+                        As It Is
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg">
+            <div class="otrbtn">
+              <a href="#" class="btn btn-secondary w-100">
+                        <img src="content/images/right-logo.svg" alt="right">
+                        Seal Packed
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg">
+            <div class="otrbtn">
+              <a href="#" class="btn btn-secondary w-100">
+                        <img src="content/images/open-box.svg" alt="open">
+                        Open Box
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg">
+            <div class="otrbtn">
+              <a href="#" class="btn btn-secondary w-100">
+                        <img src="content/images/thumb.svg" alt="thumb">
+                        All
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+
+
+<!-- model for all 5 btns -->
+
+
+<div class="modal fade" id="prodlistgraded1">
+  <div class="modal-dialog">
+    <div class="modal-content lsttype">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="gradedLabel">Grad A</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 pt-3">
+       <h4>Grad Title</h4>
+       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, laudantium, molestiae consequatur quisquam aliquam itaque cumque voluptatem numquam vitae nam velit voluptatibus nobis dicta, tempore in nulla eligendi blanditiis cupiditate?</p>
+       <ul class="ps-3">
+        <li>Grad1</li>
+        <li>Grad2</li>
+        <li>Grad3</li>
+        <li>Grad4</li>
+        <li>Grad5</li>
+       
+       </ul>
+      </div>
+     
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="prodlistgraded2">
+  <div class="modal-dialog">
+    <div class="modal-content lsttype">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="gradedLabel">Grad A</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 pt-3">
+       <h4>Grad Title</h4>
+       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, laudantium, molestiae consequatur quisquam aliquam itaque cumque voluptatem numquam vitae nam velit voluptatibus nobis dicta, tempore in nulla eligendi blanditiis cupiditate?</p>
+       <ul class="ps-3">
+        <li>Grad1</li>
+        <li>Grad2</li>
+        <li>Grad3</li>
+        <li>Grad4</li>
+        <li>Grad5</li>
+       
+       </ul>
+      </div>
+     
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="prodlistgraded3">
+  <div class="modal-dialog">
+    <div class="modal-content lsttype">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="gradedLabel">Grad A</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 pt-3">
+       <h4>Grad Title</h4>
+       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, laudantium, molestiae consequatur quisquam aliquam itaque cumque voluptatem numquam vitae nam velit voluptatibus nobis dicta, tempore in nulla eligendi blanditiis cupiditate?</p>
+       <ul class="ps-3">
+        <li>Grad1</li>
+        <li>Grad2</li>
+        <li>Grad3</li>
+        <li>Grad4</li>
+        <li>Grad5</li>
+       
+       </ul>
+      </div>
+     
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="prodlistgraded4">
+  <div class="modal-dialog">
+    <div class="modal-content lsttype">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="gradedLabel">Grad A</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 pt-3">
+       <h4>Grad Title</h4>
+       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, laudantium, molestiae consequatur quisquam aliquam itaque cumque voluptatem numquam vitae nam velit voluptatibus nobis dicta, tempore in nulla eligendi blanditiis cupiditate?</p>
+       <ul class="ps-3">
+        <li>Grad1</li>
+        <li>Grad2</li>
+        <li>Grad3</li>
+        <li>Grad4</li>
+        <li>Grad5</li>
+       
+       </ul>
+      </div>
+     
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="prodlistgraded5">
+  <div class="modal-dialog">
+    <div class="modal-content lsttype">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="gradedLabel">Grad A</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 pt-3">
+       <h4>Grad Title</h4>
+       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, laudantium, molestiae consequatur quisquam aliquam itaque cumque voluptatem numquam vitae nam velit voluptatibus nobis dicta, tempore in nulla eligendi blanditiis cupiditate?</p>
+       <ul class="ps-3">
+        <li>Grad1</li>
+        <li>Grad2</li>
+        <li>Grad3</li>
+        <li>Grad4</li>
+        <li>Grad5</li>
+       
+       </ul>
+      </div>
+     
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="prodlistgraded6">
+  <div class="modal-dialog">
+    <div class="modal-content lsttype">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="gradedLabel">Grad A</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 pt-3">
+       <h4>Grad Title</h4>
+       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, laudantium, molestiae consequatur quisquam aliquam itaque cumque voluptatem numquam vitae nam velit voluptatibus nobis dicta, tempore in nulla eligendi blanditiis cupiditate?</p>
+       <ul class="ps-3">
+        <li>Grad1</li>
+        <li>Grad2</li>
+        <li>Grad3</li>
+        <li>Grad4</li>
+        <li>Grad5</li>
+       
+       </ul>
+      </div>
+     
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="prodlistgraded7">
+  <div class="modal-dialog">
+    <div class="modal-content lsttype">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="gradedLabel">Grad A</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 pt-3">
+       <h4>Grad Title</h4>
+       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, laudantium, molestiae consequatur quisquam aliquam itaque cumque voluptatem numquam vitae nam velit voluptatibus nobis dicta, tempore in nulla eligendi blanditiis cupiditate?</p>
+       <ul class="ps-3">
+        <li>Grad1</li>
+        <li>Grad2</li>
+        <li>Grad3</li>
+        <li>Grad4</li>
+        <li>Grad5</li>
+       
+       </ul>
+      </div>
+     
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="prodlistgraded8">
+  <div class="modal-dialog">
+    <div class="modal-content lsttype">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="gradedLabel">Grad A</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 pt-3">
+       <h4>Grad Title</h4>
+       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, laudantium, molestiae consequatur quisquam aliquam itaque cumque voluptatem numquam vitae nam velit voluptatibus nobis dicta, tempore in nulla eligendi blanditiis cupiditate?</p>
+       <ul class="ps-3">
+        <li>Grad1</li>
+        <li>Grad2</li>
+        <li>Grad3</li>
+        <li>Grad4</li>
+        <li>Grad5</li>
+       
+       </ul>
+      </div>
+     
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="prodlistgraded9">
+  <div class="modal-dialog">
+    <div class="modal-content lsttype">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="gradedLabel">Grad A</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 pt-3">
+       <h4>Grad Title</h4>
+       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, laudantium, molestiae consequatur quisquam aliquam itaque cumque voluptatem numquam vitae nam velit voluptatibus nobis dicta, tempore in nulla eligendi blanditiis cupiditate?</p>
+       <ul class="ps-3">
+        <li>Grad1</li>
+        <li>Grad2</li>
+        <li>Grad3</li>
+        <li>Grad4</li>
+        <li>Grad5</li>
+       
+       </ul>
+      </div>
+     
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="prodlistgraded10">
+  <div class="modal-dialog">
+    <div class="modal-content lsttype">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="gradedLabel">Grad A</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 pt-3">
+       <h4>Grad Title</h4>
+       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, laudantium, molestiae consequatur quisquam aliquam itaque cumque voluptatem numquam vitae nam velit voluptatibus nobis dicta, tempore in nulla eligendi blanditiis cupiditate?</p>
+       <ul class="ps-3">
+        <li>Grad1</li>
+        <li>Grad2</li>
+        <li>Grad3</li>
+        <li>Grad4</li>
+        <li>Grad5</li>
+       
+       </ul>
+      </div>
+     
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="prodlistgraded11">
+  <div class="modal-dialog">
+    <div class="modal-content lsttype">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="gradedLabel">Grad A</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 pt-3">
+       <h4>Grad Title</h4>
+       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, laudantium, molestiae consequatur quisquam aliquam itaque cumque voluptatem numquam vitae nam velit voluptatibus nobis dicta, tempore in nulla eligendi blanditiis cupiditate?</p>
+       <ul class="ps-3">
+        <li>Grad1</li>
+        <li>Grad2</li>
+        <li>Grad3</li>
+        <li>Grad4</li>
+        <li>Grad5</li>
+       
+       </ul>
+      </div>
+     
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="prodlistgraded12">
+  <div class="modal-dialog">
+    <div class="modal-content lsttype">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="gradedLabel">Grad A</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 pt-3">
+       <h4>Grad Title</h4>
+       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, laudantium, molestiae consequatur quisquam aliquam itaque cumque voluptatem numquam vitae nam velit voluptatibus nobis dicta, tempore in nulla eligendi blanditiis cupiditate?</p>
+       <ul class="ps-3">
+        <li>Grad1</li>
+        <li>Grad2</li>
+        <li>Grad3</li>
+        <li>Grad4</li>
+        <li>Grad5</li>
+       
+       </ul>
+      </div>
+     
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="prodlistgraded13">
+  <div class="modal-dialog">
+    <div class="modal-content lsttype">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="gradedLabel">Grad A</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 pt-3">
+       <h4>Grad Title</h4>
+       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, laudantium, molestiae consequatur quisquam aliquam itaque cumque voluptatem numquam vitae nam velit voluptatibus nobis dicta, tempore in nulla eligendi blanditiis cupiditate?</p>
+       <ul class="ps-3">
+        <li>Grad1</li>
+        <li>Grad2</li>
+        <li>Grad3</li>
+        <li>Grad4</li>
+        <li>Grad5</li>
+       
+       </ul>
+      </div>
+     
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="prodlistgraded14">
+  <div class="modal-dialog">
+    <div class="modal-content lsttype">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="gradedLabel">Grad A</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 pt-3">
+       <h4>Grad Title</h4>
+       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, laudantium, molestiae consequatur quisquam aliquam itaque cumque voluptatem numquam vitae nam velit voluptatibus nobis dicta, tempore in nulla eligendi blanditiis cupiditate?</p>
+       <ul class="ps-3">
+        <li>Grad1</li>
+        <li>Grad2</li>
+        <li>Grad3</li>
+        <li>Grad4</li>
+        <li>Grad5</li>
+       
+       </ul>
+      </div>
+     
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="prodlistgraded15">
+  <div class="modal-dialog">
+    <div class="modal-content lsttype">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="gradedLabel">Grad A</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 pt-3">
+       <h4>Grad Title</h4>
+       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, laudantium, molestiae consequatur quisquam aliquam itaque cumque voluptatem numquam vitae nam velit voluptatibus nobis dicta, tempore in nulla eligendi blanditiis cupiditate?</p>
+       <ul class="ps-3">
+        <li>Grad1</li>
+        <li>Grad2</li>
+        <li>Grad3</li>
+        <li>Grad4</li>
+        <li>Grad5</li>
+       
+       </ul>
+      </div>
+     
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="prodlistgraded16">
+  <div class="modal-dialog">
+    <div class="modal-content lsttype">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="gradedLabel">Grad A</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 pt-3">
+       <h4>Grad Title</h4>
+       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, laudantium, molestiae consequatur quisquam aliquam itaque cumque voluptatem numquam vitae nam velit voluptatibus nobis dicta, tempore in nulla eligendi blanditiis cupiditate?</p>
+       <ul class="ps-3">
+        <li>Grad1</li>
+        <li>Grad2</li>
+        <li>Grad3</li>
+        <li>Grad4</li>
+        <li>Grad5</li>
+       
+       </ul>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>        <!-- slick javascript cdn --> 

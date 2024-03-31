@@ -55,55 +55,69 @@ $('.prev-arrow').click(function() {
 
   $('.next-arrow').click(function() {
     $('.projetos-slider').slick('slickNext'); // Trigger next slide on click
+
+
+
+
+
+
+    
   });
   
 // product-list page
 
-
-
-$(".sidebar-dropdown > a").click(function() {
-    $(".sidebar-submenu").slideUp(200);
-    if (
-      $(this)
-        .parent()
-        .hasClass("active")
-    ) {
-      $(".sidebar-dropdown").removeClass("active");
-      $(this)
-        .parent()
-        .removeClass("active");
-    } else {
-      $(".sidebar-dropdown").removeClass("active");
-      $(this)
-        .next(".sidebar-submenu")
-        .slideDown(200);
-      $(this)
-        .parent()
-        .addClass("active");
-    }
+$(document).ready(function() {
+  $(".sidebar-dropdown > a").click(function() {
+      $(".sidebar-submenu").slideUp(200);
+      if (
+          $(this)
+          .parent()
+          .hasClass("active")
+      ) {
+          $(".sidebar-dropdown").removeClass("active");
+          $(this)
+          .parent()
+          .removeClass("active");
+      } else {
+          $(".sidebar-dropdown").removeClass("active");
+          $(this)
+          .next(".sidebar-submenu")
+          .slideDown(200);
+          $(this)
+          .parent()
+          .addClass("active");
+      }
   });
+  
   var sidebarTimeout;
-var sidebarCollapsed = false;
+  var sidebarCollapsed = false;
 
-// Function to collapse sidebar after a certain time interval
-function collapseSidebar() {
-    $('#sidebar').addClass('collapsed');
-    sidebarCollapsed = true;
-}
+  // Function to collapse sidebar after a certain time interval
+  function collapseSidebar() {
+      $('#sidebar').addClass('collapsed').css('width', '10px');
+      $('.main-prodlist').css('margin-left', '15px');
+      sidebarCollapsed = true;
+  }
 
-// Toggle sidebar collapse on button click
-$('#btn-collapse').on('click', function(){
-    $('#sidebar').toggleClass('collapsed');
-    sidebarCollapsed = !sidebarCollapsed; // Toggle the sidebarCollapsed flag
-    // Reset the timeout if the button is clicked
-    clearTimeout(sidebarTimeout);
-    sidebarTimeout = setTimeout(collapseSidebar, 100000); // Adjust the time interval as needed (5000 milliseconds = 5 seconds)
+  // Toggle sidebar collapse on button click
+  $('#btn-collapse').on('click', function(){
+      $('#sidebar').toggleClass('collapsed');
+      if (sidebarCollapsed) {
+          $('#sidebar').css('width', '250px'); // Adjust the width of the sidebar when expanding
+      } else {
+          $('#sidebar').css('width', '10px'); // Set the width to zero when collapsing
+      }
+      $('.main-prodlist').css('margin-left', sidebarCollapsed ? '250px' : '20px');
+      sidebarCollapsed = !sidebarCollapsed; // Toggle the sidebarCollapsed flag
+      // Reset the timeout if the button is clicked
+      clearTimeout(sidebarTimeout);
+      sidebarTimeout = setTimeout(collapseSidebar, 100000); // Adjust the time interval as needed (100000 milliseconds = 100 seconds)
+  });
+
+  // Set timeout to collapse sidebar if button is not clicked
+  sidebarTimeout = setTimeout(collapseSidebar, 5000);  // Adjust the time interval as needed (5000 milliseconds = 5 seconds)
 });
 
-// Set timeout to collapse sidebar if button is not clicked
-sidebarTimeout = setTimeout(collapseSidebar, 5000); // Adjust the time interval as needed (5000 milliseconds = 5 seconds)
-  
-  
 
 
 
@@ -206,5 +220,111 @@ document.addEventListener("DOMContentLoaded", function() {
   var selectIcon = document.createElement('i');
   selectIcon.classList.add('bi', 'bi-translate'); // Add Bootstrap icon classes
   selectElement.insertBefore(selectIcon, selectElement.firstChild);
+});
+
+
+//text animation
+
+
+$(document).ready(function() {
+  // Define an array to store all the spans
+  var spans = $('.new_homebstock-change-title-box').find('.new_homebstock-amimationText');
+  var currentIndex = 0; // Initialize index for the current active span
+
+  // Function to show the next span and hide the previous one
+  function showNextSpan() {
+      spans.eq(currentIndex).removeClass('active'); // Hide current active span
+      currentIndex = (currentIndex + 1) % spans.length; // Calculate index for the next span
+      spans.eq(currentIndex).addClass('active'); // Show next span
+  }
+
+  // Initially, show the first span
+  spans.eq(currentIndex).addClass('active');
+
+  // Set interval to change spans every 3 seconds (adjust the interval as needed)
+  var interval = setInterval(showNextSpan, 3000);
+
+  // Stop the interval when the page unloads
+  $(window).unload(function() {
+      clearInterval(interval); // Stop the interval
+  });
+});
+
+
+//whatsp chat
+
+(function () {
+  var options = {
+      whatsapp: "6350428940", // Contact Number
+      call_to_action: "Wanna Chat With Us !!!",
+      position: "right", 
+  };
+  var proto = document.location.protocol,
+      host = "getbutton.io",
+      url = proto + "//static." + host;
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = url + '/widget-send-button/js/init.js';
+  s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+  
+  var x = document.getElementsByTagName('script')[0];
+  x.parentNode.insertBefore(s, x);    
+})();
+
+
+
+
+$(document).ready(function () {
+  
+  //save big images
+    var $bigItem = $('.image-big-list-item');
+  //save small images
+    var $smallItem = $('.image-small-list-item');
+  //click and moseenter function on small image
+  //you could delete one eventlistener
+    $smallItem.on('click mouseenter', function () {
+      //remove active class from all items
+        $bigItem.removeClass('active');
+        $smallItem.removeClass('active');
+      //add active class to item as small item's index
+        $bigItem.eq($(this).index()).addClass('active');
+        $smallItem.eq($(this).index()).addClass('active');
+    });
+  
+ });
+
+
+
+ document.addEventListener("DOMContentLoaded", function() {
+  const slides = document.querySelectorAll(".slide");
+  const tabs = document.querySelectorAll(".tab");
+  let currentIndex = 0;
+  let intervalId;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === index);
+    });
+    tabs.forEach((tab, i) => {
+      tab.classList.toggle("active", i === index);
+    });
+    currentIndex = index;
+  }
+
+  function switchSlide() {
+    const nextIndex = (currentIndex + 1) % slides.length;
+    showSlide(nextIndex);
+  }
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener("click", function() {
+      clearInterval(intervalId);
+      showSlide(index);
+      intervalId = setInterval(switchSlide, 2000);
+    });
+  });
+
+  intervalId = setInterval(switchSlide, 2000);
 });
 
