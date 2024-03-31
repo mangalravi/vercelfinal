@@ -3992,27 +3992,27 @@ margin-left: 1rem !important;
   overflow: hidden;
 }
 
-.slider {
+.workflow .slider {
   display: flex;
   height: 400px;
 }
 
-.slide {
+.workflow .slider .slide {
   flex: 0 0 100%;
   display: none;
   width:100%;
   height:100%;
 }
-.slide img{
+.workflow .slider .slide img{
  object-fit:cover;
  border-radius:1rem;
 }
 
-.slide.active {
+.workflow .slider .slide.active {
   display: block;
 }
 
-.tabs {
+.workflow .slider .tabs {
   text-align: center;
   display: flex;
   flex-direction: column;
