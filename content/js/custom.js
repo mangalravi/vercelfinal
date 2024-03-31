@@ -273,7 +273,7 @@ $(document).ready(function() {
 })();
 
 
-
+// remove from here
 
 $(document).ready(function () {
   
@@ -327,4 +327,7 @@ $(document).ready(function () {
 
   intervalId = setInterval(switchSlide, 2000);
 });
+
+
+
 

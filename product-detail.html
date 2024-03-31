@@ -231,36 +231,17 @@
                     </p>
                      
                      
-                       <div class="lft mb-3">
+                       <div class="lft mb-3 d-flex justify-content-between">
+                        <div class="">
                         <button class=" btn btn-secondary me-3">
                           <i class="bi bi-geo-alt-fill me-2"></i>Banglore</button>
                         <button class="  btn btn-secondary me-3">New</button>
 
-
-                        <div class="heart-container me-3" title="Like">
-                          <input type="checkbox" class="checkbox" id="Give-It-An-Id">
-                          <div class="svg-container">
-                              <svg viewBox="0 0 24 24" class="svg-outline" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
-                                  </path>
-                              </svg>
-                              <svg viewBox="0 0 24 24" class="svg-filled" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
-                                  </path>
-                              </svg>
-                              <svg class="svg-celebrate" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
-                                  <polygon points="10,10 20,20"></polygon>
-                                  <polygon points="10,50 20,50"></polygon>
-                                  <polygon points="20,80 30,70"></polygon>
-                                  <polygon points="90,10 80,20"></polygon>
-                                  <polygon points="90,50 80,50"></polygon>
-                                  <polygon points="80,80 70,70"></polygon>
-                              </svg>
-                          </div>
                       </div>
+                      
 
                       <div class="otrbtn" data-bs-toggle="modal" data-bs-target="#graded">
-                        <a href="#" class="btn btn-secondary w-100">
+                        <a href="#" class="btn btn-secondary-fill gradedclr w-100">
                                   <img src="content/images/category-list.svg" alt="category">
                                   Graded
                         </a>
@@ -273,12 +254,18 @@
                         <div class="totalview me-3">Total View :  30</div>
                        </div>
                   
-                     
-                      <div class="d-flex justify-content-between mb-3 flex-column flex-sm-row">
-                        <div class="lvl mb-2 mb-sm-0"><label>Quantity:</label> 265 items</div>
-                        <div class="lvl mb-2 mb-sm-0"><label>MRP: </label>₹6,61,559</div>
-                        <div class="lvl mb-2 mb-sm-0"><label>Floor Price:</label>₹72,000</div>
+                     <div class="mb-3 d-flex justify-content-between align-items-center">
+                      <div class="mb-3">
+                        <div class="lvl mb-2"><label>Quantity:</label> 265 items</div>
+                        <div class="lvl mb-2"><label>MRP: </label>₹6,61,559</div>
+                        <div class="lvl mb-2"><label>Floor Price:</label>₹72,000</div>
                       </div>
+
+                      <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">
+                        Tooltip on top
+                      </button>
+
+                    </div>
                      
                       <div class="d-flex justify-content-between mb-3">
                         <div class="trucksvg me-4">
@@ -347,20 +334,15 @@
                         </div>
                         <input type="number" placeholder="₹ Enter Bid" class="form-group" autofocus/>
                       </div>
-                      <div class="row mb-3">
-                        <div class="col-md-6">
-                       <button class="btn btn-secondary w-100 p-2 mb-3 mb-md-0">
-                        Buy @₹88,000  <strong> (Save 86.70%)</strong>
-                       </button>
-                        </div>
-                        <div class="col-md-6">
-                            <button class="btn btn-secondary-fill w-100 p-2"  data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Submit Bid</button>
-                        </div>
-                        </div>
-
+                     
+                          <button class="btn btn-secondary w-100 p-2 mb-3">
+                           Buy @₹88,000  <strong> (Save 86.70%)</strong>
+                          </button>
+                     
+                            <button class="btn btn-secondary-fill w-100 p-2 mb-3" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Submit Bid</button>
                         <div class="row justify-content-between">
                           <div class="col-6 col-lg-2">
-                            <button class="mb-3 mb-lg-0">
+                            <button class="mb-3 mb-lg-0 h-100">
                               <div class="svg-wrapper-1">
                                 <div class="svg-wrapper">
                                   <svg
@@ -383,7 +365,7 @@
                           <div class="col-lg-10">
                           <div class="row">
                           <div class="col-4">
-                            <button class="btn btn-secondary w-100 p-2">
+                            <button class="btn btn-secondary w-100 p-2 h-100">
                               Email Manifest
                                </button>
                           </div>
@@ -424,16 +406,15 @@
               </div>
             </div>
               <div class="col-5 mb-3"><div class="rangegrn">
-                163(100%)
-                <label class="sliderrange ms-2">
-                  <input type="range" class="level m-0">
-                  </label>
+                <div class="sliderrange ms-2">
+             <span>163(100%)</span>     <canvas id="myChart1" ></canvas>
+                  </div>
               </div></div>
               <div class="col-4 mb-3"><div class="rangebl">
-                ₹3,32,000(100%)
-                <label class="sliderrange ms-2">
-                  <input type="range" class="level m-0">
-                  </label>
+              
+                <div class="sliderrange ms-2">
+                  <span>  ₹3,32,000(100%)</span>     <canvas id="myChart2" ></canvas>
+                       </div>
               </div></div>
             </div>
             <div class="row text-center">
@@ -448,32 +429,31 @@
               </div>
             </div>
                 <div class="col-5 mb-3"><div class="rangegrn">
-                  153(93%)
-                   <label class="sliderrange ms-2 mt-2">
-                  <input type="range" class="level m-0">
-                  </label>
+               
+                  <div class="sliderrange ms-2">
+                    <span>    153(93%)</span>     <canvas id="myChart3" ></canvas>
+                         </div>
                 </div></div>
                 <div class="col-4 mb-3"><div class="rangebl">
-                  ₹2,85,626(86.03%)
-                   <label class="sliderrange ms-2 mt-2">
-                  <input type="range" class="level m-0">
-                  </label>
+               
+                  <div class="sliderrange ms-2">
+                    <span>     ₹2,85,626(86.03%)</span>     <canvas id="myChart4" ></canvas>
+                         </div>
                 </div></div>
               <div class="col-3 mb-3"> <div class="tblhd">
                  Others
               </div>
             </div>
               <div class="col-5 mb-3"><div class="rangegrn">
-                10(6%)
-                 <label class="sliderrange ms-2 mt-2">
-                  <input type="range" class="level m-0">
-                  </label>
+               
+                <div class="sliderrange ms-2">
+                  <span> 10(6%)</span>     <canvas id="myChart5" ></canvas>
+                       </div>
               </div></div>
               <div class="col-4 mb-3"><div class="rangebl">
-                ₹46,374(13.97%)
-                 <label class="sliderrange ms-2 mt-2">
-                  <input type="range" class="level m-0">
-                  </label>
+                <div class="sliderrange ms-2">
+                  <span>  ₹46,374(13.97%)</span>     <canvas id="myChart6" ></canvas>
+                       </div>
               </div></div>
             </div>
           </div>
@@ -3290,6 +3270,8 @@ Applying and Logging In. How do I register as a buyer? What is the fee for regis
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>        
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script src="content/js/Chart.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init();

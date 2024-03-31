@@ -1691,8 +1691,9 @@ input:checked + span{background-color: var(--bs-primary);}
 
 .mdldtl{
   padding: 1.75rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 0 25px -4px rgba(0,0,0,0.15);
+  border-radius: 0 !important;
+  border: 0;
+  border-left: 1px solid #c1c1c1;
 }
 
 
@@ -1897,7 +1898,7 @@ button {
   display: flex;
   align-items: center;
   border: none;
-  border-radius: 6px;
+  border-radius: 0.35rem;
   transition: all 0.2s;
   cursor: pointer;
   overflow: hidden;
@@ -2161,7 +2162,7 @@ margin-bottom: 1rem;
   justify-content: center;
   background-color: #2ab13f;
   backdrop-filter: blur(96px);
-  border-radius: 0.75rem;
+  border-radius: 0.35rem;
   transition: all 0.3s;
   border: 1px solid #a0b5c1;
 }
@@ -2208,7 +2209,9 @@ tr td{
   word-wrap: break-word;
 }
 .quality,.mrp{
-  position:relative;
+  position: relative;
+  text-align: left;
+  margin-left: 1.75rem;
 }
 .quality::before,.mrp::before{
   content: "";
@@ -2216,15 +2219,15 @@ tr td{
   height:15px;
   position: absolute;
   border-radius:0.25rem;
-  top: 5px;
+  top: 2px;
 }
 .quality::before{
-  background:var(--bs-primary);
-  left: 22px;
+  background: var(--bs-primary);
+  left: -20px;
 }
 .mrp::before{
   background:var(--bs-secondary);
-  left: 7px;
+  left: -20px;
 }
 
 
@@ -3771,19 +3774,26 @@ input[type=number] {
   margin: 0;
   color: #fff;
   margin-top: 13px;
+ 
 }
 
 .glass {
-  background:#dfd0e359;
-  border-radius: 0.5rem;
+  background: #dfd0e3ab;
+  border-radius: 1rem;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.15);
-  padding: 1.5rem 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .otrbtn img{
 width:25px;
 margin-right:0.5rem;
-filter: brightness(0) saturate(100%) invert(97%) sepia(100%) saturate(10%) hue-rotate(192deg) brightness(102%) contrast(101%);
+filter: invert(0%) sepia(95%) saturate(0%) hue-rotate(104deg) brightness(104%) contrast(104%);;
 }
 
 .sc-q8c6tt-3.hKYcqG{
@@ -4066,3 +4076,78 @@ margin-left: 1rem !important;
 
 
 
+.gradedclr,.gradedclr:hover,.gradedclr:focus{
+  background:#13b88f;
+  color:#fff;
+  border:1px solid #13b88f;
+}
+
+.rangegrn{
+  text-align:left;
+}
+
+#myChart1, #myChart2,#myChart3, #myChart4, #myChart5, #myChart6   {
+  width: 250px !important;
+  height: 30px !important;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.sliderrange{
+  display:flex;
+  align-items:center;
+}
+.mainotr{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.otrbtn:hover img{
+transform:scale(1.1);
+transition:0.7s linear;
+}
+a.otrbtn{
+  color: #000;
+  padding: 1.5rem 1rem;
+  display: inline-block;
+  border-right: 3px solid #fff;
+  height: 100%;
+  font-weight: 600;
+}
+a.five {
+  border-right:0;
+}
+.otrbtn .btn.btn-secondary{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.otrbtn .btn.btn-secondary.lastallbtn{
+    flex-direction: row;
+  gap: 0;
+}
+@media(max-width:767px){
+  a.otrbtn{
+    border-bottom:1px solid #fff;
+    border-right: 1px solid #fff;
+    padding: .75rem 1rem;
+  }
+  a.five {
+    border-right:0;
+  }
+ .glass .otrbtn.five{
+    border-bottom:0;
+  }
+ .glass .otrbtn.two,a.otrbtn.four{
+    border-right:0;
+  }
+  .top-banner h3{
+    margin-bottom: 4rem;
+  }
+  .top-banner h2 {
+    font-size: 38px;
+    line-height: 50px;
+}
+}
