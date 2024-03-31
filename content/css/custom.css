@@ -4079,7 +4079,7 @@ margin-left: 1rem !important;
 
 
 
-.gradedclr,.gradedclr:hover,.gradedclr:focus{
+.gradedclr,.gradedclr:hover,.gradedclr:focus,.gradedclr:active{
   background:#13b88f;
   color:#fff;
   border:1px solid #13b88f;
