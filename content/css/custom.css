@@ -3795,6 +3795,9 @@ width:25px;
 margin-right:0.5rem;
 filter: invert(0%) sepia(95%) saturate(0%) hue-rotate(104deg) brightness(104%) contrast(104%);;
 }
+.gradedclr img{
+  filter: invert(100%) sepia(0%) saturate(7439%) hue-rotate(320deg) brightness(113%) contrast(106%);
+}
 
 .sc-q8c6tt-3.hKYcqG{
   bottom: 30px;
