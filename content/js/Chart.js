@@ -30,55 +30,21 @@ new Chart("myChart1", {
       // text: "163(100%)"
     },
     tooltips: {
-      enabled: true, // Set to true to enable tooltips
-      position: 'average', // Position the tooltip on top of the bar
+      enabled: true,
+      position: 'average',
       callbacks: {
         label: function(tooltipItem, data) {
-          return tooltipItem.xLabel + " units"; // Customize tooltip label here
+          return tooltipItem.xLabel + " units";
         },
-        // Customize tooltip appearance
-        // custom: function(tooltipModel) {
-        //   // Tooltip element
-        //   var tooltipEl = document.getElementById('chartjs-tooltip');
-          
-        //   // Create tooltip if it doesn't exist
-        //   if (!tooltipEl) {
-        //     tooltipEl = document.createElement('div');
-        //     tooltipEl.id = 'chartjs-tooltip';
-        //     tooltipEl.innerHTML = '<div></div>';
-        //     document.body.appendChild(tooltipEl);
-        //   }
-
-        //   // Hide if no tooltip
-        //   if (tooltipModel.opacity === 0) {
-        //     tooltipEl.style.opacity = 0;
-        //     return;
-        //   }
-
-        //   // Set tooltip text and style
-        //   tooltipEl.classList.remove('above', 'below', 'no-transform');
-        //   if (tooltipModel.yAlign) {
-        //     tooltipEl.classList.add(tooltipModel.yAlign);
-        //   } else {
-        //     tooltipEl.classList.add('no-transform');
-        //   }
-        //   tooltipEl.innerHTML = tooltipModel.body[0].lines[0];
-          
-        //   // Apply custom CSS styles
-        //   tooltipEl.style.fontSize = '46px'; // Customize font size
-        //   tooltipEl.style.fontFamily = 'Arial'; // Customize font family
-        //   tooltipEl.style.backgroundColor = 'rgba(0, 0, 0, 0.7)'; // Customize background color
-        //   tooltipEl.style.padding = '20px'; // Customize padding
-        //   tooltipEl.style.borderRadius = '4px'; // Customize border radius
-        //   tooltipEl.style.color = '#fff'; // Customize text color
-        //   tooltipEl.style.position = 'absolute'; // Position the tooltip
-        //   tooltipEl.style.left = tooltipModel.caretX + 'px'; // Set left position
-        //   tooltipEl.style.top = tooltipModel.caretY + 'px'; // Set top position
-        //   tooltipEl.style.pointerEvents = 'none'; // Ensure tooltip does not block mouse events
-        //   tooltipEl.style.transition = 'opacity 0.3s'; // Add smooth transition
-        //   tooltipEl.style.opacity = 1; // Ensure tooltip is visible
-        // }
-      }
+      },
+      // Adjust the tooltip properties
+      bodyFontSize: 20, // Set the font size of the tooltip body
+      bodySpacing: 30, // Set spacing between tooltip elements
+      bodyAlign: 'left', // Align tooltip text to the left
+      titleFontSize: 24, // Set the font size of the tooltip title
+      titleSpacing: 10, // Set spacing between the tooltip title and body
+      caretPadding: 20, // Set padding between the tooltip caret and tooltip
+      displayColors: false // Hide the color box from the tooltip
     },
     scales: {
       xAxes: [{
@@ -99,15 +65,15 @@ const yValues2 = [5]; // Adjusted to match the length of xValues
 const barColors2 = ["#2a2a61"];
 
 new Chart("myChart2", {
-  type: "horizontalBar", // Set chart type to horizontalBar
+  type: "horizontalBar",
   data: {
-    labels: [], // Remove x-values label array
+    labels: [], 
     datasets: [
       {
-        label: "Bar 1", // Label for the first bar
-        backgroundColor: barColors2[0], // Color for the first bar
+        label: "Bar 1",
+        backgroundColor: barColors2[0],
         data: yValues2,
-        barThickness: 50 // Adjust the width of the bars
+        barThickness: 50
       }
     ]
   },
@@ -124,32 +90,40 @@ new Chart("myChart2", {
       // text: "163(100%)"
     },
     tooltips: {
-      enabled: true, // Set to true to enable tooltips
-      position: 'average', // Position the tooltip on top of the bar
+      enabled: true,
+      position: 'average',
       callbacks: {
         label: function(tooltipItem, data) {
-          return tooltipItem.xLabel + " units"; // Customize tooltip label here
+          return tooltipItem.xLabel + " units";
         },
-       
-      }
+      },
+      // Adjust the tooltip properties
+      bodyFontSize: 20, // Set the font size of the tooltip body
+      bodySpacing: 30, // Set spacing between tooltip elements
+      bodyAlign: 'left', // Align tooltip text to the left
+      titleFontSize: 24, // Set the font size of the tooltip title
+      titleSpacing: 10, // Set spacing between the tooltip title and body
+      caretPadding: 20, // Set padding between the tooltip caret and tooltip
+      displayColors: false // Hide the color box from the tooltip
     },
     scales: {
       xAxes: [{
-        display: false, // Hide the x-axis
+        display: false,
       }],
       yAxes: [{
         gridLines: {
-          display: false // Hide the horizontal grid lines
+          display: false
         },
         ticks: {
-          fontColor: "#000" // Adjust font color of y-axis labels if needed
+          fontColor: "#000"
         }
       }]
     }
   }
 });
-const yValues3 = [5]; // Adjusted to match the length of xValues
+const yValues3 = [5];
 const barColors3 = ["#45a9e7"];
+
 
 new Chart("myChart3", {
   type: "horizontalBar", // Set chart type to horizontalBar
@@ -177,14 +151,21 @@ new Chart("myChart3", {
       // text: "163(100%)"
     },
     tooltips: {
-      enabled: true, // Set to true to enable tooltips
-      position: 'average', // Position the tooltip on top of the bar
+      enabled: true,
+      position: 'average',
       callbacks: {
         label: function(tooltipItem, data) {
-          return tooltipItem.xLabel + " units"; // Customize tooltip label here
+          return tooltipItem.xLabel + " units";
         },
-       
-      }
+      },
+      // Adjust the tooltip properties
+      bodyFontSize: 20, // Set the font size of the tooltip body
+      bodySpacing: 30, // Set spacing between tooltip elements
+      bodyAlign: 'left', // Align tooltip text to the left
+      titleFontSize: 24, // Set the font size of the tooltip title
+      titleSpacing: 10, // Set spacing between the tooltip title and body
+      caretPadding: 20, // Set padding between the tooltip caret and tooltip
+      displayColors: false // Hide the color box from the tooltip
     },
     scales: {
       xAxes: [{
@@ -230,14 +211,21 @@ new Chart("myChart4", {
       // text: "163(100%)"
     },
     tooltips: {
-      enabled: true, // Set to true to enable tooltips
-      position: 'average', // Position the tooltip on top of the bar
+      enabled: true,
+      position: 'average',
       callbacks: {
         label: function(tooltipItem, data) {
-          return tooltipItem.xLabel + " units"; // Customize tooltip label here
+          return tooltipItem.xLabel + " units";
         },
-      
-      }
+      },
+      // Adjust the tooltip properties
+      bodyFontSize: 20, // Set the font size of the tooltip body
+      bodySpacing: 30, // Set spacing between tooltip elements
+      bodyAlign: 'left', // Align tooltip text to the left
+      titleFontSize: 24, // Set the font size of the tooltip title
+      titleSpacing: 10, // Set spacing between the tooltip title and body
+      caretPadding: 20, // Set padding between the tooltip caret and tooltip
+      displayColors: false // Hide the color box from the tooltip
     },
     scales: {
       xAxes: [{
@@ -283,14 +271,21 @@ new Chart("myChart5", {
       // text: "163(100%)"
     },
     tooltips: {
-      enabled: true, // Set to true to enable tooltips
-      position: 'average', // Position the tooltip on top of the bar
+      enabled: true,
+      position: 'average',
       callbacks: {
         label: function(tooltipItem, data) {
-          return tooltipItem.xLabel + " units"; // Customize tooltip label here
+          return tooltipItem.xLabel + " units";
         },
-       
-      }
+      },
+      // Adjust the tooltip properties
+      bodyFontSize: 20, // Set the font size of the tooltip body
+      bodySpacing: 30, // Set spacing between tooltip elements
+      bodyAlign: 'left', // Align tooltip text to the left
+      titleFontSize: 24, // Set the font size of the tooltip title
+      titleSpacing: 10, // Set spacing between the tooltip title and body
+      caretPadding: 20, // Set padding between the tooltip caret and tooltip
+      displayColors: false // Hide the color box from the tooltip
     },
     scales: {
       xAxes: [{
@@ -336,14 +331,21 @@ new Chart("myChart6", {
       // text: "163(100%)"
     },
     tooltips: {
-      enabled: true, // Set to true to enable tooltips
-      position: 'average', // Position the tooltip on top of the bar
+      enabled: true,
+      position: 'average',
       callbacks: {
         label: function(tooltipItem, data) {
-          return tooltipItem.xLabel + " units"; // Customize tooltip label here
+          return tooltipItem.xLabel + " units";
         },
-       
-      }
+      },
+      // Adjust the tooltip properties
+      bodyFontSize: 20, // Set the font size of the tooltip body
+      bodySpacing: 30, // Set spacing between tooltip elements
+      bodyAlign: 'left', // Align tooltip text to the left
+      titleFontSize: 24, // Set the font size of the tooltip title
+      titleSpacing: 15, // Set spacing between the tooltip title and body
+      caretPadding: 20, // Set padding between the tooltip caret and tooltip
+      displayColors: false // Hide the color box from the tooltip
     },
     scales: {
       xAxes: [{
