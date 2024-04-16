@@ -1114,7 +1114,7 @@ footer {
 .sidebar::-webkit-scrollbar,
 .grnbgc::-webkit-scrollbar {
   width: 4px;
-  background-color: #0c1e35;
+  background-color: #ddf6ff;
 }
 .sidebar .image-wrapper {
   overflow: hidden;
@@ -1133,7 +1133,7 @@ footer {
   display: flex;
   flex-direction: column;
   position: relative;
-  background-color: #0c1e35;
+  background-color: #ddf6ff;
   z-index: 2;
   padding: 1.5rem;
 }
@@ -1180,17 +1180,12 @@ footer {
   height: auto;
   overflow: auto;
 }
-
-/* .layout .sidebar.collapsed {
-    width: 10px;
-    min-width: 10px;
-} */
 .layout .sidebar {
   width: 250px;
   transition: all 0.4s linear;
 }
 .sidebar {
-  color: #7d84ab;
+  color: #222d50;
   overflow-x: hidden !important;
   position: relative;
 }
@@ -1198,12 +1193,12 @@ footer {
 .sidebar-layout .accordion .accordion-item,
 .sidebar-layout .accordion-button {
   background: transparent;
-  color: #fff;
+  color: #000830;
   padding: 0.6rem 0;
 }
 .sidebar-layout .accordion-button:not(.collapsed) {
   background-color: transparent;
-  color: #fff;
+  color: #000830;
   box-shadow: none;
 }
 .sidebar-layout .accordion-button:focus {
@@ -1212,6 +1207,8 @@ footer {
 }
 .sidebar-layout .accordion-button::after {
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+  filter: invert(0%) sepia(47%) saturate(294%) hue-rotate(356deg) brightness(7%)
+    contrast(212%);
 }
 .main-prodlist {
   margin-left: 250px;
@@ -4701,4 +4698,182 @@ a.five {
     align-items: flex-start;
     justify-content: start;
   }
+}
+
+.resfrom {
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 0 0 25px -7px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  width: 768px;
+  max-width: 100%;
+  min-height: 480px;
+}
+
+.resfrom p {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  margin: 20px 0;
+}
+
+.resfrom span {
+  font-size: 12px;
+}
+
+.resfrom a {
+  color: #333;
+  font-size: 13px;
+  text-decoration: none;
+  margin: 1rem 0;
+}
+
+.resfrom button.hidden {
+  background-color: transparent;
+  border-color: #fff;
+}
+
+.resfrom form {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  height: 100%;
+}
+
+.resfrom input {
+  background-color: #eee;
+  border: none;
+  margin: 8px 0;
+  padding: 10px 15px;
+  font-size: 13px;
+  border-radius: 8px;
+  width: 100%;
+  outline: none;
+}
+
+.form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+.sign-in {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+
+.resfrom.active .sign-in {
+  transform: translateX(100%);
+}
+
+.sign-up {
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.resfrom.active .sign-up {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+  animation: move 0.6s;
+}
+
+@keyframes move {
+  0%,
+  49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
+  50%,
+  100% {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+
+.social-icons {
+  margin: 20px 0;
+}
+
+.social-icons a {
+  border: 1px solid #ccc;
+  border-radius: 20%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 3px;
+  width: 40px;
+  height: 40px;
+}
+
+.toggle-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.6s ease-in-out;
+  border-radius: 150px 0 0 100px;
+  z-index: 1000;
+}
+
+.resfrom.active .toggle-container {
+  transform: translateX(-100%);
+  border-radius: 0 150px 100px 0;
+}
+
+.toggle {
+  background: linear-gradient(to right, #c863de, #5926fe);
+  color: #fff;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+}
+
+.resfrom.active .toggle {
+  transform: translateX(50%);
+}
+
+.toggle-panel {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 30px;
+  text-align: center;
+  top: 0;
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+}
+
+.toggle-left {
+  transform: translateX(-200%);
+}
+
+.resfrom.active .toggle-left {
+  transform: translateX(0);
+}
+
+.toggle-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.resfrom.active .toggle-right {
+  transform: translateX(200%);
 }

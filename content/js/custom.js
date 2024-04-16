@@ -392,35 +392,14 @@ children.forEach((child, index) => {
   });
 });
 
-// const children = document.querySelectorAll('.ImgContent');
-// let currentIndex = 0;
+const container = document.getElementById("container");
+const registerBtn = document.getElementById("register");
+const loginBtn = document.getElementById("login");
 
-// function setActive(index) {
-//   children.forEach((child, i) => {
-//     if (i === index) {
-//       child.classList.add('active');
-//     } else {
-//       child.classList.remove('active');
-//     }
-//   });
-// }
+registerBtn.addEventListener("click", () => {
+  container.classList.add("active");
+});
 
-// function nextSlide() {
-//   currentIndex = (currentIndex + 1) % children.length;
-//   setActive(currentIndex);
-// }
-
-// setInterval(nextSlide, 3000); // Change slide every 3 seconds
-
-// // Add event listeners for mouse enter and mouse leave
-// children.forEach((child, index) => {
-//   child.addEventListener('mouseenter', () => {
-//     setActive(index);
-//     child.classList.add('arrow');
-//   });
-//   child.addEventListener('mouseleave', () => {
-//     // Reset to default behavior
-//     setActive(-1);
-//     child.classList.remove('arrow');
-//   });
-// });
+loginBtn.addEventListener("click", () => {
+  container.classList.remove("active");
+});

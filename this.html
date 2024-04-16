@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    html,body { min-height: 100vh; }
+
+#wrapper {
+     width: 100%;
+     max-width: 900px;
+     margin: 0 auto;
+  position: relative;
+}
+/*++++CIRCLE++++*/
+ .prems-fading-circle { 
+     margin: 120px auto;
+     width: 100%;
+     max-width: 350px;
+     height: 350px;
+     position: relative;
+}
+ .prems-fading-circle .prems-circle {
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     left: 0;
+     top: 0;
+     z-index: 1;
+}
+ .prems-fading-circle .prems-circle > div {
+     content: '';
+     display: block;
+     margin: 0 auto; 
+     width: 10px;
+     height: 10px;
+     background-color: #49b8ac;
+     border-radius: 100%;
+     opacity: 0.3;
+     -webkit-animation: prems-circleFadeDelay 1s normal forwards ease-in-out;
+     -moz-animation: prems-circleFadeDelay 1s normal forwards ease-in-out;
+     animation: prems-circleFadeDelay 1s normal forwards ease-in-out;
+}
+ .prems-fading-circle .prems-circle1 > div {
+    animation-delay:10.25s;
+}
+ .prems-fading-circle .prems-circle2 > div {
+    animation-delay:10.5s;
+}
+ .prems-fading-circle .prems-circle3 > div {
+    animation-delay:10.75s;
+}
+ .prems-fading-circle .prems-circle4 > div {
+    animation-delay:11s;
+
+}
+ .prems-fading-circle .prems-circle5 > div {
+    animation-delay:0; 
+    background: url("https://www.premiums.mobi/userfiles/premiums.mobi/images/Rondje_01.png");
+    background-repeat: no-repeat; 
+    background-size: contain;
+    height: 30px;
+    width: 30px;
+    margin-top: -7px;
+    opacity:1;
+ 
+}
+ .prems-fading-circle .prems-circle6 > div {
+    animation-delay:1.25s;
+}
+ .prems-fading-circle .prems-circle7 > div {
+    animation-delay:1.5s;
+}
+.prems-fading-circle .prems-circle8 > div {
+    animation-delay:1.75s;
+
+}
+ .prems-fading-circle .prems-circle9 > div{
+    animation-delay:2s;
+}
+ .prems-fading-circle .prems-circle10 > div {
+    animation-delay:2.25s;
+}
+ .prems-fading-circle .prems-circle11 > div {
+    animation-delay:2.5s;
+    background: url("https://www.premiums.mobi/userfiles/premiums.mobi/images/Rondje_02.png");
+    background-repeat: no-repeat; 
+    background-size: contain;
+    height: 30px;
+    width: 30px;
+    margin-top: -7px;
+    opacity:1;
+}
+ .prems-fading-circle .prems-circle12 > div {
+    animation-delay:2.75s;
+}
+ .prems-fading-circle .prems-circle13 > div {
+    animation-delay:3s;
+}
+ .prems-fading-circle .prems-circle14 > div {
+    animation-delay:3.25s;
+}
+ .prems-fading-circle .prems-circle15 > div {
+    animation-delay:3.5s;
+}
+ .prems-fading-circle .prems-circle16 > div {
+    animation-delay:3.75s;
+}
+ .prems-fading-circle .prems-circle17 > div {
+    animation-delay:4s;
+    background: url("https://www.premiums.mobi/userfiles/premiums.mobi/images/Rondje_03.png");
+    background-repeat: no-repeat; 
+    background-size: contain;
+    height: 30px;
+    width: 30px;
+    margin-top: -7px;
+    opacity:1;
+}
+ .prems-fading-circle .prems-circle18 > div {
+    animation-delay:4.25s;
+}
+ .prems-fading-circle .prems-circle19 > div {
+    animation-delay:4.5s;
+}
+ .prems-fading-circle .prems-circle20 > div {
+    animation-delay:4.75s;
+}
+ .prems-fading-circle .prems-circle21 > div {
+    animation-delay:5s;
+}
+ .prems-fading-circle .prems-circle22: > div {
+    animation-delay:5.25s;
+}
+ .prems-fading-circle .prems-circle23 > div {
+    animation-delay:5.5s;
+}
+ .prems-fading-circle .prems-circle24 > div {
+    animation-delay:5.75s;
+}
+ .prems-fading-circle .prems-circle25 > div {
+    animation-delay:6s;
+    background: url("https://www.premiums.mobi/userfiles/premiums.mobi/images/Rondje_01.png");
+    background-repeat: no-repeat; 
+    background-size: contain;
+    height: 30px;
+    width: 30px;
+    margin-top: -7px;
+    opacity:1;
+}
+ .prems-fading-circle .prems-circle26 > div {
+    animation-delay:6.25s;
+}
+ .prems-fading-circle .prems-circle27 > div {
+    animation-delay:6.5s;
+}
+ .prems-fading-circle .prems-circle28 > div {
+    animation-delay:6.75s;
+}
+ .prems-fading-circle .prems-circle29 > div {
+    animation-delay:7s;
+}
+ .prems-fading-circle .prems-circle30 > div {
+    animation-delay:7.25s;
+}
+ .prems-fading-circle .prems-circle31 > div {
+    animation-delay:7.5s;
+    background: url("https://www.premiums.mobi/userfiles/premiums.mobi/images/Rondje_02.png");
+    background-repeat: no-repeat; 
+    background-size: contain;
+    height: 30px;
+    width: 30px;
+    margin-top: -7px;
+    opacity:1;
+}
+ .prems-fading-circle .prems-circle32 > div {
+    animation-delay:7.75s;
+
+}
+ .prems-fading-circle .prems-circle33 > div {
+    animation-delay:8s;
+}
+ .prems-fading-circle .prems-circle34 > div {
+    animation-delay:8.25s;
+}
+ .prems-fading-circle .prems-circle35 > div {
+    animation-delay:8.5s;
+}
+ .prems-fading-circle .prems-circle36 > div {
+    animation-delay:8.75s;
+}
+ .prems-fading-circle .prems-circle37 > div {
+    animation-delay:9s;
+    background: url("https://www.premiums.mobi/userfiles/premiums.mobi/images/Rondje_03.png");
+    background-repeat: no-repeat; 
+    background-size: contain; 
+    height: 30px;
+    width: 30px;
+    margin-top: -7px;
+    opacity:1;
+}
+ .prems-fading-circle .prems-circle38 > div {
+    animation-delay:9.25s;
+   
+}
+ .prems-fading-circle .prems-circle39 > div {
+    animation-delay:9.5s;
+   
+}
+ .prems-fading-circle .prems-circle40 > div {
+    animation-delay:9.75s;
+}
+ .prems-fading-circle .prems-circle41 > div {
+    animation-delay:10s;
+}
+ .prems-fading-circle .prems-circle2 {
+     -webkit-transform: rotate(9deg); 
+     -ms-transform: rotate(9deg);
+     transform: rotate(9deg);
+}
+ .prems-fading-circle .prems-circle3 {
+     -webkit-transform: rotate(18deg);
+     -ms-transform: rotate(18deg);
+     transform: rotate(18deg);
+}
+ .prems-fading-circle .prems-circle4 {
+     -webkit-transform: rotate(27deg);
+     -ms-transform: rotate(27deg);
+     transform: rotate(27deg);
+}
+ .prems-fading-circle .prems-circle5 {
+     -webkit-transform: rotate(36deg);
+     -ms-transform: rotate(36deg);
+     transform: rotate(36deg);
+}
+ .prems-fading-circle .prems-circle6 {
+     -webkit-transform: rotate(45deg);
+     -ms-transform: rotate(45deg);
+     transform: rotate(45deg);
+}
+ .prems-fading-circle .prems-circle7 {
+     -webkit-transform: rotate(54deg);
+     -ms-transform: rotate(54deg);
+     transform: rotate(54deg);
+}
+ .prems-fading-circle .prems-circle8 {
+     -webkit-transform: rotate(63deg);
+     -ms-transform: rotate(63deg);
+     transform: rotate(63deg);
+}
+ .prems-fading-circle .prems-circle9 {
+     -webkit-transform: rotate(72deg);
+     -ms-transform: rotate(72deg);
+     transform: rotate(72deg);
+}
+ .prems-fading-circle .prems-circle10 {
+     -webkit-transform: rotate(81deg);
+     -ms-transform: rotate(81deg);
+     transform: rotate(81deg);
+}
+ .prems-fading-circle .prems-circle11 {
+     -webkit-transform: rotate(90deg);
+     -ms-transform: rotate(90deg);
+     transform: rotate(90deg);
+}
+ .prems-fading-circle .prems-circle12 {
+     -webkit-transform: rotate(99deg);
+     -ms-transform: rotate(99deg);
+     transform: rotate(99deg);
+}
+ .prems-fading-circle .prems-circle13 {
+     -webkit-transform: rotate(108deg);
+     -ms-transform: rotate(108deg);
+     transform: rotate(108deg);
+}
+ .prems-fading-circle .prems-circle14 {
+     -webkit-transform: rotate(117deg);
+     -ms-transform: rotate(117deg);
+     transform: rotate(117deg);
+}
+ .prems-fading-circle .prems-circle15 {
+     -webkit-transform: rotate(126deg);
+     -ms-transform: rotate(126deg);
+     transform: rotate(126deg);
+}
+ .prems-fading-circle .prems-circle16 {
+     -webkit-transform: rotate(135deg);
+     -ms-transform: rotate(135deg);
+     transform: rotate(135deg);
+}
+ .prems-fading-circle .prems-circle17 {
+     -webkit-transform: rotate(144deg);
+     -ms-transform: rotate(144deg);
+     transform: rotate(144deg);
+}
+ .prems-fading-circle .prems-circle18 {
+     -webkit-transform: rotate(153deg);
+     -ms-transform: rotate(153deg);
+     transform: rotate(153deg);
+}
+ .prems-fading-circle .prems-circle19 {
+     -webkit-transform: rotate(162deg);
+     -ms-transform: rotate(162deg);
+     transform: rotate(162deg);
+}
+ .prems-fading-circle .prems-circle20 {
+     -webkit-transform: rotate(171deg);
+     -ms-transform: rotate(171deg);
+     transform: rotate(171deg);
+}
+ .prems-fading-circle .prems-circle21 {
+     -webkit-transform: rotate(180deg);
+     -ms-transform: rotate(180deg);
+     transform: rotate(180deg);
+}
+ .prems-fading-circle .prems-circle22 {
+     -webkit-transform: rotate(189deg);
+     -ms-transform: rotate(189deg);
+     transform: rotate(189deg);
+}
+ .prems-fading-circle .prems-circle23 {
+     -webkit-transform: rotate(198deg);
+     -ms-transform: rotate(198deg);
+     transform: rotate(198deg);
+}
+ .prems-fading-circle .prems-circle24 {
+     -webkit-transform: rotate(207deg);
+     -ms-transform: rotate(207deg);
+     transform: rotate(207deg);
+}
+ .prems-fading-circle .prems-circle25 {
+     -webkit-transform: rotate(216deg);
+     -ms-transform: rotate(216deg);
+     transform: rotate(216deg);
+}
+ .prems-fading-circle .prems-circle26 {
+     -webkit-transform: rotate(225deg);
+     -ms-transform: rotate(225deg);
+     transform: rotate(225deg);
+} 
+ .prems-fading-circle .prems-circle27 {
+     -webkit-transform: rotate(234deg);
+     -ms-transform: rotate(234deg);
+     transform: rotate(234deg);
+}
+ .prems-fading-circle .prems-circle28 {
+     -webkit-transform: rotate(243deg);
+     -ms-transform: rotate(243deg);
+     transform: rotate(243deg);
+}
+ .prems-fading-circle .prems-circle29 {
+     -webkit-transform: rotate(252deg);
+     -ms-transform: rotate(252deg);
+     transform: rotate(252deg);
+}
+ .prems-fading-circle .prems-circle30 {
+     -webkit-transform: rotate(261deg);
+     -ms-transform: rotate(261deg);
+     transform: rotate(261deg);
+}
+ .prems-fading-circle .prems-circle31 {
+     -webkit-transform: rotate(270deg);
+     -ms-transform: rotate(270deg);
+     transform: rotate(270deg);
+}
+ .prems-fading-circle .prems-circle32 {
+     -webkit-transform: rotate(279deg);
+     -ms-transform: rotate(279deg);
+     transform: rotate(279deg);
+}
+ .prems-fading-circle .prems-circle33 {
+     -webkit-transform: rotate(288deg);
+     -ms-transform: rotate(288deg);
+     transform: rotate(288deg);
+}
+ .prems-fading-circle .prems-circle34 {
+     -webkit-transform: rotate(297deg);
+     -ms-transform: rotate(297deg);
+     transform: rotate(297deg);
+}
+ .prems-fading-circle .prems-circle35 {
+     -webkit-transform: rotate(306deg);
+     -ms-transform: rotate(306deg);
+     transform: rotate(306deg);
+}
+ .prems-fading-circle .prems-circle36 {
+     -webkit-transform: rotate(315deg);
+     -ms-transform: rotate(315deg);
+     transform: rotate(315deg);
+}
+ .prems-fading-circle .prems-circle37 {
+     -webkit-transform: rotate(324deg);
+     -ms-transform: rotate(324deg);
+     transform: rotate(324deg);
+}
+ .prems-fading-circle .prems-circle38 {
+     -webkit-transform: rotate(333deg);
+     -ms-transform: rotate(333deg);
+     transform: rotate(333deg);
+}
+ .prems-fading-circle .prems-circle39 {
+     -webkit-transform: rotate(342deg);
+     -ms-transform: rotate(342deg);
+     transform: rotate(342deg);
+}
+ .prems-fading-circle .prems-circle40 {
+     -webkit-transform: rotate(351deg);
+     -ms-transform: rotate(351deg);
+     transform: rotate(351deg);
+}
+ .prems-fading-circle .prems-circle41 {
+     -webkit-transform: rotate(360deg);
+     -ms-transform: rotate(360deg);
+}
+/*++Animation++*/
+
+
+@-moz-keyframes  prems-circleFadeDelay {
+     0%, 39% {
+         opacity: 0.3;
+    }
+     40%, 100% {
+         opacity: 1;
+    }
+}
+ @-moz-keyframes  prems-divAppear {
+     0%, 40% {
+         opacity: 0;
+    }
+     50%, 100% {
+         opacity: 1;
+    }
+        0%{ -moz-transform:scale(0); opacity:0;}
+        50%{ -moz-transform:scale(1.1); opacity:0.4; }
+        75%{ -moz-transform:scale(0.9); opacity:0.7;}
+        100%{ -moz-transform:scale(1); opacity:1;}
+}
+
+ @-webkit-keyframes prems-circleFadeDelay {
+     0%, 39% {
+         opacity: 0.3;
+    }
+     40%, 100% {
+         opacity: 1;
+    }
+}
+ @-webkit-keyframes prems-divAppear {
+     0%, 40% {
+         opacity: 0;
+    }
+     50%, 100% {
+         opacity: 1;
+    }
+        0%{ -moz-transform:scale(0); opacity:0;}
+        50%{ -moz-transform:scale(1.1); opacity:0.4; }
+        75%{ -moz-transform:scale(0.9); opacity:0.7;}
+        100%{ -moz-transform:scale(1); opacity:1;}
+}
+@keyframes  prems-circleFadeDelay {
+     0%, 39% {
+         opacity: 0.3;
+    }
+     40%, 100% {
+         opacity: 1;
+    }
+}
+ @keyframes  prems-divAppear {
+     0%, 40% {
+         opacity: 0;
+    }
+     50%, 100% {
+         opacity: 1;
+    }
+        0%{ -moz-transform:scale(0); opacity:0;}
+        50%{ -moz-transform:scale(1.1); opacity:0.4; }
+        75%{ -moz-transform:scale(0.9); opacity:0.7;}
+        100%{ -moz-transform:scale(1); opacity:1;}
+}
+
+.filled {
+    opacity: 1; /* or any other styles you want for a filled circle */
+}
+
+/*++Circle inner++*/
+ .prems-fading-circle #inner {
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%,-50%);
+     background-color: #E7E7E7;
+     padding: 10px;
+     border-radius: 50%;
+     width: 100%;
+     max-width: 250px;
+     height: 250px;
+     display: flex;
+     flex-flow: column nowrap;
+     justify-content: center;
+     box-shadow: 0 2px 5px 1px rgba(0,0,0,0.3);
+}
+ #inner h3 {
+     text-transform: uppercase;
+     text-align: center;
+     font-size: 1.7rem;
+}
+
+/*Container*/
+#wrapper .containr { width: 100%; max-width: 370px; padding: 10px 15px; position: absolute; right: 0; z-index: 1; top: 0;  transition: all 1s ease-in-out; background-color: #3f3f37; color: #FFF; animation: prems-divAppear 2s normal forwards ease-in-out; -webkit-animation: prems-divAppear 2s normal forwards ease-in-out; -moz-animation: prems-divAppear 2s normal forwards ease-in-out; opacity: 0;  font-size: 13px; font-family: "Open Sans", sans-serif; }
+#wrapper .containr img { max-width: 102px; float: left; margin: 17px 10px 10px 10px; border-radius: 50%;} 
+
+#wrapper .containr.container1 img { box-shadow: 5px 4px 21px 2px rgba(0,0,0,0.6);}
+#wrapper .containr.container2 img { box-shadow: 5px 4px 21px 2px rgba(0,0,0,0.6);}
+#wrapper .containr.container3 img { box-shadow: 5px 4px 21px 2px rgba(0,0,0,0.6);}
+#wrapper .containr.container4 img { box-shadow: 5px 4px 21px 2px rgba(0,0,0,0.6);}
+#wrapper .containr.container5 img { box-shadow: 5px 4px 21px 2px rgba(0,0,0,0.6);}
+#wrapper .containr.container6 img { box-shadow: 5px 4px 21px 2px rgba(0,0,0,0.6);}
+
+#wrapper .containr.container4 img,
+#wrapper .containr.container5 img,
+#wrapper .containr.container6 img {float: right; }
+
+#wrapper h3 { font-size: 1.6rem; font-family: "Open Sans", sans-serif; float: left; padding-left: 20px; line-height: 1.1; }
+#wrapper h3 p { opacity: 0.7; }
+#wrapper .container4 h3, 
+#wrapper .container5 h3, 
+#wrapper .container6 h3 {
+    font-size: 1.6rem;
+    font-family: "Open Sans", sans-serif;
+    position: absolute;
+    right: 150px;
+    top: 10px;
+    text-align: right;
+}
+#wrapper .containr.container4 p,
+#wrapper .containr.container5 p,
+#wrapper .containr.container6 p{
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    max-width: 260px;
+}
+
+#wrapper .container1 { margin-right: -60px; margin-top: -110px;  animation: none;  animation-delay: 0s; background: #557f8d; border-radius: 80px; opacity: 1;}
+#wrapper .container2 { margin-top: 100px; margin-right: -150px; animation-delay: 2s; background-color: #00adb4; border-radius: 80px;}  
+#wrapper .container3 { margin-top: 310px; margin-right: -60px; animation-delay: 3.75s; transition: all 400ms ease-in-out; background-color: #41b5ac; border-radius: 80px;}
+#wrapper .container4 { margin-top: 310px; margin-right: 560px; animation-delay: 5.5s; transition: all 400ms ease-in-out; background-color: #557f8d; border-radius: 80px;}
+#wrapper .container5 { margin-top: 100px; margin-right: 650px; animation-delay: 7.25s; transition: all 400ms ease-in-out; background-color: #00adb4; border-radius: 80px;}
+#wrapper .container6 { margin-top: -110px; margin-right: 560px; animation-delay:8.75s; transition: all 400ms ease-in-out; background-color: #40b2aa; border-radius: 80px;}
+ 
+#wrapper .container1::after {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-left: 12px solid transparent;
+	border-right: 11px solid transparent;
+	border-bottom: 15px solid #557f8d;
+	margin: 126px 0 0 7px;
+	border-radius: 3%;
+	outline: 1px solid transparent;
+	-webkit-transform: rotateZ(-8deg);
+	-webkit-transform-style: preserve-3d;
+}
+
+#wrapper .container2::after {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-left: 12px solid transparent;
+	border-right: 11px solid transparent;
+	border-bottom: 15px solid #00adb4;
+	-webkit-transform: rotate(230deg);
+	transform: rotate(-90deg);
+	margin: 70px 0 0 -18px;
+ 	border-radius: 3%;
+}
+
+#wrapper .container3::after {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-left: 12px solid transparent;
+	border-right: 11px solid transparent;
+	border-bottom: 15px solid #41b5ac;
+	margin: 16px 0 0 6px;
+	border-radius: 3%;
+	outline: 1px solid transparent;
+	-webkit-transform: rotateZ(65deg);
+	-webkit-transform-style: preserve-3d;
+}
+
+#wrapper .container4::after {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-left: 12px solid transparent;
+	border-right: 11px solid transparent;
+	border-bottom: 15px solid #557f8d;
+	margin: 17px 0 0 376px;
+	border-radius: 3%;
+	outline: 1px solid transparent;
+	-webkit-transform: rotateZ(405deg);
+	-webkit-transform-style: preserve-3d;
+}
+
+#wrapper .container5::after {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-left: 12px solid transparent;
+	border-right: 11px solid transparent;
+	border-bottom: 15px solid #00adb4;
+	-webkit-transform: rotate(230deg);
+	transform: rotate(90deg);
+	margin: 70px 0 0 395px;
+  	border-radius: 3%; 
+}
+
+#wrapper .container6::after {  
+	content: "";
+	display: block; 
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-left: 12px solid transparent;
+	border-right: 11px solid transparent;
+	border-bottom: 15px solid #40b2aa;
+	margin: 123px 0 0 372px;
+	border-radius: 3%;
+	outline: 1px solid transparent;
+	-webkit-transform: rotateZ(134deg);
+	-webkit-transform-style: preserve-3d;
+} 
+
+    </style>
+</head>
+<body>
+  <div id="wrapper">
+
+    <div id="circle">
+        <div class="prems-fading-circle">
+            <div class="prems-circle1 prems-circle"><div> </div></div>
+            <div class="prems-circle2 prems-circle"><div> </div></div>
+            <div class="prems-circle3 prems-circle"><div> </div></div>
+            <div class="prems-circle4 prems-circle"><div> </div></div>
+            <div class="prems-circle5 prems-circle"><div> </div></div>
+            <div class="prems-circle6 prems-circle"><div> </div></div>
+            <div class="prems-circle7 prems-circle"><div> </div></div>
+            <div class="prems-circle8 prems-circle"><div> </div></div>
+            <div class="prems-circle9 prems-circle"><div> </div></div>
+            <div class="prems-circle10 prems-circle"><div> </div></div>
+            <div class="prems-circle11 prems-circle"><div> </div></div>
+            <div class="prems-circle12 prems-circle"><div> </div></div>
+            <div class="prems-circle13 prems-circle"><div> </div></div>
+            <div class="prems-circle14 prems-circle"><div> </div></div>
+            <div class="prems-circle15 prems-circle"><div> </div></div>
+            <div class="prems-circle16 prems-circle"><div> </div></div>
+            <div class="prems-circle17 prems-circle"><div> </div></div>
+            <div class="prems-circle18 prems-circle"><div> </div></div>
+            <div class="prems-circle19 prems-circle"><div> </div></div>
+            <div class="prems-circle20 prems-circle"><div> </div></div>
+            <div class="prems-circle21 prems-circle"><div> </div></div>
+            <div class="prems-circle22 prems-circle"><div> </div></div>
+            <div class="prems-circle23 prems-circle"><div> </div></div>
+            <div class="prems-circle24 prems-circle"><div> </div></div>
+            <div class="prems-circle25 prems-circle"><div> </div></div>
+            <div class="prems-circle26 prems-circle"><div> </div></div>
+            <div class="prems-circle27 prems-circle"><div> </div></div>
+            <div class="prems-circle28 prems-circle"><div> </div></div>
+            <div class="prems-circle29 prems-circle"><div> </div></div>
+            <div class="prems-circle30 prems-circle"><div> </div></div>
+            <div class="prems-circle31 prems-circle"><div> </div></div>
+            <div class="prems-circle32 prems-circle"><div> </div></div>
+            <div class="prems-circle33 prems-circle"><div> </div></div>
+            <div class="prems-circle34 prems-circle"><div> </div></div>
+            <div class="prems-circle35 prems-circle"><div> </div></div>
+            <div class="prems-circle36 prems-circle"><div> </div></div>
+            <div class="prems-circle37 prems-circle"><div> </div></div>
+            <div class="prems-circle38 prems-circle"><div> </div></div>
+            <div class="prems-circle39 prems-circle"><div> </div></div>
+            <div class="prems-circle40 prems-circle"><div> </div></div>
+            <div class="prems-circle41 prems-circle"><div> </div></div>
+ 
+            <div id="inner">
+                <h3><br></h3>
+            </div>
+        </div>
+
+    </div>
+
+  <div class="containr container1">
+    <img src="https://www.premiums.mobi/userfiles/premiums.mobi/images/Losrondje_01.png">
+    <h3>Het<br>vormgevings<br>gesprek</h3>
+ 
+  </div>
+
+ <div class="containr container2">
+    <img src="https://www.premiums.mobi/userfiles/premiums.mobi/images/Losrondje_02.png">
+    <h3>Het<br>ontwerp<br>voorstel</h3>
+  </div> 
+   
+  <div class="containr container3">
+     <img src="https://www.premiums.mobi/userfiles/premiums.mobi/images/Losrondje_03.png">
+    <h3>Uw<br>inlog<br>gegevens</h3>
+  </div>
+ 
+
+  <div class="containr container4">
+     <img src="https://www.premiums.mobi/userfiles/premiums.mobi/images/Losrondje_04.png">
+    <h3>Live<br>zetten<br>van website</h3>
+  </div>
+   
+     <div class="containr container5">
+     <img src="https://www.premiums.mobi/userfiles/premiums.mobi/images/Losrondje_05.png">
+    <h3>Onbeperkt<br>aanpassingen</h3>
+  </div>
+<!--    
+        <div class="containr container6">
+     <img src="https://www.premiums.mobi/userfiles/premiums.mobi/images/Losrondje_05.png">
+    <h3>Voorbeeld<br>tekst</h3>
+ 
+  </div> -->
+   
+   
+
+   
+   
+</div>
+
+   
+      </div>
+      
+
+
+      <script>
+const circles = document.querySelectorAll('.prems-circle > div');
+
+// Initialize an array to track the state of each circle
+const circleStates = new Array(circles.length).fill(false);
+
+// Add click event listener to each circle
+circles.forEach((circle, index) => {
+    circle.addEventListener('click', () => {
+        // Toggle the state of the clicked circle
+        circleStates[index] = !circleStates[index];
+
+        // Update the fill status of all circles
+        circles.forEach((circle, i) => {
+            circle.classList.toggle('filled', circleStates[i]);
+        });
+    });
+});
+
+
+// Get all circle elements
+// const circles = document.querySelectorAll('.prems-circle > div');
+
+// Add click event listener to each circle
+circles.forEach((circle, index) => {
+    circle.addEventListener('click', () => {
+        // Toggle the fill status of the clicked circle
+        circle.classList.toggle('filled');
+    });
+});
+
+
+
+      </script>
+</body>
+</html>
