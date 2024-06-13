@@ -5034,7 +5034,7 @@ a.five {
   border: 1px solid #ddd;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
-  z-index: 999;
+  z-index:999;
 }
 
 .chat-header {
@@ -5045,7 +5045,7 @@ a.five {
   justify-content: space-between;
   align-items: center;
   border-radius: 0.5rem;
-  z-index: 9999;
+  z-index:9999;
 }
 .chat-header button {
   color: #fff;
@@ -5086,13 +5086,12 @@ a.five {
   border-radius: 4px;
 }
 .chat-body input::placeholder {
-  font-size: 0.775rem;
-  color: #ddd;
+font-size:0.775rem;
+color:#ddd;
 }
-.chat-body input:focus,
-.chat-body input:focus-visible {
+.chat-body input:focus,.chat-body input:focus-visible {
   border: 1px solid var(--bs-secondary);
-  outline: none;
+  outline:none;
 }
 
 .chat-body button {
@@ -5109,11 +5108,12 @@ a.five {
 .chat-body button:hover {
   background: #128c7e;
 }
-#sendBtn {
-  justify-content: center;
+#sendBtn{
+ justify-content:center;
 }
 
 /* chatbot with roboicon */
+
 
 @media (max-width: 1200px) {
   .bgcrcl {
