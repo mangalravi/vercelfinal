@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WhatsApp Chatbot</title>
+    <style>
+  
+      .chat-widget {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #fff;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .chat-header {
+        background: #25d366;
+        color: #fff;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 0.5rem;
+      }
+      .chat-header button {
+        color: #000;
+        border: 0;
+        border-radius: 4px;
+        font-size: 0.875rem;
+        padding: 5px;
+      }
+
+      .chat-header h3 {
+        margin: 0;
+        font-size: 14px;
+        margin-right: 0.675rem;
+      }
+
+      .chat-body {
+        display: none;
+        padding: 10px;
+      }
+
+      .chat-body input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+
+      .chat-body button {
+        width: 100%;
+        padding: 10px;
+        background: #25d366;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        border-radius: 0.5rem;
+      }
+
+      .chat-body button:hover {
+        background: #128c7e;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chat-widget">
+      <div class="chat-header">
+        <h3>Chat with us..</h3>
+        <button id="chatToggleBtn">Open Chat</button>
+      </div>
+      <div class="chat-body" id="chatBody">
+        <input
+          type="text"
+          id="messageInput"
+          placeholder="Type your message..."
+        />
+        <button id="sendBtn">Send</button>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const chatToggleBtn = document.getElementById("chatToggleBtn");
+        const chatBody = document.getElementById("chatBody");
+        const sendBtn = document.getElementById("sendBtn");
+        const messageInput = document.getElementById("messageInput");
+
+        chatToggleBtn.addEventListener("click", function () {
+          chatBody.style.display =
+            chatBody.style.display === "block" ? "none" : "block";
+        });
+
+        sendBtn.addEventListener("click", function () {
+          const message = messageInput.value.trim();
+          if (message) {
+            const phoneNumber = "6350428940"; // Replace with your WhatsApp number
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            window.open(whatsappUrl, "_blank");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

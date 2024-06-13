@@ -1,59 +1,53 @@
-$(window).scroll(function () {
-  var scroll = $(window).scrollTop();
-
-  if (scroll >= 50) {
-    $(".navwhite").addClass("bg-active");
-  } else {
-    $(".navwhite").removeClass("bg-active");
-  }
-});
-
-// $(document).ready(function(){
-//   $('.projetos-slider').slick({
-//       slidesToShow: 1,
-//       slidesToScroll: 1,
-//       autoplay: true,
-//       autoplaySpeed: 1000,
-//       arrows: false,
-//       dots: false,
-//       adaptiveHeight: true,
-//       paginationClickable: true,
-//       parallax: true,
-//       spaceBetween: 10,
-//       grabCursor: true,
-//       speed: 1500,
-//       responsive: [
-//           {
-//               breakpoint: 1121,
-//               settings: {
-//                   slidesToShow: 1,
-//                   autoplay: true,
-//                   adaptiveHeight: true,
-//               }
-//           },
-//           {
-//               breakpoint: 768,
-//               settings: {
-//                   slidesToShow: 1,
-//                   autoplay: true,
-//                   adaptiveHeight: true,
-//               }
-//           }
-//       ]
-//   });
-
-//   $('.prev-arrow').click(function() {
-//       $('.projetos-slider').slick('slickPrev'); // Trigger previous slide on click
-//   });
-
-//   $('.next-arrow').click(function() {
-//       $('.projetos-slider').slick('slickNext'); // Trigger next slide on click
-//   });
-// });
-
-// product-list page
-
 $(document).ready(function () {
+  // Scroll event for navbar
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    if (scroll >= 50) {
+      $(".navwhite").addClass("bg-active");
+    } else {
+      $(".navwhite").removeClass("bg-active");
+    }
+  });
+
+  // Slick slider initialization
+  $(".projetos-slider").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    arrows: false,
+    dots: false,
+    adaptiveHeight: true,
+    speed: 1500,
+    responsive: [
+      {
+        breakpoint: 1121,
+        settings: {
+          slidesToShow: 1,
+          autoplay: true,
+          adaptiveHeight: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          autoplay: true,
+          adaptiveHeight: true,
+        },
+      },
+    ],
+  });
+
+  $(".prev-arrow").click(function () {
+    $(".projetos-slider").slick("slickPrev");
+  });
+
+  $(".next-arrow").click(function () {
+    $(".projetos-slider").slick("slickNext");
+  });
+
+  // Sidebar dropdown
   $(".sidebar-dropdown > a").click(function () {
     $(".sidebar-submenu").slideUp(200);
     if ($(this).parent().hasClass("active")) {
@@ -66,35 +60,141 @@ $(document).ready(function () {
     }
   });
 
-  var sidebarTimeout;
-  var sidebarCollapsed = false;
+  $(document).ready(function () {
+    var sidebarTimeout;
+    var sidebarCollapsed = true; // Initially collapsed
+    var hoverEffectEnabled = true; // To track if hover effect is enabled
 
-  // Function to collapse sidebar after a certain time interval
-  function collapseSidebar() {
-    $("#sidebar").addClass("collapsed").css("width", "10px");
-    $(".main-prodlist").css("margin-left", "15px");
-    sidebarCollapsed = true;
-  }
-
-  // Toggle sidebar collapse on button click
-  $("#btn-collapse").on("click", function () {
-    $("#sidebar").toggleClass("collapsed");
-    if (sidebarCollapsed) {
-      $("#sidebar").css("width", "250px"); // Adjust the width of the sidebar when expanding
-    } else {
-      $("#sidebar").css("width", "10px"); // Set the width to zero when collapsing
+    // Function to collapse sidebar
+    function collapseSidebar() {
+      $("#sidebar").addClass("collapsed").css("width", "10px");
+      $(".main-prodlist").css("margin-left", "15px");
+      $("#btn-collapse").css("left", "-18px");
+      sidebarCollapsed = true;
+      hoverEffectEnabled = false; // Disable hover effect after the sidebar collapses to 10px
     }
-    $(".main-prodlist").css("margin-left", sidebarCollapsed ? "250px" : "20px");
-    sidebarCollapsed = !sidebarCollapsed; // Toggle the sidebarCollapsed flag
-    // Reset the timeout if the button is clicked
-    clearTimeout(sidebarTimeout);
-    sidebarTimeout = setTimeout(collapseSidebar, 100000); // Adjust the time interval as needed (100000 milliseconds = 100 seconds)
+
+    // Function to expand sidebar
+    function expandSidebar() {
+      $("#sidebar").removeClass("collapsed").css("width", "250px");
+      $(".main-prodlist").css("margin-left", "250px");
+      $("#btn-collapse").css("left", "215px");
+      sidebarCollapsed = false;
+    }
+
+    // Toggle sidebar collapse on button click
+    $("#btn-collapse").on("click", function () {
+      if (sidebarCollapsed) {
+        expandSidebar();
+      } else {
+        collapseSidebar();
+      }
+      clearTimeout(sidebarTimeout);
+      sidebarTimeout = setTimeout(collapseSidebar, 100000); // Reset the timeout to collapse the sidebar after 100 seconds
+    });
+
+    // Add hover event listeners for sidebar
+    $("#sidebar").hover(
+      function () {
+        if (hoverEffectEnabled && sidebarCollapsed) {
+          clearTimeout(sidebarTimeout);
+          expandSidebar();
+        }
+      },
+      function () {
+        if (hoverEffectEnabled && !sidebarCollapsed) {
+          sidebarTimeout = setTimeout(collapseSidebar, 5000); // Collapse the sidebar after 5 seconds
+          hoverEffectEnabled = false; // Disable hover effect after first collapse to 10px
+        }
+      }
+    );
+
+    // Ensure the sidebar collapse state is respected when the page is first loaded
+    // Initial collapse after 5 seconds if no interaction
+    sidebarTimeout = setTimeout(collapseSidebar, 5000);
+
+    // Additional event for the new button to display sidebar
+    $(".navbar-toggler.bfltr.mdlcat").on("click", function () {
+      $("#sidebar").css("display", "block");
+      expandSidebar();
+    });
+
+    // Re-check the screen size on window resize and adjust sidebar accordingly
+    $(window).resize(function () {
+      if ($(window).width() > 991) {
+        if (sidebarCollapsed) {
+          collapseSidebar();
+        } else {
+          expandSidebar();
+        }
+      } else {
+        // If the window is resized to a smaller width, ensure the sidebar is collapsed
+        collapseSidebar();
+      }
+    });
   });
 
-  // Set timeout to collapse sidebar if button is not clicked
-  sidebarTimeout = setTimeout(collapseSidebar, 5000); // Adjust the time interval as needed (5000 milliseconds = 5 seconds)
+  // Text animation
+  var spans = $(".new_homebstock-change-title-box").find(
+    ".new_homebstock-amimationText"
+  );
+  var currentIndex = 0;
+
+  function showNextSpan() {
+    spans.eq(currentIndex).removeClass("active");
+    currentIndex = (currentIndex + 1) % spans.length;
+    spans.eq(currentIndex).addClass("active");
+  }
+
+  spans.eq(currentIndex).addClass("active");
+  var interval = setInterval(showNextSpan, 3000);
+
+  $(window).on("unload", function () {
+    clearInterval(interval);
+  });
+
+  // Image hover effect
+  var $bigItem = $(".image-big-list-item");
+  var $smallItem = $(".image-small-list-item");
+
+  $smallItem.on("click mouseenter", function () {
+    $bigItem.removeClass("active");
+    $smallItem.removeClass("active");
+    $bigItem.eq($(this).index()).addClass("active");
+    $smallItem.eq($(this).index()).addClass("active");
+  });
+
+  // Filter toggle
+  $("#clsfltr").click(function () {
+    $("#sidebar").css("display", "none");
+  });
+  $(".mdlcat").click(function () {
+    $("#sidebar").css("display", "block");
+  });
 });
 
+//whatsp chat
+// (function () {
+//   var options = {
+//     whatsapp: "6350428940", // Contact Number
+//     call_to_action: "Wanna Chat With Us !!!",
+//     position: "right",
+//   };
+//   var proto = document.location.protocol,
+//     host = "getbutton.io",
+//     url = proto + "//static." + host;
+//   var s = document.createElement("script");
+//   s.type = "text/javascript";
+//   s.async = true;
+//   s.src = url + "/widget-send-button/js/init.js";
+//   s.onload = function () {
+//     WhWidgetSendButton.init(host, proto, options);
+//   };
+
+//   var x = document.getElementsByTagName("script")[0];
+//   x.parentNode.insertBefore(s, x);
+// })();
+// Google Translate initialization
 var Cookie = {
   set: function set(name, value, days) {
     var domain, domainParts, date, expires, host;
@@ -216,74 +316,6 @@ document.addEventListener("DOMContentLoaded", function () {
   selectElement.insertBefore(selectIcon, selectElement.firstChild);
 });
 
-// text animation
-
-$(document).ready(function () {
-  // Define an array to store all the spans
-  var spans = $(".new_homebstock-change-title-box").find(
-    ".new_homebstock-amimationText"
-  );
-  var currentIndex = 0; // Initialize index for the current active span
-
-  // Function to show the next span and hide the previous one
-  function showNextSpan() {
-    spans.eq(currentIndex).removeClass("active"); // Hide current active span
-    currentIndex = (currentIndex + 1) % spans.length; // Calculate index for the next span
-    spans.eq(currentIndex).addClass("active"); // Show next span
-  }
-
-  // Initially, show the first span
-  spans.eq(currentIndex).addClass("active");
-
-  // Set interval to change spans every 3 seconds (adjust the interval as needed)
-  var interval = setInterval(showNextSpan, 3000);
-
-  // Stop the interval when the page unloads
-  $(window).unload(function () {
-    clearInterval(interval); // Stop the interval
-  });
-});
-
-// whatsapp chat
-
-(function () {
-  var options = {
-    whatsapp: "6350428940", // Contact Number
-    call_to_action: "Wanna Chat With Us !!!",
-    position: "right",
-  };
-  var proto = document.location.protocol,
-    host = "getbutton.io",
-    url = proto + "//static." + host;
-  var s = document.createElement("script");
-  s.type = "text/javascript";
-  s.async = true;
-  s.src = url + "/widget-send-button/js/init.js";
-  s.onload = function () {
-    WhWidgetSendButton.init(host, proto, options);
-  };
-
-  var x = document.getElementsByTagName("script")[0];
-  x.parentNode.insertBefore(s, x);
-})();
-
-$(document).ready(function () {
-  // save big images
-  var $bigItem = $(".image-big-list-item");
-  // save small images
-  var $smallItem = $(".image-small-list-item");
-  // click and mouseenter function on small image
-  // you could delete one eventlistener
-  $smallItem.on("click mouseenter", function () {
-    // remove active class from all items
-    $bigItem.removeClass("active");
-    $smallItem.removeClass("active");
-    // add active class to item as small item's index
-    $bigItem.eq($(this).index()).addClass("active");
-    $smallItem.eq($(this).index()).addClass("active");
-  });
-});
-
 document.addEventListener("DOMContentLoaded", function () {
   const slides = document.querySelectorAll(".slide");
   const tabs = document.querySelectorAll(".tab");
@@ -316,90 +348,117 @@ document.addEventListener("DOMContentLoaded", function () {
   intervalId = setInterval(switchSlide, 2000);
 });
 
-function showTooltip(event) {
-  // check presence
-  let tooltipDiv = event.target.closest("*[data-tooltip]");
-  if (!tooltipDiv) return;
+document.addEventListener("DOMContentLoaded", function () {
+  const children = document.querySelectorAll(".ImgContent");
+  let currentIndex = 0;
 
-  // get tooltip text
-  let tooltipText = tooltipDiv.dataset.tooltip;
-
-  // make the tooltip box
-  let tooltipBox = document.createElement("div");
-
-  // (append the complete thing else positioning is impossible)
-  tooltipBox.className = "tooltip";
-  tooltipBox.innerHTML = tooltipText;
-  document.body.append(tooltipBox); // position of the code is important
-
-  let tooltipBoxCoors = tooltipBox.getBoundingClientRect();
-  let tooltipDivCoors = tooltipDiv.getBoundingClientRect();
-  let topPosition = "none";
-  let leftPosition = "none";
-
-  topPosition = tooltipDivCoors.top - tooltipBoxCoors.height - 3;
-  leftPosition =
-    tooltipDivCoors.left +
-    tooltipDivCoors.width / 2 -
-    tooltipBoxCoors.width / 2;
-
-  if (topPosition < 0) {
-    topPosition = tooltipDivCoors.top + tooltipDivCoors.height + 3;
+  function setActive(index) {
+    children.forEach((child, i) => {
+      if (i === index) {
+        child.classList.add("active");
+      } else {
+        child.classList.remove("active");
+      }
+    });
   }
-  if (leftPosition < 0) leftPosition = tooltipDivCoors.left;
 
-  // final position and show tooltip
-  tooltipBox.style.left = leftPosition + "px";
-  tooltipBox.style.top = topPosition + "px";
-}
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % children.length;
+    setActive(currentIndex);
+  }
 
-function removeTooltip(event) {
-  let tooltipList = document.querySelectorAll(".tooltip");
-  Array.from(tooltipList).forEach((item) => item.remove());
-}
+  setInterval(nextSlide, 3000);
 
-document.addEventListener("mouseover", showTooltip);
-document.addEventListener("mouseout", removeTooltip);
+  children.forEach((child, index) => {
+    child.addEventListener("mouseenter", () => {
+      setActive(index);
+    });
+    child.addEventListener("mouseleave", () => {
+      setActive(-1);
+    });
+  });
+});
 
-const children = document.querySelectorAll(".ImgContent");
-let currentIndex = 0;
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.getElementById("container");
+  const registerBtn = document.getElementById("register");
+  const loginBtn = document.getElementById("login");
 
-function setActive(index) {
-  children.forEach((child, i) => {
-    if (i === index) {
-      child.classList.add("active");
-    } else {
-      child.classList.remove("active");
+  registerBtn.addEventListener("click", () => {
+    container.classList.add("active");
+  });
+
+  loginBtn.addEventListener("click", () => {
+    container.classList.remove("active");
+  });
+});
+
+$(document).ready(function () {
+  // Open sidebar when clicking the Filter button
+  $(".mdlcat2").click(function () {
+    $("#sidebar").css("display", "block");
+  });
+  // Close sidebar when clicking the close button inside the sidebar
+  $("#clsfltr").click(function () {
+    $("#sidebar").css("display", "none");
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Find the select element with class 'goog-te-combo'
+  var selectElement = document.querySelector(".goog-te-combo");
+
+  // Check if the element exists
+  if (selectElement) {
+    // Add the 'selectSearch' class to the element
+    selectElement.classList.add("selectSearch");
+  }
+});
+
+// whatsp chatbot
+// document.addEventListener("DOMContentLoaded", function () {
+//   const chatToggleBtn = document.getElementById("chatToggleBtn");
+//   const chatBody = document.getElementById("chatBody");
+//   const sendBtn = document.getElementById("sendBtn");
+//   const messageInput = document.getElementById("messageInput");
+
+//   chatToggleBtn.addEventListener("click", function () {
+//     chatBody.style.display =
+//       chatBody.style.display === "block" ? "none" : "block";
+//   });
+
+//   sendBtn.addEventListener("click", function () {
+//     const message = messageInput.value.trim();
+//     if (message) {
+//       const phoneNumber = "6350428940"; // Replace with your WhatsApp number
+//       const encodedMessage = encodeURIComponent(message);
+//       const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+//       window.open(whatsappUrl, "_blank");
+//     }
+//   });
+// });
+
+
+
+//whatsp chatbot with roboicon
+document.addEventListener("DOMContentLoaded", function () {
+  const chatToggleBtn = document.getElementById("chatToggleBtn");
+  const chatBody = document.getElementById("chatBody");
+  const sendBtn = document.getElementById("sendBtn");
+  const messageInput = document.getElementById("messageInput");
+
+  chatToggleBtn.addEventListener("click", function () {
+    chatBody.style.display =
+      chatBody.style.display === "block" ? "none" : "block";
+  });
+
+  sendBtn.addEventListener("click", function () {
+    const message = messageInput.value.trim();
+    if (message) {
+      const phoneNumber = "6350428940"; // Replace with your WhatsApp number
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+      window.open(whatsappUrl, "_blank");
     }
   });
-}
-
-function nextSlide() {
-  currentIndex = (currentIndex + 1) % children.length;
-  setActive(currentIndex);
-}
-
-setInterval(nextSlide, 3000); // Change slide every 3 seconds
-
-// Add event listeners for mouse enter and mouse leave
-children.forEach((child, index) => {
-  child.addEventListener("mouseenter", () => {
-    setActive(index);
-  });
-  child.addEventListener("mouseleave", () => {
-    // Reset to default behavior
-    setActive(-1);
-  });
-});
-
-const container = document.getElementById("container");
-const registerBtn = document.getElementById("register");
-const loginBtn = document.getElementById("login");
-
-registerBtn.addEventListener("click", () => {
-  container.classList.add("active");
-});
-
-loginBtn.addEventListener("click", () => {
-  container.classList.remove("active");
 });
