@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>b2bstop</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="content/images/fabicon.png" alt="fabicon">
+    <link rel="icon" type="image/png" sizes="32x32" href="content/images/fabicon.png" alt="fabicon">
+    <link rel="icon" type="image/png" sizes="16x16" href="content/images/fabicon.png" alt="fabicon">
+    <link rel="publication" href="" crossorigin="use-credentials" type="application/manifest+json">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+
     <link rel="icon" href="content/images/logo/favicon.png" type="image/png">
-    <link rel="stylesheet preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link type='text/css' href='http://fonts.googleapis.com/css?family=Lato:400,500,600,700,800,900' rel="stylesheet" />
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="content/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="content/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="content/css/font-family.css">
+ <link rel="stylesheet" href="content/css/aos.css">
+ <link href="content/Select2/Select2.min.css"stylesheet" />
     <link rel="stylesheet" href="content/css/custom.css">
 </head>
-<body>
+<body class="poswht">
   <header class="fixed-top">
     <nav class="navbar navbar-expand-lg p-md-2 navwhite">
     <div class="container-fluid position-relative">
@@ -66,7 +74,7 @@
                       </div>
                    </li>
                     <li class="nav-item d-flex align-items-center p-0">
-                  <div id="translate"></div>
+                  <div id="translate" class="selectSearch"></div>
                    </li>
                   </ul>
                 </li>
@@ -151,18 +159,22 @@
 
 <section class="p-0">
   <div class="layout has-sidebar fixed-sidebar fixed-header">
-    <aside id="sidebar" class="sidebar break-point-sm has-bg-image d-none d-lg-block">
-      <a id="btn-collapse" class="sidebar-collapser" data-aos="fade-left" data-aos-duration="1400">
-        <i class="bi bi-filter-left"></i>
-      </a>
-      <div class="image-wrapper">
-        <img src="assets/content/images/sidebar-bg.jpg" alt="sidebar background" />
-      </div>
-      <div class="sidebar-layout">
-      <div class="d-flex justify-content-between mb-3">
-        <span class="filter">Filters</span>
-        <button class="btn btn-primary">Clear</button>
-      </div>
+      <aside id="sidebar" class="sidebar break-point-sm has-bg-image">
+          <a id="btn-collapse" class="sidebar-collapser" data-aos="fade-left" data-aos-duration="1400">
+              <i class="bi bi-filter-left"></i>
+          </a>
+          <div class="image-wrapper">
+              <img src="content/images/sidebar-bg.jpg" alt="sidebar background" />
+          </div>
+
+          <div class="sidebar-layout ">
+              <div class="d-flex d-lg-none justify-content-end mb-4">
+                  <button type="button" class="btn-close text-right" id="clsfltr" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="d-flex justify-content-between mb-3">
+                  <span class="filter">Filters</span>
+                  <button class="btn btn-primary">Clear</button>
+              </div>
       <div class="accmain">
         <div class="accordion accordion-flush" id="accordionFlushExample">
           <div class="accordion-item pt-0">
@@ -215,15 +227,15 @@
             <div id="flush-collapseThree" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushExample">
               <div class="accordion-body">
                 <form>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
                   <label for="vehicle1">Electronic & Appliances</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
                   <label for="vehicle2">Fashion & Style</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
                   <label for="vehicle3">Other</label>
                   </div>
@@ -240,164 +252,164 @@
             <div id="flush-collapseFour" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushExample">
               <div class="accordion-body">
                 <form class="chkgrp">
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle11" name="vehicle11" value="Bike">
                   <label for="vehicle11">Air Cooler</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle21" name="vehicle21" value="Car">
                   <label for="vehicle21">Electrical Product</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle131" name="vehicle131" value="Boat">
                   <label for="vehicle131">Handbag</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle4" name="vehicle4" value="Bike">
                   <label for="vehicle4">Home Utility</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle5" name="vehicle5" value="Car">
                   <label for="vehicle5">Lamp</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle6" name="vehicle6" value="Boat">
                   <label for="vehicle6">2 Wheeler Accessories</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle7" name="vehicle7" value="Bike">
                   <label for="vehicle7">Water Heater</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle8" name="vehicle8" value="Car">
                   <label for="vehicle8">Water Purifier</label>
                   </div>
 
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle011" name="vehicle011" value="Bike">
                   <label for="vehicle011">Air Cooler</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle021" name="vehicle021" value="Car">
                   <label for="vehicle021">Electrical Product</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle0131" name="vehicle0131" value="Boat">
                   <label for="vehicle0131">Handbag</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle04" name="vehicle04" value="Bike">
                   <label for="vehicle04">Home Utility</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle05" name="vehicle05" value="Car">
                   <label for="vehicle05">Lamp</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle06" name="vehicle06" value="Boat">
                   <label for="vehicle06">2 Wheeler Accessories</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle07" name="vehicle07" value="Bike">
                   <label for="vehicle07">Water Heater</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle08" name="vehicle08" value="Car">
                   <label for="vehicle08">Water Purifier</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle711" name="vehicle711" value="Bike">
                   <label for="vehicle711">Air Cooler</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle721" name="vehicle721" value="Car">
                   <label for="vehicle721">Electrical Product</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle7131" name="vehicle7131" value="Boat">
                   <label for="vehicle7131">Handbag</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle74" name="vehicle74" value="Bike">
                   <label for="vehicle74">Home Utility</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle75" name="vehicle75" value="Car">
                   <label for="vehicle75">Lamp</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle76" name="vehicle76" value="Boat">
                   <label for="vehicle76">2 Wheeler Accessories</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle77" name="vehicle77" value="Bike">
                   <label for="vehicle77">Water Heater</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle78" name="vehicle78" value="Car">
                   <label for="vehicle78">Water Purifier</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle611" name="vehicle611" value="Bike">
                   <label for="vehicle611">Air Cooler</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle621" name="vehicle621" value="Car">
                   <label for="vehicle621">Electrical Product</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle6131" name="vehicle6131" value="Boat">
                   <label for="vehicle6131">Handbag</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle64" name="vehicle64" value="Bike">
                   <label for="vehicle64">Home Utility</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle65" name="vehicle65" value="Car">
                   <label for="vehicle65">Lamp</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle66" name="vehicle66" value="Boat">
                   <label for="vehicle66">2 Wheeler Accessories</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle67" name="vehicle67" value="Bike">
                   <label for="vehicle67">Water Heater</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle68" name="vehicle68" value="Car">
                   <label for="vehicle68">Water Purifier</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle811" name="vehicle811" value="Bike">
                   <label for="vehicle811">Air Cooler</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle821" name="vehicle821" value="Car">
                   <label for="vehicle821">Electrical Product</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle8131" name="vehicle8131" value="Boat">
                   <label for="vehicle8131">Handbag</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle84" name="vehicle84" value="Bike">
                   <label for="vehicle84">Home Utility</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle85" name="vehicle85" value="Car">
                   <label for="vehicle85">Lamp</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle86" name="vehicle86" value="Boat">
                   <label for="vehicle86">2 Wheeler Accessories</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle87" name="vehicle87" value="Bike">
                   <label for="vehicle87">Water Heater</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle88" name="vehicle88" value="Car">
                   <label for="vehicle88">Water Purifier</label>
                   </div>
@@ -414,11 +426,11 @@
             <div id="flush-collapseFive" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushExample">
               <div class="accordion-body">
                 <form action="/action_page.php">
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle21" name="vehicle21" value="Bike">
                   <label for="vehicle21">Open Box</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle22" name="vehicle22" value="Car">
                   <label for="vehicle22">Very Good</label>
                   </div>
@@ -435,19 +447,19 @@
             <div id="flush-collapseSix" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushExample">
               <div class="accordion-body">
                 <form action="/action_page.php">
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle31" name="vehicle31" value="Bike">
                   <label for="vehicle31">Ahmdabad</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle32" name="vehicle32" value="Car">
                   <label for="vehicle32">Bangalore</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle33" name="vehicle33" value="Boat">
                   <label for="vehicle33">Kolkata</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle43" name="vehicle43" value="Boat">
                   <label for="vehicle43">Patiyala</label>
                   </div>
@@ -461,28 +473,28 @@
     </aside>
     <div class="main-prodlist w-100">
       <div class="container-fluid">
-        <div class="row pt-4 align-items-center">
-          <div class="col-md-3 mb-4">
+        <div class="row pt-4 pt-lg-5 align-items-center">
+          <div class="col-md-3 mb-3 mb-md-4">
             <span class="live">255 Live Lots (Hybrid)</span>
           </div>
-          <div class="col-md-7 mb-4">
+          <div class="col-md-7 mb-3 mb-md-4">
             <div class="row">
-              <div class="col-8">
-                <div class="inpbox me-3">
-                  <input type="text" placeholder="Search for Lots">
-                  <button class="btn btn-primary">Search</button>
+              <div class="col-sm-8">
+               <div class="inpbox  mb-3 mb-sm-0 ">
+                  <input type="text" placeholder="Search for Lots" class="form-control">
+                  <button class="btn btn-primary" type="button">Search</button>
                             </div>
               </div>
-         <div class="col-4">
-          <a href="#" class="btn btn-secondary w-100 flex-row" data-bs-toggle="modal" data-bs-target="#graded">
+         <div class="col-sm-4">
+          <button href="#" class="btn btn-secondary w-100 flex-row" data-bs-toggle="modal" data-bs-target="#graded">
             <!-- <img src="content/images/category-list.svg" alt="category"> -->
             <i class="bi bi-search"></i>
             Search By
-  </a>
+  </button>
 </div>
 </div>
         </div>
-          <div class="col-md-2 mb-4">
+          <div class="col-md-2 mb-3 mb-md-4">
             <div class="drpdwn">
 <div class="btn-group">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -731,8 +743,14 @@
 </svg>
                   B4 Traders
                 </h6>
-                <p class="d-flex flex-column">
-                  <i class="bi bi-box"></i>Hybrid
+                <p class="d-flex flex-column align-items-end">
+                  <i class="bi bi-box"></i>
+
+                  <button type="button" class="btn btn-primary-filled" data-bs-toggle="modal" data-bs-target="#hybrid">
+                    Hybrid
+                  </button>
+
+                  
                 </p>
               </div>
               <div class="d-flex justify-content-between align-items-center mt-2">
@@ -2717,7 +2735,13 @@
 </footer>
 
 <!--bottom filter -->
-<button class="bfltr d-flex justify-content-center d-none-lg" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><i class="bi bi-filter-left"></i>Sort</button>
+<button href="#" class="bfltr d-flex d-none-lg mdlcat1 flex-row" data-bs-toggle="modal" data-bs-target="#graded">
+  <!-- <img src="content/images/category-list.svg" alt="category"> -->
+  <i class="bi bi-search"></i>
+  Search By
+</button>
+
+<!-- <button class="bfltr d-flex d-none-lg mdlcat1 flex-row" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><i class="bi bi-filter-left"></i>Sort</button> -->
 
 <div class="offcanvas offcanvas-bottom offhgt" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
   <div class="offcanvas-header">
@@ -2760,7 +2784,7 @@
 
 
 <!-- modal catagory -->
-<div class="modal fade" id="catagory" tabindex="-1" aria-hidden="true">
+<!-- <div class="modal fade" id="catagory" tabindex="-1" aria-hidden="true">
 	<div class="modal-dialog modal-fullscreen-lg-down">
 	  <div class="modal-content">
 	  <div class="modal-header">
@@ -2798,15 +2822,15 @@
               </div>
               <div class="tab-pane fade" id="v-pills-messages" role="tabpanel">
                 <form>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle1a" name="vehicle1a" value="Bike">
                   <label for="vehicle1a">Electronic Appliances</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle2a" name="vehicle2a" value="Car">
                   <label for="vehicle2a">Fashion Style</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle3a" name="vehicle3a" value="Boat">
                   <label for="vehicle3a">Other</label>
                   </div>
@@ -2814,164 +2838,164 @@
               </div>
               <div class="tab-pane fade" id="v-pills-settings" role="tabpanel">
                 <form class="chkgrp">
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle11a" name="vehicle11a" value="Bike">
                   <label for="vehicle11a">Air Cooler</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle21a" name="vehicle21a" value="Car">
                   <label for="vehicle21a">Electrical Product</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle131a" name="vehicle131a" value="Boat">
                   <label for="vehicle131a">Handbag</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle4a" name="vehicle4a" value="Bike">
                   <label for="vehicle4a">Home Utility</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle5a" name="vehicle5a" value="Car">
                   <label for="vehicle5a">Lamp</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle6a" name="vehicle6a" value="Boat">
                   <label for="vehicle6a">2 Wheeler Accessories</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle7a" name="vehicle7a" value="Bike">
                   <label for="vehicle7a">Water Heater</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle8a" name="vehicle8a" value="Car">
                   <label for="vehicle8a">Water Purifier</label>
                   </div>
 
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle011a" name="vehicle011a" value="Bike">
                   <label for="vehicle011a">Air Cooler</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle021a" name="vehicle021a" value="Car">
                   <label for="vehicle021a">Electrical Product</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle0131a" name="vehicle0131a" value="Boat">
                   <label for="vehicle0131a">Handbag</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle04a" name="vehicle04a" value="Bike">
                   <label for="vehicle04"a>Home Utility</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle05a" name="vehicle05a" value="Car">
                   <label for="vehicle05a">Lamp</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle06a" name="vehicle06a" value="Boat">
                   <label for="vehicle06a">2 Wheeler Accessories</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle07a" name="vehicle07a" value="Bike">
                   <label for="vehicle07a">Water Heater</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle08a" name="vehicle08a" value="Car">
                   <label for="vehicle08a">Water Purifier</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle711a" name="vehicle711a" value="Bike">
                   <label for="vehicle711a">Air Cooler</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle721a" name="vehicle721a" value="Car">
                   <label for="vehicle721a">Electrical Product</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle7131a" name="vehicle7131a" value="Boat">
                   <label for="vehicle7131a">Handbag</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle74a" name="vehicle74a" value="Bike">
                   <label for="vehicle74a">Home Utility</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle75a" name="vehicle75a" value="Car">
                   <label for="vehicle75a">Lamp</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle76a" name="vehicle76a" value="Boat">
                   <label for="vehicle76a">2 Wheeler Accessories</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle77a" name="vehicle77a" value="Bike">
                   <label for="vehicle77a">Water Heater</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle78a" name="vehicle78a" value="Car">
                   <label for="vehicle78a">Water Purifier</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle611a" name="vehicle611a" value="Bike">
                   <label for="vehicle611a">Air Cooler</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle621a" name="vehicle621a" value="Car">
                   <label for="vehicle621a">Electrical Product</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle6131a" name="vehicle6131a" value="Boat">
                   <label for="vehicle6131a">Handbag</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle64a" name="vehicle64a" value="Bike">
                   <label for="vehicle64a">Home Utility</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle65a" name="vehicle65a" value="Car">
                   <label for="vehicle65a">Lamp</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle66a" name="vehicle66a" value="Boat">
                   <label for="vehicle66a">2 Wheeler Accessories</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle67a" name="vehicle67a" value="Bike">
                   <label for="vehicle67a">Water Heater</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle68a" name="vehicle68a" value="Car">
                   <label for="vehicle68a">Water Purifier</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle811a" name="vehicle811a" value="Bike">
                   <label for="vehicle811a">Air Cooler</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle821a" name="vehicle821a" value="Car">
                   <label for="vehicle821a">Electrical Product</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle8131a" name="vehicle8131a" value="Boat">
                   <label for="vehicle8131a">Handbag</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle84a" name="vehicle84a" value="Bike">
                   <label for="vehicle84a">Home Utility</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle85a" name="vehicle85a" value="Car">
                   <label for="vehicle85a">Lamp</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle86a" name="vehicle86a" value="Boat">
                   <label for="vehicle86a">2 Wheeler Accessories</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle87a" name="vehicle87a" value="Bike">
                   <label for="vehicle87a">Water Heater</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle88a" name="vehicle88a" value="Car">
                   <label for="vehicle88a">Water Purifier</label>
                   </div>
@@ -2979,11 +3003,11 @@
               </div>
               <div class="tab-pane fade" id="v-pills-fst" role="tabpanel">
                 <form action="/action_page.php">
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle21a" name="vehicle21a" value="Bike">
                   <label for="vehicle21a">Open Box</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle22a" name="vehicle22a" value="Car">
                   <label for="vehicle22a">Very Good</label>
                   </div>
@@ -2991,19 +3015,19 @@
               </div>
               <div class="tab-pane fade" id="v-pills-snd" role="tabpanel">
                 <form action="/action_page.php">
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle31a" name="vehicle31a" value="Bike">
                   <label for="vehicle31a">Ahmdabad</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle32a" name="vehicle32a" value="Car">
                   <label for="vehicle32a">Bangalore</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle33a" name="vehicle33a" value="Boat">
                   <label for="vehicle33a">Kolkata</label>
                   </div>
-                  <div class="mb-2 d-flex">
+                  <div class="mb-2 d-flex align-items-center">
                   <input type="checkbox" id="vehicle43a" name="vehicle43a" value="Boat">
                   <label for="vehicle43a">Patiyala</label>
                   </div>
@@ -3017,9 +3041,9 @@
      </div>
   </div>
   </div>
+  </div> -->
   </div>
-  </div>
-  <button class="navbar-toggler  bfltr mdlcat" type="button" data-bs-toggle="modal" data-bs-target="#catagory">
+  <button class="navbar-toggler bfltr mdlcat2 flex-row" type="button" >
     <i class="bi bi-funnel"></i> Filter
 </button>
 
@@ -3037,11 +3061,11 @@
         <h1 class="modal-title fs-5" id="gradedLabel">Grad A</h1>
         <button type="button" class="btn-close tooltip" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body p-5 pt-3">
+      <div class="modal-body p-4 pt-3">
        <h4>Select Any one</h4>
        <div class="glassmodel">
-        <div class="row">
-          <div class="col-md-6 col-lg">
+        <div class="row gx-3">
+          <div class="col-sm-6 col-md-4 col-lg mb-3 mb-lg-0">
             <div class="otrbtn">
               <a href="#" class="btn btn-secondary w-100">
                         <img src="content/images/category-list.svg" alt="category">
@@ -3049,7 +3073,7 @@
               </a>
             </div>
           </div>
-          <div class="col-md-6 col-lg">
+          <div class="col-sm-6 col-md-4 col-lg mb-3 mb-lg-0">
             <div class="otrbtn">
               <a href="#" class="btn btn-secondary w-100">
                         <img src="content/images/same.svg" alt="same">
@@ -3057,7 +3081,7 @@
               </a>
             </div>
           </div>
-          <div class="col-md-6 col-lg">
+          <div class="col-sm-6 col-md-4 col-lg mb-3 mb-lg-0">
             <div class="otrbtn">
               <a href="#" class="btn btn-secondary w-100">
                         <img src="content/images/right-logo.svg" alt="right">
@@ -3065,7 +3089,7 @@
               </a>
             </div>
           </div>
-          <div class="col-md-6 col-lg">
+          <div class="col-sm-6 col-md-4 col-lg mb-3 mb-sm-0">
             <div class="otrbtn">
               <a href="#" class="btn btn-secondary w-100">
                         <img src="content/images/open-box.svg" alt="open">
@@ -3073,7 +3097,7 @@
               </a>
             </div>
           </div>
-          <div class="col-md-6 col-lg">
+          <div class="col-sm-6 col-md-4 col-lg">
             <div class="otrbtn">
               <a href="#" class="btn btn-secondary w-100">
                         <img src="content/images/thumb.svg" alt="thumb">
@@ -3463,20 +3487,46 @@
   </div>
 </div>
 
+<!-- popup for hybrid -->
+
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class=" modal fade" id="hybrid" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-4 text-center">
+      <div class="modal-header mb-4 border-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body hhbridmdl">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" disabled placeholder="Enter here...">
+          <button class="btn btn-outline-secondary" type="button" >
+            <i class="bi bi-plus-lg"></i>
+          </button>
+        </div>
+        <button class="btn btn-primary-filled">Submit</button>
+      </div>
+     
+    </div>
+  </div>
+</div>
 
 
 
 
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>        <!-- slick javascript cdn --> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="content/js/jquery.min.js"></script>
+<script src="content/js/js.cookie.min.js"></script>
+<script src="content/js/slick.js"></script>
+<script src="content/js/aos.js"></script>
+<script src="content/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="content/Select2/Select2.min.js"></script>
+<script>$(".selectSearch").select2({})</script>
+<script src="content/js/custom.js"></script>
 <script>
   AOS.init();
 </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="content/js/custom.js"></script>
 </body>
 </html>

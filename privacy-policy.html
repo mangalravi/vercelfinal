@@ -1,380 +1,825 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>b2bstop</title>
-    <link rel="icon" href="content/images/logo/favicon.png" type="image/png">
-    <link rel="stylesheet preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link type='text/css' href='http://fonts.googleapis.com/css?family=Lato:400,500,600,700,800,900' rel="stylesheet" />
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="content/css/custom.css">
-</head>
-<body>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="content/images/fabicon.png"
+      alt="fabicon"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="content/images/fabicon.png"
+      alt="fabicon"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="content/images/fabicon.png"
+      alt="fabicon"
+    />
+    <link
+      rel="publication"
+      href=""
+      crossorigin="use-credentials"
+      type="application/manifest+json"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="icon" href="content/images/logo/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="content/css/bootstrap-icons.css" />
+    <link rel="stylesheet" href="content/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="content/css/font-family.css" />
+    <link rel="stylesheet" href="content/css/aos.css" />
+    <link rel="stylesheet" href="content/css/custom.css" />
+  </head>
+  <body>
     <header class="fixed-top">
-        <nav class="navbar navbar-expand-lg p-md-2 navwhite">
+      <nav class="navbar navbar-expand-lg p-md-2 navwhite">
         <div class="container-fluid position-relative">
           <a class="navbar-brand" href="/">
-            <img src="content/images/logo/isspl-logo.svg" height="36" width="95" alt="bynry_logo" title="bynry_logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          <span class="top-line"></span>
-          <span class="middle-line"></span>
-          <span class="bottom-line"></span>
-      </button>
+            <img
+              src="content/images/logo/isspl-logo.svg"
+              height="36"
+              width="95"
+              alt="bynry_logo"
+              title="bynry_logo"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            <span class="top-line"></span>
+            <span class="middle-line"></span>
+            <span class="bottom-line"></span>
+          </button>
           <div class="collapse navbar-collapse dnmd" id="navbarCollapse">
-              <ul class="navbar-nav ms-auto mb-2 mb-md-0 d-flex align-items-center">
-                <li class="nav-item">
-                  <a href="/product-list.html" class="nav-link">Shop All Auctions</a>
+            <ul
+              class="navbar-nav ms-auto mb-2 mb-md-0 d-flex align-items-center"
+            >
+              <li class="nav-item">
+                <a href="/product-list.html" class="nav-link"
+                  >Shop All Auctions</a
+                >
               </li>
               <li class="nav-item">
-                  <a href="buyers.html" class="nav-link">For Buyers</a>
+                <a href="buyers.html" class="nav-link">For Buyers</a>
               </li>
-           <li class="nav-item ">
-          <a href="sellers.html" class="nav-link">For Sellers</a>
-          </li>
-                  <li class="nav-item"><a class="nav-link" href="support.html">Support  </a></li>
-                 
-                    <li>
-                      <ul class="d-flex justify-content-between align-items-center">
-                        <li class="nav-item px-2"> <a class="btn btn-primary blink" href="Browse.html">BROWSE MARKETPLACES <i class="bi bi-arrow-up-right"></i>
-                        </a></li>
-                     
-                        <li class="nav-item btnmrgn user position-relative">
-                          <a  href="form.html" class="btn btn-secondary">
-                            SIGN IN 
-                          </a>
-                          <div class="user-box">
-                            <div class="user-hdr">
-                              <i class="bi bi-person-circle"></i>
-                              <div class="user-name">
-                                <h6>Anuj Singh</h6>
-                                <p>@anuj9876</p>
-                              </div>
-                            </div>
-                            <div class="routeopt">
-                              <div class="switch">
-                               <div> <i class="bi bi-people"></i>  Switch Account </div><i class="bi bi-chevron-right"></i>
-                              </div>
-                              <div class="out">
-                                <i class="bi bi-box-arrow-right"></i> Sign Out
-                              </div>
-                            </div>
-                          </div>
-                       </li>
-                        <li class="nav-item d-flex align-items-center p-0">
-                      <div id="translate"></div>
-                       </li>
-                      </ul>
-                    </li>
-                  
-              </ul>
+              <li class="nav-item">
+                <a href="sellers.html" class="nav-link">For Sellers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="support.html">Support </a>
+              </li>
+
+              <li>
+                <ul class="d-flex justify-content-between align-items-center">
+                  <li class="nav-item px-2">
+                    <a class="btn btn-primary blink" href="Browse.html"
+                      >BROWSE MARKETPLACES <i class="bi bi-arrow-up-right"></i>
+                    </a>
+                  </li>
+
+                  <li class="nav-item btnmrgn user position-relative">
+                    <a href="form.html" class="btn btn-secondary"> SIGN IN </a>
+                    <div class="user-box">
+                      <div class="user-hdr">
+                        <i class="bi bi-person-circle"></i>
+                        <div class="user-name">
+                          <h6>Anuj Singh</h6>
+                          <p>@anuj9876</p>
+                        </div>
+                      </div>
+                      <div class="routeopt">
+                        <div class="switch">
+                          <div><i class="bi bi-people"></i> Switch Account</div>
+                          <i class="bi bi-chevron-right"></i>
+                        </div>
+                        <div class="out">
+                          <i class="bi bi-box-arrow-right"></i> Sign Out
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item d-flex align-items-center p-0">
+                    <div id="translate"></div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </div>
-      </div>
-    </nav>
-    
+        </div>
+      </nav>
     </header>
-    
-    
-    
+
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen-lg-down">
-    <div class="modal-content">
-    <div class="modal-header">
-      <h4 class="modal-title"><a class="navbar-brand" href="/"><img src="" height="28" alt="b2bstop" title="b2bstop" /></a></h4>
-      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-    </div>
-    <div class="modal-body pt-0">
-      <ul>
-        <li class="pb-0"><div class="user">
-          <i class="bi bi-person-circle"></i>
-          Welcome
-        </div></li>
-        <li class="hvrlnk"><a href="/product-list.html">Shop All Auctions</a></li>
-        <li class="hvrlnk"><a href="buyers.html">For Buyers</a></li>
-        <li class="hvrlnk"><a href="sellers.html">For Sellers</a></li>
-        <li class="hvrlnk"><a href="support.html">Support</a></li>
-        <li class="hvrlnk"><a href="Browse.html">Browse MarketPlaces</a></li>
-        
-          <li class="d-flex align-items-center">
-            <div class="dropdown">
-                 <a class="btn btn-primary dropdown-toggle" href="form.html" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                   Select Language
-                 </a>
-                 <ul class="dropdown-menu langdiv">
-                   <li>
-                     <h6 class="mb-0">Select Language</h6>
-                   <div class="row">
-                     <div class="col-6">
-                       <ul class="language-drop">
-                   <li><a class="dropdown-item" href="#">Assamese</a></li>
-                   <li><a class="dropdown-item" href="#">Bengali</a></li>
-                   <li><a class="dropdown-item" href="#">Bhojpuri</a></li>
-                   <li><a class="dropdown-item" href="#">Gujrati</a></li>
-                   <li><a class="dropdown-item" href="#">Hindi</a></li>
-                   <li><a class="dropdown-item" href="#">Kannad</a></li>
-                   <li><a class="dropdown-item" href="#">Maithili</a></li>
-                   <li><a class="dropdown-item" href="#">Malyalam</a></li>
-                 </ul>
-               </div>
-               <div class="col-6">
-                 <ul class="language-drop">
-                         <li><a class="dropdown-item" href="#">Marathi</a></li>
-                         <li><a class="dropdown-item" href="#">Nepali</a></li>
-                   <li><a class="dropdown-item" href="#">Punjabi</a></li>
-                   <li><a class="dropdown-item" href="#">Sanskrit</a></li>
-                   <li><a class="dropdown-item" href="#">Tamil</a></li>
-                   <li><a class="dropdown-item" href="#">Telgu</a></li>
-                   <li><a class="dropdown-item" href="#">Urdu</a></li>
-                 </ul>
-               </div>
-             </div>
-           </li>
-                 </ul>
-               </div>
-          </li>
-        
-        <li class="d-flex">
-          <a href="#" class="nav-link btn btn-secondary">
-            SIGN IN 
-          </a>
-       </li>
-      </ul>
-    </div>
-    </div>
-    </div>
+      <div class="modal-dialog modal-fullscreen-lg-down">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">
+              <a class="navbar-brand" href="/"
+                ><img src="" height="28" alt="b2bstop" title="b2bstop"
+              /></a>
+            </h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body pt-0">
+            <ul>
+              <li class="pb-0">
+                <div class="user">
+                  <i class="bi bi-person-circle"></i>
+                  Welcome
+                </div>
+              </li>
+              <li class="hvrlnk">
+                <a href="/product-list.html">Shop All Auctions</a>
+              </li>
+              <li class="hvrlnk"><a href="buyers.html">For Buyers</a></li>
+              <li class="hvrlnk"><a href="sellers.html">For Sellers</a></li>
+              <li class="hvrlnk"><a href="support.html">Support</a></li>
+              <li class="hvrlnk">
+                <a href="Browse.html">Browse MarketPlaces</a>
+              </li>
+
+              <li class="d-flex align-items-center">
+                <div class="dropdown">
+                  <a
+                    class="btn btn-primary dropdown-toggle"
+                    href="form.html"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Select Language
+                  </a>
+                  <ul class="dropdown-menu langdiv">
+                    <li>
+                      <h6 class="mb-0">Select Language</h6>
+                      <div class="row">
+                        <div class="col-6">
+                          <ul class="language-drop">
+                            <li>
+                              <a class="dropdown-item" href="#">Assamese</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">Bengali</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">Bhojpuri</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">Gujrati</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Hindi</a></li>
+                            <li>
+                              <a class="dropdown-item" href="#">Kannad</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">Maithili</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">Malyalam</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-6">
+                          <ul class="language-drop">
+                            <li>
+                              <a class="dropdown-item" href="#">Marathi</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">Nepali</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">Punjabi</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">Sanskrit</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Tamil</a></li>
+                            <li><a class="dropdown-item" href="#">Telgu</a></li>
+                            <li><a class="dropdown-item" href="#">Urdu</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="d-flex">
+                <a href="#" class="nav-link btn btn-secondary"> SIGN IN </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
 
-
-
-
-    <section class="privacy ">
-        <div class="container">
-         <div class="row justify-content-center">
-              <div class="col-md-11">
-                <div class="privarycard"  data-aos="fade-down" data-aos-duration="1400">
-                <div class="tpcntnt mb-5 text-center">
-                  <h6>Item Condition</h6>
-                     <p class="m-0"> BULK4TRADERS offers products with clearly defined conditions. Please read below for full explanations of the different product conditions we offer</p>
+    <section class="privacy">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-11">
+            <div
+              class="privarycard"
+              data-aos="fade-down"
+              data-aos-duration="1400"
+            >
+              <div class="tpcntnt mb-5 text-center">
+                <h6>Item Condition</h6>
+                <p class="m-0">
+                  BULK4TRADERS offers products with clearly defined conditions.
+                  Please read below for full explanations of the different
+                  product conditions we offer
+                </p>
               </div>
               <div class="pribody">
-                    <p> In the course of a user / subscriber / visitor accessing / visiting / using the website [wwww.b2bstop.com] and buyer app mobile application (together hereinafter referred to as the “Website") and its related sites, services, tools and software, M/s Green Enabled IT Solutions Private Limited, a company incorporated under Companies Act, 2013 having its registered office at Bansashankari, Bangalore - 560 085, Karnataka, India (hereinafter referred to as “Company”), may become privy to the personal information of the user / subscribers, including information that is of a confidential nature. </p>
-                    <p> This Privacy Policy is an integral part of the Terms of Use as mentioned on the Website. This Privacy Policy is incorporated into the Terms of Use by reference. </p>
-                    <p> We value the trust you place in us. That's why we insist upon the highest standards for secure communication and customer information privacy. Please read the following statement to learn about our information gathering and dissemination practices. The Privacy Policy specified herein is subject to change at any time without notice. To make sure you are aware of any changes, please review this policy periodically. By visiting the Website and / or using its related sites, services, tools and software you agree to be bound by the terms and conditions of this Privacy Policy. If you do not agree please do not use or access the Website. </p>
-                    <p> By mere use of the Website, you expressly consent to our use and disclosure of your personal and non-personal information in accordance with this Privacy Policy. </p>
-                    <p> The Company has taken all reasonable measures to protect the confidentiality of the personal information and its transmission through the internet and it shall not be held liable for disclosure of the confidential information when in accordance with this Privacy Policy or in terms of the agreements, if any, with the user / subscribers. To preserve the confidentiality of all information you provide to us, the Company maintains the privacy principles mentioned hereinafter: </p>
-                    <p> The Company has policies and procedures concerning the collection, storage use and security of your information that will help protect your privacy. This Policy endeavours to help us serve you while maintaining strict privacy and security standards. </p>
-                    <ol>
-                       <li>
-                        <p>  The Company collects several types of information, which is primarily used to serve you better and maintain authenticity of services and offerings by identifying you. Details of such information (collectively called “Information”) are as follows: </p>
-                          <ul>
-                             <li>
-                             <span>Personal Information: </span>   
-                                <p> Personal Information is the information collected that can be used to uniquely identify or contact you. Personal Information for the purposes of this Privacy Policy shall include, but not be limited to: </p>
-                                <ul>
-                                   <li>Your name</li>
-                                   <li>Your address,</li>
-                                   <li>Your telephone number,</li>
-                                   <li> Your e-mail address or other contact information, </li>
-                                   <li>Your date of birth,</li>
-                                   <li>Your gender,</li>
-                                   <li> Information regarding your transactions on the Website </li>
-                                   <li> Your financial information such as bank account information or credit card or debit card or other payment instrument details, </li>
-                                   <li>Internet Protocol address,</li>
-                                   <li> Any other items of "sensitive personal data or information" as such term is defined under the Information Technology (Reasonable Security Practices And Procedures And Sensitive Personal Data Of Information) Rules, 2011 enacted under the Information Technology Act, 1400; </li>
-                                   <li> Identification code of your communication device which you use to access the Website or otherwise deal with the Company, </li>
-                                   <li> Any other Information that you provide during your registration process, if any, on the Website </li>
-                                </ul>
-                             </li>
-                             <li>
-                            <span>    Non-Personal Information: </span>
-                                <p> The Company may also collect information other than Personal Information from You through the Website when You visit and / or use the Website. Such information may be stored in server logs. This Non-Personal Information would not assist Company to identify you personally. </p>
-                                <p> We will automatically receive and collect certain anonymous information in standard usage logs through our Web server, including computer-identification information obtained from "cookies," sent to your browser from a </p>
-                                <ul>
-                                   <li>Web server cookie stored on your hard drive</li>
-                                   <li> An IP address, assigned to the computer which you use </li>
-                                   <li> The domain server through which you access our service </li>
-                                   <li>The type of computer you're using</li>
-                                   <li>The type of web browser you're using</li>
-                                   <p> You can terminate your account at any time. However, your information may remain stored in archive on our servers even after the deletion or the termination of your account. </p>
-                                </ul>
-                             </li>
-                             <li>
-                            <span>    Surveys: </span>
-                                <p> The Company may email you or post various surveys on the Website. The surveys may request for your demographic information (age, gender, and familiarity with the Website, your interests, content, products, services and offerings) and your feedback on services and offerings. </p>
-                             </li>
-                             <li>
-                           <span>     Customer Service Communications Information: </span>
-                                <p> The Company may collect Personal Information, Non-Personal or Other Information when you post or submit comments, questions, complaints or suggestions regarding products, services and offerings. </p>
-                             </li>
-                             <li>
-                            <span>    Other Information: </span>
-                                <p> The Company also collects information regarding your usage of the Website and services (“Other Information”). Other Information includes, but is not limited to pattern of use of the Website by you, pages visited, posts/comments made on any page of the Website etc. </p>
-                             </li>
-                          </ul>
-                       </li>
-                       <li>
-                        <span>  Mode of Collection of Information: </span>
-                          <ul>
-                             <li> When you use the Website, we collect and store your Information which is provided by you from time to time. Our primary goal in doing so is to provide you a safe, efficient, smooth and customized experience. This allows us to provide services and features that most likely meet your needs, and to customize the Website to make your experience safer and easier. More importantly, while doing so we collect personal information from you that we consider necessary for achieving this purpose. </li>
-                             <li> In general, you can browse the Website without telling us who you are or revealing any Personal Information about yourself. Once you give us your Personal Information, you are not anonymous to us. We may collect your Non-Personal Information, just by you browsing your site. When collecting personal information from you we indicate which fields are required and which fields are optional. You always have the option to not provide information by choosing not to use a particular service or feature on the Website. We may automatically track certain information about you based upon your behaviour on the Website. We use this information to do internal research on our users' demographics, interests, and behaviour to better understand, protect and serve our users. This information is compiled and analysed on an aggregated basis. This information may include the URL that you just came from (whether this URL is on our website / app or not), which URL you next go to (whether this URL is on the Website or not), your computer browser information, and your IP address. </li>
-                             <li> We may receive Personal information about you from third parties, such as social media services, commercially available sources and business partners. If you access the Website through a social media service or connect a service on the Website to a social media service, the information we collect may include your user name associated with that social media service, any information or content the social media service has the right to share with us, such as your profile picture, email address or friends list, and any information you have made public in connection with that social media service. When you access the Website or otherwise deal with the Company entity through social media services or when you connect any the Website to social media services, you are authorizing the Company to collect, store, and use and retain such information and content in accordance with this Privacy Policy </li>
-                             <li> We use data collection devices such as "cookies" on certain pages of the the Website to help analyse our web page flow, measure promotional effectiveness, and promote trust and safety. We offer certain features that are only available through the use of a "cookie". We also use cookies to allow you to enter your password less frequently during a session. Cookies can also help us provide information that is targeted to your interests. Most cookies are "session cookies" meaning that they are automatically deleted from your hard drive at the end of a session. You are always free to decline our cookies if your browser permits, although in that case you may not be able to use certain features on the Website and you may be required to re-enter your password more frequently during a session. Additionally, you may encounter "cookies" or other similar devices on certain pages of the Website that are placed by third parties. We do not control the use of cookies by third parties. </li>
-                             <li> If you choose to buy on the Website, we collect information about your buying behaviour. If you transact with us, we collect some additional information, such as a billing address, a credit / debit card number and a credit / debit card expiration date and/ or other payment instrument details and tracking information from cheques or money orders. </li>
-                             <li> If you choose to post messages on our message boards, chat rooms or other message areas or leave feedback, we will collect that information you provide to us. We retain this information as necessary to resolve disputes, provide customer support and troubleshoot problems as permitted by law. </li>
-                             <li> If you send us personal correspondence, such as emails or letters, or if other users or third parties send us correspondence about your activities or postings on the Website, we may collect such information into a file specific to you. </li>
-                             <li> We do use your contact information to send you offers based on your previous orders and your interests. </li>
-                          </ul>
-                       </li>
-                       <li>
-                        <span>  Use of Information: </span>
-                          <p> The Company may also collect information other than Personal </p>
-                          <p> We will automatically receive and collect certain anonymous </p>
-                          <ul>
-                             <li>
-                                The Company undertakes not to disclose (includes selling, sharing and renting) Personal Information collected by the Company at any time to any third party without your consent except in accordance with this Privacy Policy. However, the Company reserves the right to disclose Information in good faith: 
-                                <ul>
-                                   <li>if required by law or any authority;</li>
-                                   <li> to protect and defend rights and interests of the Company, employees/ agents of the Company , other users or the general public; </li>
-                                   <li> to enforce Terms of Use and other policies of the Company; </li>
-                                   <li>to address concerns raised by a third party.</li>
-                                </ul>
-                             </li>
-                             <li> The Company uses personal information to provide the products, services and offerings. To the extent the Company uses your personal information to market to you, we will provide you the ability to opt-out of such uses. We use your personal information to resolve disputes; troubleshoot problems; help promote a safe service; collect money; measure consumer interest in our products and services, inform you about online and offline offers, products, services, and updates; customize your experience; detect and protect us against error, fraud and other criminal activity; enforce our terms and conditions; and as otherwise described to you at the time of collection. </li>
-                             <li> In our efforts to continually improve our product and service offerings, we collect and analyse demographic and profile data about our users' activity on the Website. </li>
-                             <li> We identify and use your IP address to help diagnose problems with our server, and to administer the Website. Your IP address is also used to help identify you and to gather broad demographic information. </li>
-                             <li> We will occasionally ask you to complete optional online surveys. These surveys may ask you for contact information and demographic information (like zip code, age, or income level). We use this data to tailor your experience at the Website, providing you with content that we think you might be interested in and to display content according to your preferences. </li>
-                             <li> Information collected can be used by the Company within the company or by its affiliates/ contractors/ agents for analysis and determination of statistics, demand and supply, pattern of usage etc. </li>
-                             <li> We may share personal information with our other corporate entities and affiliates to help detect and prevent identity theft, fraud and other potentially illegal acts; correlate related or multiple accounts to prevent abuse of our services; and to facilitate joint or co-branded services that you request where such services are provided by more than one corporate entity. Those entities and affiliates may not market to you as a result of such sharing unless you explicitly opt-in. </li>
-                          </ul>
-                       </li>
-                       <li>
-                       <span>   Links to other websites: </span>
-                          <p> The Website may carry links to other websites. Your use of and activity at such other websites are at your own risk and the Company takes no responsibility regarding Information dissipated by you at such websites </p>
-                       </li>
-                       <li>
-                      <span>    <b> Data Security: </b></span>
-                          <ul>
-                             <li> The Website has stringent security measures in place to protect the loss, misuse, and alteration of the information under our control. Whenever you change or access your account information, we offer the use of a secure server. Once your information is in our possession we adhere to strict security guidelines, protecting it against unauthorized access. </li>
-                             <li> Your Information will primarily be stored in electronic form however certain data can also be stored in physical form. We may store, collect, process and use your data in countries other than Republic of India but under compliance with applicable laws. We may enter into agreements with third parties (in or outside of India) to store or process your information or data. These third parties may have their own security standards to safeguard your information or data and we will on commercial reasonable basis require from such third parties to adopt reasonable security standards to safeguard your information / data. </li>
-                          </ul>
-                       </li>
-                       <li>
-                       <span>   <b> Obligations of visitors/customers/users: </b></span>
-                          <p> To help the Company protect Information, the visitors/customers/users are required to maintain the privy of Information, ensure strength of password by using a combination of alphabets, numbers and special character and keep changing the password on regular basis. The visitors/customers/users are also prohibited from communicating information provided by the Company to a third party unless required by law or in compliance with agreements entered between visitors/customers/users and the Company. </p>
-                       </li>
-                       <li>
-                      <span>    <b> Disclaimer as to Loss: </b></span>
-                          <p> Although, the Company has ensured the security of Personal Information collected. However, considering the open nature of Internet, such Information may be accessed by unauthorised entities/ software/ codes (“Hackers”). The Company assumes no liability whatsoever with respect to access of Information by Hackers. </p>
-                       </li>
-                       <li>
-                      <span>    <b> Sale, merger of the Company: </b></span>
-                          <p> Information collected by the Company is considered to be trade secret of the Company. As the owner of such trade secret, the Company has right to disclose or sell the Information as an asset of the Company during any sale or merger. </p>
-                       </li>
-                       <li>
-                      <span>    <b> Your Consent: </b></span>
-                          <p> By using the Website and/ or by providing your information, you consent to the collection and use of the information you disclose on the Website in accordance with this Privacy Policy, including but not limited to your consent for sharing your information as per this Privacy Policy. </p>
-                       </li>
-                       <li>
-                       <span>   <b> Changes to this Policy: </b></span>
-                          <p> The Company reserves the right to amend this Policy, from time to time, as required or in pursuance to change in relevant laws. </p>
-                          <p> If we decide to change our privacy policy, we will post those changes on this page so that you are always aware of what information we collect, how we use it, and under what circumstances we disclose it. However, any substantial change to the Policy would be communicated to you through the Website or through email as provided by you on the Website. </p>
-                       </li>
-                       <li>
-                        <span>  <b> Grievance: </b></span>
-                          <p> In case of any grievance, in respect of the Privacy Policy, the Company may be contacted from Mon to Sat (9:00 to 17:00) at the following coordinates: </p>
-                          <p>Email: grievances@blubirch.com</p>
-                          <p>Phone: 080-26711673 /4 /6</p>
-                          <p> Address: No. 565, Axis Pennmark building, 2nd, 3rd &amp; 4th Floor, 9th cross road, Sarakki, 3rd phase, JP Nagar, Bangalore, Karnataka - 560078</p>
-                       </li>
-                    </ol>
-                 </div>
+                <p>
+                  In the course of a user / subscriber / visitor accessing /
+                  visiting / using the website [wwww.b2bstop.com] and buyer app
+                  mobile application (together hereinafter referred to as the
+                  “Website") and its related sites, services, tools and
+                  software, M/s Green Enabled IT Solutions Private Limited, a
+                  company incorporated under Companies Act, 2013 having its
+                  registered office at Bansashankari, Bangalore - 560 085,
+                  Karnataka, India (hereinafter referred to as “Company”), may
+                  become privy to the personal information of the user /
+                  subscribers, including information that is of a confidential
+                  nature.
+                </p>
+                <p>
+                  This Privacy Policy is an integral part of the Terms of Use as
+                  mentioned on the Website. This Privacy Policy is incorporated
+                  into the Terms of Use by reference.
+                </p>
+                <p>
+                  We value the trust you place in us. That's why we insist upon
+                  the highest standards for secure communication and customer
+                  information privacy. Please read the following statement to
+                  learn about our information gathering and dissemination
+                  practices. The Privacy Policy specified herein is subject to
+                  change at any time without notice. To make sure you are aware
+                  of any changes, please review this policy periodically. By
+                  visiting the Website and / or using its related sites,
+                  services, tools and software you agree to be bound by the
+                  terms and conditions of this Privacy Policy. If you do not
+                  agree please do not use or access the Website.
+                </p>
+                <p>
+                  By mere use of the Website, you expressly consent to our use
+                  and disclosure of your personal and non-personal information
+                  in accordance with this Privacy Policy.
+                </p>
+                <p>
+                  The Company has taken all reasonable measures to protect the
+                  confidentiality of the personal information and its
+                  transmission through the internet and it shall not be held
+                  liable for disclosure of the confidential information when in
+                  accordance with this Privacy Policy or in terms of the
+                  agreements, if any, with the user / subscribers. To preserve
+                  the confidentiality of all information you provide to us, the
+                  Company maintains the privacy principles mentioned
+                  hereinafter:
+                </p>
+                <p>
+                  The Company has policies and procedures concerning the
+                  collection, storage use and security of your information that
+                  will help protect your privacy. This Policy endeavours to help
+                  us serve you while maintaining strict privacy and security
+                  standards.
+                </p>
+                <ol>
+                  <li>
+                    <p>
+                      The Company collects several types of information, which
+                      is primarily used to serve you better and maintain
+                      authenticity of services and offerings by identifying you.
+                      Details of such information (collectively called
+                      “Information”) are as follows:
+                    </p>
+                    <ul>
+                      <li>
+                        <span>Personal Information: </span>
+                        <p>
+                          Personal Information is the information collected that
+                          can be used to uniquely identify or contact you.
+                          Personal Information for the purposes of this Privacy
+                          Policy shall include, but not be limited to:
+                        </p>
+                        <ul>
+                          <li>Your name</li>
+                          <li>Your address,</li>
+                          <li>Your telephone number,</li>
+                          <li>
+                            Your e-mail address or other contact information,
+                          </li>
+                          <li>Your date of birth,</li>
+                          <li>Your gender,</li>
+                          <li>
+                            Information regarding your transactions on the
+                            Website
+                          </li>
+                          <li>
+                            Your financial information such as bank account
+                            information or credit card or debit card or other
+                            payment instrument details,
+                          </li>
+                          <li>Internet Protocol address,</li>
+                          <li>
+                            Any other items of "sensitive personal data or
+                            information" as such term is defined under the
+                            Information Technology (Reasonable Security
+                            Practices And Procedures And Sensitive Personal Data
+                            Of Information) Rules, 2011 enacted under the
+                            Information Technology Act, 1400;
+                          </li>
+                          <li>
+                            Identification code of your communication device
+                            which you use to access the Website or otherwise
+                            deal with the Company,
+                          </li>
+                          <li>
+                            Any other Information that you provide during your
+                            registration process, if any, on the Website
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <span> Non-Personal Information: </span>
+                        <p>
+                          The Company may also collect information other than
+                          Personal Information from You through the Website when
+                          You visit and / or use the Website. Such information
+                          may be stored in server logs. This Non-Personal
+                          Information would not assist Company to identify you
+                          personally.
+                        </p>
+                        <p>
+                          We will automatically receive and collect certain
+                          anonymous information in standard usage logs through
+                          our Web server, including computer-identification
+                          information obtained from "cookies," sent to your
+                          browser from a
+                        </p>
+                        <ul>
+                          <li>Web server cookie stored on your hard drive</li>
+                          <li>
+                            An IP address, assigned to the computer which you
+                            use
+                          </li>
+                          <li>
+                            The domain server through which you access our
+                            service
+                          </li>
+                          <li>The type of computer you're using</li>
+                          <li>The type of web browser you're using</li>
+                          <p>
+                            You can terminate your account at any time. However,
+                            your information may remain stored in archive on our
+                            servers even after the deletion or the termination
+                            of your account.
+                          </p>
+                        </ul>
+                      </li>
+                      <li>
+                        <span> Surveys: </span>
+                        <p>
+                          The Company may email you or post various surveys on
+                          the Website. The surveys may request for your
+                          demographic information (age, gender, and familiarity
+                          with the Website, your interests, content, products,
+                          services and offerings) and your feedback on services
+                          and offerings.
+                        </p>
+                      </li>
+                      <li>
+                        <span>
+                          Customer Service Communications Information:
+                        </span>
+                        <p>
+                          The Company may collect Personal Information,
+                          Non-Personal or Other Information when you post or
+                          submit comments, questions, complaints or suggestions
+                          regarding products, services and offerings.
+                        </p>
+                      </li>
+                      <li>
+                        <span> Other Information: </span>
+                        <p>
+                          The Company also collects information regarding your
+                          usage of the Website and services (“Other
+                          Information”). Other Information includes, but is not
+                          limited to pattern of use of the Website by you, pages
+                          visited, posts/comments made on any page of the
+                          Website etc.
+                        </p>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span> Mode of Collection of Information: </span>
+                    <ul>
+                      <li>
+                        When you use the Website, we collect and store your
+                        Information which is provided by you from time to time.
+                        Our primary goal in doing so is to provide you a safe,
+                        efficient, smooth and customized experience. This allows
+                        us to provide services and features that most likely
+                        meet your needs, and to customize the Website to make
+                        your experience safer and easier. More importantly,
+                        while doing so we collect personal information from you
+                        that we consider necessary for achieving this purpose.
+                      </li>
+                      <li>
+                        In general, you can browse the Website without telling
+                        us who you are or revealing any Personal Information
+                        about yourself. Once you give us your Personal
+                        Information, you are not anonymous to us. We may collect
+                        your Non-Personal Information, just by you browsing your
+                        site. When collecting personal information from you we
+                        indicate which fields are required and which fields are
+                        optional. You always have the option to not provide
+                        information by choosing not to use a particular service
+                        or feature on the Website. We may automatically track
+                        certain information about you based upon your behaviour
+                        on the Website. We use this information to do internal
+                        research on our users' demographics, interests, and
+                        behaviour to better understand, protect and serve our
+                        users. This information is compiled and analysed on an
+                        aggregated basis. This information may include the URL
+                        that you just came from (whether this URL is on our
+                        website / app or not), which URL you next go to (whether
+                        this URL is on the Website or not), your computer
+                        browser information, and your IP address.
+                      </li>
+                      <li>
+                        We may receive Personal information about you from third
+                        parties, such as social media services, commercially
+                        available sources and business partners. If you access
+                        the Website through a social media service or connect a
+                        service on the Website to a social media service, the
+                        information we collect may include your user name
+                        associated with that social media service, any
+                        information or content the social media service has the
+                        right to share with us, such as your profile picture,
+                        email address or friends list, and any information you
+                        have made public in connection with that social media
+                        service. When you access the Website or otherwise deal
+                        with the Company entity through social media services or
+                        when you connect any the Website to social media
+                        services, you are authorizing the Company to collect,
+                        store, and use and retain such information and content
+                        in accordance with this Privacy Policy
+                      </li>
+                      <li>
+                        We use data collection devices such as "cookies" on
+                        certain pages of the the Website to help analyse our web
+                        page flow, measure promotional effectiveness, and
+                        promote trust and safety. We offer certain features that
+                        are only available through the use of a "cookie". We
+                        also use cookies to allow you to enter your password
+                        less frequently during a session. Cookies can also help
+                        us provide information that is targeted to your
+                        interests. Most cookies are "session cookies" meaning
+                        that they are automatically deleted from your hard drive
+                        at the end of a session. You are always free to decline
+                        our cookies if your browser permits, although in that
+                        case you may not be able to use certain features on the
+                        Website and you may be required to re-enter your
+                        password more frequently during a session. Additionally,
+                        you may encounter "cookies" or other similar devices on
+                        certain pages of the Website that are placed by third
+                        parties. We do not control the use of cookies by third
+                        parties.
+                      </li>
+                      <li>
+                        If you choose to buy on the Website, we collect
+                        information about your buying behaviour. If you transact
+                        with us, we collect some additional information, such as
+                        a billing address, a credit / debit card number and a
+                        credit / debit card expiration date and/ or other
+                        payment instrument details and tracking information from
+                        cheques or money orders.
+                      </li>
+                      <li>
+                        If you choose to post messages on our message boards,
+                        chat rooms or other message areas or leave feedback, we
+                        will collect that information you provide to us. We
+                        retain this information as necessary to resolve
+                        disputes, provide customer support and troubleshoot
+                        problems as permitted by law.
+                      </li>
+                      <li>
+                        If you send us personal correspondence, such as emails
+                        or letters, or if other users or third parties send us
+                        correspondence about your activities or postings on the
+                        Website, we may collect such information into a file
+                        specific to you.
+                      </li>
+                      <li>
+                        We do use your contact information to send you offers
+                        based on your previous orders and your interests.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span> Use of Information: </span>
+                    <p>
+                      The Company may also collect information other than
+                      Personal
+                    </p>
+                    <p>
+                      We will automatically receive and collect certain
+                      anonymous
+                    </p>
+                    <ul>
+                      <li>
+                        The Company undertakes not to disclose (includes
+                        selling, sharing and renting) Personal Information
+                        collected by the Company at any time to any third party
+                        without your consent except in accordance with this
+                        Privacy Policy. However, the Company reserves the right
+                        to disclose Information in good faith:
+                        <ul>
+                          <li>if required by law or any authority;</li>
+                          <li>
+                            to protect and defend rights and interests of the
+                            Company, employees/ agents of the Company , other
+                            users or the general public;
+                          </li>
+                          <li>
+                            to enforce Terms of Use and other policies of the
+                            Company;
+                          </li>
+                          <li>to address concerns raised by a third party.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        The Company uses personal information to provide the
+                        products, services and offerings. To the extent the
+                        Company uses your personal information to market to you,
+                        we will provide you the ability to opt-out of such uses.
+                        We use your personal information to resolve disputes;
+                        troubleshoot problems; help promote a safe service;
+                        collect money; measure consumer interest in our products
+                        and services, inform you about online and offline
+                        offers, products, services, and updates; customize your
+                        experience; detect and protect us against error, fraud
+                        and other criminal activity; enforce our terms and
+                        conditions; and as otherwise described to you at the
+                        time of collection.
+                      </li>
+                      <li>
+                        In our efforts to continually improve our product and
+                        service offerings, we collect and analyse demographic
+                        and profile data about our users' activity on the
+                        Website.
+                      </li>
+                      <li>
+                        We identify and use your IP address to help diagnose
+                        problems with our server, and to administer the Website.
+                        Your IP address is also used to help identify you and to
+                        gather broad demographic information.
+                      </li>
+                      <li>
+                        We will occasionally ask you to complete optional online
+                        surveys. These surveys may ask you for contact
+                        information and demographic information (like zip code,
+                        age, or income level). We use this data to tailor your
+                        experience at the Website, providing you with content
+                        that we think you might be interested in and to display
+                        content according to your preferences.
+                      </li>
+                      <li>
+                        Information collected can be used by the Company within
+                        the company or by its affiliates/ contractors/ agents
+                        for analysis and determination of statistics, demand and
+                        supply, pattern of usage etc.
+                      </li>
+                      <li>
+                        We may share personal information with our other
+                        corporate entities and affiliates to help detect and
+                        prevent identity theft, fraud and other potentially
+                        illegal acts; correlate related or multiple accounts to
+                        prevent abuse of our services; and to facilitate joint
+                        or co-branded services that you request where such
+                        services are provided by more than one corporate entity.
+                        Those entities and affiliates may not market to you as a
+                        result of such sharing unless you explicitly opt-in.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span> Links to other websites: </span>
+                    <p>
+                      The Website may carry links to other websites. Your use of
+                      and activity at such other websites are at your own risk
+                      and the Company takes no responsibility regarding
+                      Information dissipated by you at such websites
+                    </p>
+                  </li>
+                  <li>
+                    <span> <b> Data Security: </b></span>
+                    <ul>
+                      <li>
+                        The Website has stringent security measures in place to
+                        protect the loss, misuse, and alteration of the
+                        information under our control. Whenever you change or
+                        access your account information, we offer the use of a
+                        secure server. Once your information is in our
+                        possession we adhere to strict security guidelines,
+                        protecting it against unauthorized access.
+                      </li>
+                      <li>
+                        Your Information will primarily be stored in electronic
+                        form however certain data can also be stored in physical
+                        form. We may store, collect, process and use your data
+                        in countries other than Republic of India but under
+                        compliance with applicable laws. We may enter into
+                        agreements with third parties (in or outside of India)
+                        to store or process your information or data. These
+                        third parties may have their own security standards to
+                        safeguard your information or data and we will on
+                        commercial reasonable basis require from such third
+                        parties to adopt reasonable security standards to
+                        safeguard your information / data.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span>
+                      <b> Obligations of visitors/customers/users: </b></span
+                    >
+                    <p>
+                      To help the Company protect Information, the
+                      visitors/customers/users are required to maintain the
+                      privy of Information, ensure strength of password by using
+                      a combination of alphabets, numbers and special character
+                      and keep changing the password on regular basis. The
+                      visitors/customers/users are also prohibited from
+                      communicating information provided by the Company to a
+                      third party unless required by law or in compliance with
+                      agreements entered between visitors/customers/users and
+                      the Company.
+                    </p>
+                  </li>
+                  <li>
+                    <span> <b> Disclaimer as to Loss: </b></span>
+                    <p>
+                      Although, the Company has ensured the security of Personal
+                      Information collected. However, considering the open
+                      nature of Internet, such Information may be accessed by
+                      unauthorised entities/ software/ codes (“Hackers”). The
+                      Company assumes no liability whatsoever with respect to
+                      access of Information by Hackers.
+                    </p>
+                  </li>
+                  <li>
+                    <span> <b> Sale, merger of the Company: </b></span>
+                    <p>
+                      Information collected by the Company is considered to be
+                      trade secret of the Company. As the owner of such trade
+                      secret, the Company has right to disclose or sell the
+                      Information as an asset of the Company during any sale or
+                      merger.
+                    </p>
+                  </li>
+                  <li>
+                    <span> <b> Your Consent: </b></span>
+                    <p>
+                      By using the Website and/ or by providing your
+                      information, you consent to the collection and use of the
+                      information you disclose on the Website in accordance with
+                      this Privacy Policy, including but not limited to your
+                      consent for sharing your information as per this Privacy
+                      Policy.
+                    </p>
+                  </li>
+                  <li>
+                    <span> <b> Changes to this Policy: </b></span>
+                    <p>
+                      The Company reserves the right to amend this Policy, from
+                      time to time, as required or in pursuance to change in
+                      relevant laws.
+                    </p>
+                    <p>
+                      If we decide to change our privacy policy, we will post
+                      those changes on this page so that you are always aware of
+                      what information we collect, how we use it, and under what
+                      circumstances we disclose it. However, any substantial
+                      change to the Policy would be communicated to you through
+                      the Website or through email as provided by you on the
+                      Website.
+                    </p>
+                  </li>
+                  <li>
+                    <span> <b> Grievance: </b></span>
+                    <p>
+                      In case of any grievance, in respect of the Privacy
+                      Policy, the Company may be contacted from Mon to Sat (9:00
+                      to 17:00) at the following coordinates:
+                    </p>
+                    <p>Email: grievances@blubirch.com</p>
+                    <p>Phone: 080-26711673 /4 /6</p>
+                    <p>
+                      Address: No. 565, Axis Pennmark building, 2nd, 3rd &amp;
+                      4th Floor, 9th cross road, Sarakki, 3rd phase, JP Nagar,
+                      Bangalore, Karnataka - 560078
+                    </p>
+                  </li>
+                </ol>
               </div>
-              </div>
-              </div>
-            
+            </div>
+          </div>
         </div>
+      </div>
     </section>
-
-
-
-
-
-
-
-
-
-
-
-
 
     <footer>
       <div class="container">
         <div class="row mb-4">
           <div class="col-sm-6 col-md-2 d-flex">
             <div class="hdr-img mb-4">
-              <img src="hdr-logo" alt="hdr-logo">
+              <img src="hdr-logo" alt="hdr-logo" />
             </div>
           </div>
           <div class="col-md-7">
             <div class="row">
-                <div class="col-3">
-                  <ul>
-                    <li><a href="aboutus.html">About Us</a></li>
-                    <li><a href="contact-us.html">Contact Us</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                  </ul>
-                </div>
-                <div class="col-4">
-                  <ul>
-                    <li><a href="term-and-condition.html">Terms of Purchase</a></li>
-                    <li><a href="item-condition.html">Items Condition</a></li>
-                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                  </ul>
-                </div>
-                <div class="col-5">
-                  <ul class="mailli">
-                    <li><a href="tel:1800-419-0431"><i class="bi bi-telephone-fill"></i> 1800-419-0431</a></li>
-                    <li><a href="mailto: support@b2bstop.com"><i class="bi bi-envelope"></i>  support@b2bstop.com</a></li>
-                  </ul>
-                </div>
-             </div>
-            
+              <div class="col-3">
+                <ul>
+                  <li><a href="aboutus.html">About Us</a></li>
+                  <li><a href="contact-us.html">Contact Us</a></li>
+                  <li><a href="faq.html">FAQ</a></li>
+                </ul>
+              </div>
+              <div class="col-4">
+                <ul>
+                  <li>
+                    <a href="term-and-condition.html">Terms of Purchase</a>
+                  </li>
+                  <li><a href="item-condition.html">Items Condition</a></li>
+                  <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+              </div>
+              <div class="col-5">
+                <ul class="mailli">
+                  <li>
+                    <a href="tel:1800-419-0431"
+                      ><i class="bi bi-telephone-fill"></i> 1800-419-0431</a
+                    >
+                  </li>
+                  <li>
+                    <a href="mailto: support@b2bstop.com"
+                      ><i class="bi bi-envelope"></i> support@b2bstop.com</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div class="col-sm-6 col-md-3 d-flex">
             <div class="adrs">
               <a href="#">
                 <i class="bi bi-geo-alt-fill"></i>
-                No. 565, Axis Pennmark building, 2nd, 3rd & 4th Floor, 9th cross road, Sarakki, 3rd phase, JP Nagar, Bangalore, Karnataka - 560078
+                No. 565, Axis Pennmark building, 2nd, 3rd & 4th Floor, 9th cross
+                road, Sarakki, 3rd phase, JP Nagar, Bangalore, Karnataka -
+                560078
               </a>
             </div>
           </div>
         </div>
         <div class="btn-hdng">
-          <p class="text-center">© b2bstop - Trade mark of Green Enabled IT Solutions Pvt. Ltd</p>
+          <p class="text-center">
+            © b2bstop - Trade mark of Green Enabled IT Solutions Pvt. Ltd
+          </p>
         </div>
       </div>
     </footer>
 
-
-
-
-
-
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>        
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-AOS.init();
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<script src="content/js/custom.js"></script>
-</body>
+    <script src="content/js/jquery.min.js"></script>
+    <script src="content/js/js.cookie.min.js"></script>
+    <script src="content/js/slick.js"></script>
+    <script src="content/js/aos.js"></script>
+    <script src="content/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="content/js/custom.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>

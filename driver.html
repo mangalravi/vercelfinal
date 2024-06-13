@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>GeeksForGeeks</title>
+    <!-- Here we had include the Driver library -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/driver.js@0.9.8/dist/driver.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 20px;
+      }
+
+      .section {
+        margin-top: 200px;
+        margin-bottom: 20px;
+      }
+
+      .button {
+        padding: 10px;
+        text-decoration: none;
+        color: #fff;
+        background-color: #118b04;
+        border: 1px solid #118b04;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .field {
+        width: 500px;
+        margin-top: 20px;
+      }
+
+      .input {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="section">
+      <a class="button is-primary" id="btn1">GeeksForGeeks</a>
+      <div class="field">
+        <label class="label">About you</label>
+        <div class="control">
+          <input
+            class="input"
+            id="test1"
+            type="text"
+            placeholder="Tell me something about you?"
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Your Email</label>
+        <div class="control">
+          <input
+            class="input"
+            id="email"
+            type="email"
+            placeholder="Enter your email address"
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Your Age</label>
+        <div class="control">
+          <input
+            class="input"
+            id="age"
+            type="number"
+            placeholder="Enter your age"
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Your Feedback</label>
+        <div class="control">
+          <input
+            class="input"
+            id="feedback"
+            type="text"
+            placeholder="Enter your feedback"
+          />
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/driver.js@0.9.8/dist/driver.min.js"></script>
+    <script>
+      let driver = new Driver();
+
+      function highlightElementsSequentially(elements) {
+        elements.forEach((element, index) => {
+          setTimeout(() => {
+            driver.highlight({
+              element: document.querySelector(element.selector),
+              popover: {
+                title: element.title,
+                description: element.description,
+                position: element.position || "top",
+              },
+            });
+          }, index * 2000); // Adjust the delay as needed
+        });
+      }
+
+      document
+        .getElementById("btn1")
+        .addEventListener("click", function (event) {
+          event.stopPropagation();
+
+          const elementsToHighlight = [
+            {
+              selector: "#test1",
+              title: "Enter something about you.",
+              description: "Text format only",
+            },
+            {
+              selector: "#email",
+              title: "Enter your email address.",
+              description: "Must be a valid email format",
+            },
+            {
+              selector: "#age",
+              title: "Enter your age.",
+              description: "Must be a valid number",
+            },
+            {
+              selector: "#feedback",
+              title: "Enter your feedback.",
+              description: "Text format only",
+            },
+          ];
+
+          highlightElementsSequentially(elementsToHighlight);
+        });
+    </script>
+  </body>
+</html>

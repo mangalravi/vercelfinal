@@ -14,12 +14,10 @@
 
 
     <link rel="icon" href="content/images/logo/favicon.png" type="image/png">
-    <link rel="stylesheet preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="content/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="content/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="content/css/font-family.css">
+ <link rel="stylesheet" href="content/css/aos.css">
     <link rel="stylesheet" href="content/css/custom.css">
 </head>
 <body>
@@ -1135,7 +1133,22 @@
     </div>
   </div>
 </footer>
-
+<!-- whatsp chatbot -->
+<div class="chat-widget">
+  <div class="chat-header">
+    <h3>Chat with us..</h3>
+    <button id="chatToggleBtn">Open Chat</button>
+  </div>
+  <div class="chat-body" id="chatBody">
+    <input
+      type="text"
+      id="messageInput"
+      placeholder="Type your message..."
+    />
+    <button id="sendBtn">Send</button>
+  </div>
+</div>
+<!-- whatsp chatbot with roboicon -->
 
 
 
@@ -1168,20 +1181,21 @@
 
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>       
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="content/js/jquery.min.js"></script>
+<script src="content/js/js.cookie.min.js"></script>
+<script src="content/js/slick.js"></script>
+<script src="content/js/aos.js"></script>
+<script src="content/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="content/js/custom.js"></script>
 <script>
-AOS.init();
+  AOS.init();
 </script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 <script>
 $(document).ready(function () {
     $("#bkgOverlay").delay(4800).fadeIn(400);
     $("#delayedPopup").delay(5000).fadeIn(400, function() {
-        $("body").addClass("modal-open"); // Add class after popups are fully shown
+        $("body").addClass("modal-open"); 
     });
 
     $("#btnClose").click(function (e) {
@@ -1196,10 +1210,6 @@ function HideDialog() {
         $("body").removeClass("modal-open"); // Remove class after popups are fully hidden
     });
 }
-
-
 </script>
-<script src="content/js/custom.js"></script>
-<script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script><script id="zsiqscript" src="https://salesiq.zohopublic.in/widget?wc=siqe65e58ab95d271bba9394197b18414efe96a0c231fcb6ca692ce315ab45181ba" defer></script>
 </body>
 </html>
