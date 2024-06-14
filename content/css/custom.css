@@ -281,6 +281,7 @@ footer {
 .switch,
 .out {
   padding: 0.5rem 1rem;
+  color: var(--bs-secondary);
 }
 .switch:hover,
 .out:hover {
@@ -2884,9 +2885,9 @@ label.required:after {
     line-height: 1.25;
     margin-bottom: 3rem;
   }
-  /* .modal-fullscreen-lg-down .modal-body {
+  .modal-fullscreen-lg-down .modal-body {
     overflow-y: hidden;
-  } */
+  }
   .pointcard {
     margin-bottom: 2rem;
   }
@@ -5031,27 +5032,25 @@ a.five {
   bottom: 20px;
   right: 20px;
   background: #fff;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 0.5rem;
+  border-radius: 0.35rem;
   z-index: 999;
 }
 
 .chat-header {
   background: #25d366;
   color: #fff;
-  padding: 10px;
+  padding: 0.5rem 0.75rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 0.5rem;
+  border-radius: 0.35rem;
   z-index: 9999;
 }
 .chat-header button {
-  color: #fff;
-  border: 0;
-  border-radius: 4px;
-  font-size: 0.875rem;
+  border-radius: 0.35rem;
+  font-size: 0.775rem;
   padding: 5px;
   background: transparent;
   border: 1px solid;
@@ -5071,6 +5070,7 @@ a.five {
   font-size: 14px;
   margin-right: 0.675rem;
   color: #fff;
+  font-weight: normal;
 }
 
 .chat-body {
@@ -5128,8 +5128,134 @@ a.five {
     padding-left: 0;
     width: 350px;
   }
-}
+  .resfrom {
+    background-color: #fff;
+    background: linear-gradient(to right, #c863de, #5926fe);
+    border-radius: 30px;
+    box-shadow: 0 0 25px -7px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: overlay;
+    width: 100%;
+    max-width: 100%;
+    min-height: 400px;
+  }
+  .sign-up {
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    z-index: 1;
+  }
+  .resfrom form {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+  }
+  .social-icons a {
+    background: #fff;
+  }
+  .form-container {
+    position: absolute;
+    top: 100%;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+  }
+  .form-container h1 {
+    margin-bottom: 0;
+  }
+  .resfrom input {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+  }
+  .resfrom input::placeholder {
+    color: #fff;
+  }
+  .resfrom a {
+    margin-top: 0;
+  }
+  .sign-in {
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    top: 50%;
+  }
+  .toggle-container {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 0;
+  }
 
+  .toggle-left {
+    transform: translateX(-200%);
+  }
+
+  .toggle-panel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: -20%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+  }
+  .resfrom.active .toggle-left {
+    transform: translateX(0);
+  }
+  .resfrom.active .toggle-right {
+    transform: translateX(0%);
+  }
+  .toggle-right {
+    right: 0;
+    transform: translateX(0);
+  }
+  .resfrom.active .sign-up {
+    transform: translateX(0%);
+    opacity: 1;
+    top: 50%;
+    z-index: 9999;
+    animation: move 0.6s;
+  }
+  .resfrom.active .sign-in {
+    transform: translateX(0%);
+  }
+  .resfrom.active .toggle-container {
+    transform: translateX(-0%);
+  }
+
+  .toggle {
+    background: linear-gradient(to right, #c863de, #5926fe);
+    color: #fff;
+    /* position: relative; */
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+  }
+  .resfrom.active .toggle {
+    transform: translateX(0%);
+  }
+}
+@media (min-width: 768px) {
+  .resfrom button.hidden {
+    opacity: 1 !important;
+  }
+}
 @media (min-width: 1400px) {
   .bgcrcl {
     height: 550px;
