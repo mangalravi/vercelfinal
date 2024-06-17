@@ -2,6 +2,9 @@ body {
   background-color: black;
   cursor: none;
   font-family: "Roboto", sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
 section {
   padding: 50px 0;
