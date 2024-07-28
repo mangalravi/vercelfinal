@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>b2bstop</title>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="content/images/fabicon.png"
+      alt="fabicon"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="content/images/fabicon.png"
+      alt="fabicon"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="content/images/fabicon.png"
+      alt="fabicon"
+    />
+    <link
+      rel="publication"
+      href=""
+      crossorigin="use-credentials"
+      type="application/manifest+json"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="icon" href="content/images/logo/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="content/css/bootstrap-icons.css" />
+    <link rel="stylesheet" href="content/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="content/css/font-family.css" />
+    <link rel="stylesheet" href="content/css/aos.css" />
+    <link rel="stylesheet" href="content/css/custom.css" />
+  </head>
+  <body>
+    <header class="fixed-top">
+      <nav class="navbar navbar-expand-lg p-md-2 navwhite">
+        <div class="container-fluid position-relative">
+          <a class="navbar-brand" href="/">
+            <img
+              src="content/images/logo/isspl-logo.svg"
+              height="36"
+              width="95"
+              alt="bynry_logo"
+              title="bynry_logo"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            <span class="top-line"></span>
+            <span class="middle-line"></span>
+            <span class="bottom-line"></span>
+          </button>
+          <div class="collapse navbar-collapse dnmd" id="navbarCollapse">
+            <ul
+              class="navbar-nav ms-auto mb-2 mb-md-0 d-flex align-items-center"
+            >
+              <li class="nav-item">
+                <a href="/product-list.html" class="nav-link"
+                  >Shop All Auctions</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="buyers.html" class="nav-link">For Buyers</a>
+              </li>
+              <li class="nav-item">
+                <a href="sellers.html" class="nav-link">For Sellers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="support.html">Support </a>
+              </li>
+
+              <li>
+                <ul class="d-flex justify-content-between align-items-center">
+                  <li class="nav-item px-2">
+                    <a class="btn btn-primary blink" href="Browse.html"
+                      >BROWSE MARKETPLACES <i class="bi bi-arrow-up-right"></i>
+                    </a>
+                  </li>
+
+                  <li class="nav-item btnmrgn user position-relative">
+                    <a
+                      href="Registration-login-page.html"
+                      class="btn btn-secondary"
+                    >
+                      SIGN IN
+                    </a>
+                    <div class="user-box">
+                      <div class="user-hdr">
+                        <i class="bi bi-person-circle"></i>
+                        <div class="user-name">
+                          <h6>Anuj Singh</h6>
+                          <p>@anuj9876</p>
+                        </div>
+                      </div>
+                      <div class="routeopt">
+                        <div class="switch">
+                          <div><i class="bi bi-people"></i> Switch Account</div>
+                          <i class="bi bi-chevron-right"></i>
+                        </div>
+                        <div class="out">
+                          <i class="bi bi-box-arrow-right"></i> Sign Out
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item d-flex align-items-center p-0">
+                    <div id="translate"></div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen-lg-down">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">
+              <a class="navbar-brand" href="/"
+                ><img src="" height="28" alt="b2bstop" title="b2bstop"
+              /></a>
+            </h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body pt-0">
+            <ul>
+              <li class="pb-0">
+                <div class="user">
+                  <i class="bi bi-person-circle"></i>
+                  Welcome
+                </div>
+              </li>
+              <li class="hvrlnk">
+                <a href="/product-list.html">Shop All Auctions</a>
+              </li>
+              <li class="hvrlnk"><a href="buyers.html">For Buyers</a></li>
+              <li class="hvrlnk"><a href="sellers.html">For Sellers</a></li>
+              <li class="hvrlnk"><a href="support.html">Support</a></li>
+              <li class="hvrlnk">
+                <a href="Browse.html">Browse MarketPlaces</a>
+              </li>
+
+              <li class="d-flex align-items-center">
+                <div class="dropdown">
+                  <a
+                    class="btn btn-primary dropdown-toggle"
+                    href="form.html"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Select Language
+                  </a>
+                  <ul class="dropdown-menu langdiv">
+                    <li>
+                      <h6 class="mb-0">Select Language</h6>
+                      <div class="row">
+                        <div class="col-6">
+                          <ul class="language-drop">
+                            <li>
+                              <a class="dropdown-item" href="#">Assamese</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">Bengali</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">Bhojpuri</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">Gujrati</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Hindi</a></li>
+                            <li>
+                              <a class="dropdown-item" href="#">Kannad</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">Maithili</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">Malyalam</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-6">
+                          <ul class="language-drop">
+                            <li>
+                              <a class="dropdown-item" href="#">Marathi</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">Nepali</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">Punjabi</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">Sanskrit</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Tamil</a></li>
+                            <li><a class="dropdown-item" href="#">Telgu</a></li>
+                            <li><a class="dropdown-item" href="#">Urdu</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="d-flex">
+                <a href="#" class="nav-link btn btn-secondary"> SIGN IN </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="pt-4 login">
+      <div class="container">
+        <div class="row g-3">
+          <div class="col-md-8">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item dblock" id="section1">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    <span class="no-set">1</span> LOGIN OR SIGNUP
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <div class="row g-5">
+                      <div class="col-md-5">
+                        <div class="group">
+                          <input
+                            required=""
+                            type="tel"
+                            class="input-focus mb-4"
+                            id="mobno"
+                            name="mobno"
+                            pattern="\d{10}"
+                            maxlength="10"
+                          />
+                          <span class="highlight"></span>
+                          <span class="bar"></span>
+                          <label for="mobno">Enter Email/Mobile number</label>
+                        </div>
+                        <div class="group">
+                          <input
+                            required=""
+                            type="tel"
+                            class="input-focus mb-4"
+                            id="otp"
+                            name="otp"
+                            pattern="\d{6}"
+                            maxlength="6"
+                          />
+                          <span class="highlight"></span>
+                          <span class="bar"></span>
+                          <label for="otp">Enter OTP</label>
+                        </div>
+
+                        <p class="cont">
+                          By continuing, you agree to Flipkart's
+                          <a class="c9RDXR" target="_blank" href="/pages/terms"
+                            >Terms of Use</a
+                          >
+                          and
+                          <a
+                            class="c9RDXR"
+                            target="_blank"
+                            href="/pages/privacypolicy"
+                            >Privacy Policy</a
+                          >.
+                        </p>
+                        <button class="cont-btn" id="continueButton" disabled>
+                          Continue
+                        </button>
+                      </div>
+                      <div class="col-md-7">
+                        <p>Advantages of our secure login</p>
+                        <ul>
+                          <li>
+                            <svg
+                              width="18"
+                              height="18"
+                              viewBox="0 0 24 24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <g fill="none" fill-rule="evenodd">
+                                <path
+                                  d="M9.466 18.257h4.87c0 1.764 1.42 3.195 3.174 3.195a3.185 3.185 0 0 0 3.175-3.195H22.5c.276 0 .499-.23.499-.496v-5.57l-3.273-4.868h-3.261V4.645a.497.497 0 0 0-.497-.502H1.497A.498.498 0 0 0 1 4.645v13.11c0 .277.219.502.497.502h1.62a3.185 3.185 0 0 0 3.175 3.195 3.185 3.185 0 0 0 3.174-3.195zm6.978-8.381H18.7l2.214 3.057h-4.47V9.876zm2.644 8.381c0 .877-.706 1.588-1.578 1.588a1.583 1.583 0 0 1-1.578-1.588c0-.877.706-1.588 1.578-1.588.872 0 1.578.71 1.578 1.588zm-11.218 0c0 .877-.707 1.588-1.578 1.588a1.583 1.583 0 0 1-1.579-1.588c0-.877.707-1.588 1.579-1.588.871 0 1.578.71 1.578 1.588z"
+                                  fill="#2874f0"
+                                ></path>
+                              </g>
+                            </svg>
+                            <span
+                              >Easily Track Orders, Hassle free Returns</span
+                            >
+                          </li>
+                          <li>
+                            <svg
+                              width="18"
+                              height="18"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <g fill-rule="evenodd">
+                                <path
+                                  d="M8.037 17.546c1.487 0 2.417-.93 2.417-2.417H5.62c0 1.486.93 2.415 2.417 2.415m5.315-6.463v-2.97h-.005c-.044-3.266-1.67-5.46-4.337-5.98v-.81C9.01.622 8.436.05 7.735.05 7.033.05 6.46.624 6.46 1.325v.808c-2.667.52-4.294 2.716-4.338 5.98h-.005v2.972l-1.843 1.42v1.376h14.92v-1.375l-1.842-1.42z"
+                                ></path>
+                              </g>
+                            </svg>
+                            <span>Get Relevant Alerts and Recommendation</span>
+                          </li>
+                          <li>
+                            <span class="star">★</span>
+                            <span>Wishlist, Reviews, Ratings and more.</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="changenumber">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <p class="phn">Phone <span>+91988765467</span></p>
+                          <a href="#">Logout & Sign in to another account</a>
+                          <button class="cont-btn mb-3">
+                            Continue Checkout
+                          </button>
+                        </div>
+                      </div>
+
+                      <p class="chekc">
+                        Please note that upon clicking "Logout" you will lose
+                        all items in cart and will be redirected to Flipkart
+                        home page.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item dnone" id="section2">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    <span class="no-set">2</span> DELIVERY ADDRESS
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <div class="delivery-set delivery">
+                      <div class="d-flex">
+                        <input
+                          type="radio"
+                          class="radio-01"
+                          name="delivery-address"
+                          checked=""
+                        />
+                        <div class="check-right">
+                          <div class="check-set">
+                            <p>
+                              <span class="name">Anuj Singh</span>
+                              <span class="home">Home</span>
+                              <span class="phone">6232656788</span>
+                            </p>
+                            <p>
+                              Tower no.10, flat no. 908 Gurugram harayana, Avl
+                              36 society road gurugram harayana, Gurugram,
+                              Haryana - <span class="name">122004</span>
+                            </p>
+                            <button class="cont-btn deliver">
+                              Deliver Here
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="edit">EDIT</p>
+                    </div>
+                    <div class="delivery-set delivery-001">
+                      <input
+                        type="radio"
+                        class="radio-01"
+                        name="delivery-address"
+                        id="radio1"
+                      />
+                      <div class="check-right" for="radio1">
+                        <div class="check-set">
+                          <p>
+                            <span class="name">Anuj Singh</span>
+                            <span class="home">Office</span>
+                            <span class="phone">6232656788</span>
+                          </p>
+                          <p>
+                            Tower no.10, flat no. 908 Gurugram harayana, Avl 36
+                            society road gurugram harayana, Gurugram, Haryana -
+                            <span class="name">122004</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="delivery-set delivery-001" id="hide">
+                      <input
+                        type="radio"
+                        class="radio-01"
+                        name="delivery-address"
+                        id="radio2"
+                      />
+                      <div class="check-right" for="radio2">
+                        <div class="check-set">
+                          <p>
+                            <span class="name">Anuj Singh</span>
+                            <span class="home">Work Place</span>
+                            <span class="phone">6232656788</span>
+                          </p>
+                          <p>
+                            Tower no.10, flat no. 908 Gurugram harayana, Avl 36
+                            society road gurugram harayana, Gurugram, Haryana -
+                            <span class="name">122004</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="NO">
+                      <div id="viewmore">
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 16 27"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z"
+                            fill="#2874f0"
+                            class=""
+                          ></path></svg
+                        ><span id="viewmore-text">View all 5 addresses</span>
+
+                        <div class="space"></div>
+                      </div>
+                      <div
+                        class="add-address"
+                        data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop"
+                      >
+                        <img
+                          height="14"
+                          width="14"
+                          src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGZpbGw9IiMyMTc1RkYiIGQ9Ik0xMS4yNSA2Ljc1aC00LjV2NC41aC0xLjV2LTQuNUguNzV2LTEuNWg0LjVWLjc1aDEuNXY0LjVoNC41Ii8+PHBhdGggZD0iTS0zLTNoMTh2MThILTMiLz48L2c+PC9zdmc+"
+                          class="DI-sr8"
+                        />Add a new address
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item dnone" id="section3">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    <span class="no-set">3</span> ORDER SUMMARY
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <div class="notabilvl">
+                      <div class="nxtno">
+                        <span class="nospan"
+                          >The following item has become Out of Stock.</span
+                        >
+                        <ul class="noul">
+                          <li class="noli">
+                            brother DCP-B7535DW Multi-function WiFi Monochrome
+                            Laser Printer with Auto Duplex Feature
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="nxtno">
+                        <span class="nospan"
+                          >The following items are Not Deliverable at 328021.
+                          You can change the address and check the
+                          serviceability.</span
+                        >
+                        <ul class="noul">
+                          <li class="noli">
+                            World Wear Footwear Running Shoes For Men
+                          </li>
+                          <li class="noli">
+                            Kanak Jewels Couple Pendant P Letter Silver plated
+                            Valentine alphabet Cubic Zirconia Pendant Silver
+                            Cubic Zirconia Brass Pendant
+                          </li>
+                          <li class="noli">
+                            CMF by Nothing Phone 1 (Light Green, 128 GB)
+                          </li>
+                          <li class="noli">
+                            CMF by Nothing Phone 1 (Light Green, 128 GB)
+                          </li>
+                          <li class="noli">
+                            Motorola g64 5G (Pearl Blue, 128 GB)
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="position-relative">
+                      <div class="order">
+                        <div class="order-pad">
+                          <div class="order-content">
+                            <span
+                              >The following item is Not Deliverable at 122004.
+                              You can change the address and check the
+                              serviceability.</span
+                            >
+                            <ul>
+                              <li>
+                                Noise Colorfit Icon 2 1.8'' Display with
+                                Bluetooth Calling, AI Voice Assistant Smartwatch
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="order-01">
+                        <div class="d-flex">
+                          <div class="img-set">
+                            <img
+                              loading="lazy"
+                              alt=""
+                              src="https://rukminim2.flixcart.com/image/100/100/xif0q/smartwatch/y/q/q/-original-imagxp8tzzwyhkzr.jpeg?q=90"
+                            />
+                          </div>
+                          <div class="right-cont">
+                            <div class="boat">
+                              <div class="boat-content">
+                                boAt Wave Flex Connect with 1.83" HD
+                                Display,Bluetooth Calling &amp; Premium Metal
+                                Design Smartwatch
+                              </div>
+                            </div>
+                            <div class="right-bot">
+                              Active Black Strap, Free Size
+                            </div>
+                            <div class="mt-1">
+                              <span class="sel">Seller: RetailNet</span>
+                            </div>
+                            <span class="price">₹7,990</span>
+                            <span class="price-01">₹1,299</span>
+                            <span class="price-02">83% Off</span>
+                            <div class="offer">
+                              <div class="offer-01">
+                                2 offers applied
+                                <svg
+                                  width="14"
+                                  height="14"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <g fill="none">
+                                    <path d="M-1-1h16v16H-1"></path>
+                                    <path
+                                      d="M7 0C3.136 0 0 3.136 0 7s3.136 7 7 7 7-3.136 7-7-3.136-7-7-7zm.7 10.5H6.3V6.3h1.4v4.2zm0-5.6H6.3V3.5h1.4v1.4z"
+                                      fill="#388e3c"
+                                    ></path>
+                                  </g>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="del-con">
+                            <div class="form-check">
+                              <div class="del-01">
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  id="flexRadioDefault1"
+                                  name="delivery-option"
+                                />
+
+                                <label for="flexRadioDefault1">
+                                  Delivery by 11 PM, Today |
+                                  <span class="price">₹70</span>
+                                  <span class="price-02">Free</span>
+                                </label>
+                                <span class="right-bot">
+                                  If ordered within 02h :19m: 00s
+                                </span>
+                              </div>
+                            </div>
+                            <div class="form-check">
+                              <div class="del-01">
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  id="flexRadioDefault2"
+                                  name="delivery-option"
+                                />
+                                <label for="flexRadioDefault2">
+                                  Delivery by 11 PM, Today |
+                                  <span class="price">₹70</span>
+                                  <span class="price-02">Free</span>
+                                </label>
+                                <span class="right-bot">
+                                  If ordered within 02h :19m: 00s
+                                </span>
+                              </div>
+                            </div>
+
+                            <div class="mt-1">
+                              <div class="open">
+                                <div class="d-flex">
+                                  <div class="img-01">
+                                    <img
+                                      class="img-set"
+                                      src="https://rukminim2.flixcart.com/www/200/200/promos/10/08/2020/8ed1a6e7-6892-41e9-b208-75f043e1c258.png?q=90"
+                                    />
+                                  </div>
+                                  <div>
+                                    Open Box Delivery is eligible for this item.
+                                    You will receive a confirmation post
+                                    payment.
+                                    <div>
+                                      <span class="know-more">Know More</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="remove">
+                          <div class="d+mEZR dyuyu">
+                            <div class="ocFP1P">
+                              <div class="p2uyH2">
+                                <button class="LcLcvv" disabled="">–</button>
+                                <div class="atHedL">
+                                  <input type="text" class="p6sArZ" value="1" />
+                                </div>
+                                <button class="LcLcvv">+</button>
+                              </div>
+                            </div>
+                            <div class="_5jL4tC">
+                              <div class="sBxzFz" tabindex="12">
+                                <span>Remove</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="space"></div>
+                        <div class="d-flex-001">
+                          <div class="gst">
+                            <label class="w-auto">
+                              <input
+                                type="checkbox"
+                                class="check-001"
+                                readonly=""
+                              />
+                              <div class="check-border"></div>
+                            </label>
+                            <span class="qe0Ly5">Use GST Invoice</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="space"></div>
+                        <div class="confirm">
+                          <div class="odrcon">
+                            Order confirmation email will be sent to
+                            <div class="mail">nazim8khkg6232@gmail.com</div>
+                          </div>
+                          <span id="to-payment">
+                            <button class="cont-btn">CONTINUE</button>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item dnone" id="section4">
+                <h2 class="accordion-header" id="headingFour">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="false"
+                    aria-controls="collapseFour"
+                  >
+                    <span class="no-set">4</span> PAYMENT OPTIONS
+                  </button>
+                </h2>
+                <div
+                  id="collapseFour"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingFour"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <div class="mb-2 payment-option">
+                      <!-- UPI Payment Option -->
+                      <label for="UPI" class="payment-label">
+                        <input
+                          type="radio"
+                          id="UPI"
+                          name="payment-option"
+                          checked=""
+                        />
+                        <div class="upi">
+                          <div class="d-flex">
+                            <img
+                              src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/batman-returns/logos/UPI.gif"
+                              alt="UPI"
+                            />
+                            <div>
+                              <span>UPI</span>
+                              <div class="mt-3 fw-bold">Choose an option</div>
+                              <label for="PHONEPE1" class="mt-3 d-flex">
+                                <input
+                                  type="radio"
+                                  id="PHONEPE1"
+                                  name="child-payment-option"
+                                  class="child-radio"
+                                />
+                                <div class="upi">
+                                  <div class="fix">PhonePe</div>
+                                </div>
+                              </label>
+                              <label for="PHONEPE2" class="mt-3 d-flex">
+                                <input
+                                  type="radio"
+                                  id="PHONEPE2"
+                                  name="child-payment-option"
+                                  class="child-radio"
+                                />
+                                <div class="upi">
+                                  <div class="fix">Your UPI ID</div>
+                                </div>
+                              </label>
+                              <ul class="pl-0">
+                                <li class="pay-li">Pay by any UPI app</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </label>
+
+                      <!-- Wallets Payment Option -->
+                      <label for="WALLETOTHERS" class="payment-label">
+                        <input
+                          type="radio"
+                          id="WALLETOTHERS"
+                          name="payment-option"
+                        />
+                        <div class="upi">
+                          <div class="d-flex">
+                            <img
+                              src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/batman-returns/logos/Wallets.gif"
+                              alt="Wallets"
+                            />
+                            <label>Wallets</label>
+                          </div>
+                        </div>
+                      </label>
+
+                      <!-- Credit/Debit/ATM Card Payment Option -->
+                      <label for="CREDIT" class="payment-label">
+                        <input type="radio" id="CREDIT" name="payment-option" />
+                        <div class="upi">
+                          <div>
+                            <span>Credit / Debit / ATM Card</span>
+                          </div>
+                          <div>
+                            <form class="mt-3">
+                              <!-- Form fields for Credit/Debit/ATM Card -->
+                            </form>
+                          </div>
+                          <ul class="pl-0">
+                            <li class="pay-li">
+                              Add and secure cards as per RBI guidelines
+                            </li>
+                          </ul>
+                        </div>
+                      </label>
+
+                      <!-- Net Banking Payment Option -->
+                      <label for="NET_OPTIONS" class="payment-label">
+                        <input
+                          type="radio"
+                          id="NET_OPTIONS"
+                          name="payment-option"
+                        />
+                        <div class="upi">
+                          <div class="j+SSYu">
+                            <div class="_9-suWS">
+                              <div class="wqxwWW"></div>
+                              Net Banking
+                              <ul>
+                                <li class="Zto6jc">
+                                  This instrument has low success, use UPI or
+                                  cards for better experience
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </label>
+
+                      <!-- EMI Payment Option (Disabled) -->
+                      <label for="EMI_OPTIONS" class="payment-label">
+                        <input
+                          disabled=""
+                          type="radio"
+                          id="EMI_OPTIONS"
+                          name="payment-option"
+                        />
+                        <div class="upi">
+                          <div class="j+SSYu">
+                            <div class="_9-suWS">
+                              <div class="wqxwWW"></div>
+                              EMI (Easy Installments)
+                              <div class="el2-ND upXlSE">
+                                <div class="EjOX7q QTSLaI">
+                                  <span>Not applicable</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </label>
+
+                      <!-- Cash on Delivery Payment Option (Disabled) -->
+                      <label for="COD" class="payment-label">
+                        <input
+                          disabled=""
+                          type="radio"
+                          id="COD"
+                          name="payment-option"
+                        />
+                        <div class="upi">
+                          <div class="j+SSYu">
+                            <div class="_9-suWS">
+                              <div class="wqxwWW"></div>
+                              <div class="OSvHUb">Cash on Delivery</div>
+                              <div class="el2-ND upXlSE">
+                                <div class="EjOX7q QTSLaI">
+                                  <span>Not applicable</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+
+                    <div class="ChobKE">+ <span>Add Gift Card</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="detial-with">
+              <span class="with-01">Price details</span>
+              <div class="px-4">
+                <div class="PW">
+                  <div>Price (1 item)</div>
+                  <div>₹999</div>
+                </div>
+                <div class="PW">
+                  <div>Delivery Charges</div>
+                  <div>
+                    <span>₹70</span
+                    ><span style="margin-left: 5px"
+                      ><span class="free">Free</span></span
+                    >
+                  </div>
+                </div>
+                <div class="payable">
+                  <div class="PW">
+                    <div class="cthO4-">Total Payable</div>
+                    <div class="yiggsN">₹999</div>
+                  </div>
+                </div>
+              </div>
+              <div class="order">
+                <span
+                  >Your Total Savings on this order
+                  <div class="rs">
+                    ₹
+                    <span>1,500</span>
+                  </div>
+                </span>
+              </div>
+            </div>
+            <div class="right-001">
+              <div>
+                <img
+                  class="mt-3 img-fluid"
+                  alt=""
+                  src="https://rukminim2.flixcart.com/lockin/2000/2000/images/promotion_banner_v2_inactive_2.png?q=50"
+                  data-tkid="lo_sb:d674d25e-3b19-1b1a-a0b6-5edc8962ff95.ct:STATIC_BANNER;bn:CCI-InActive-Migrated;"
+                />
+              </div>
+            </div>
+            <div class="mt-3 d-flex align-items-end">
+              <img src="content/images/shield.png" class="shield" />
+              <span class="safe"
+                >Safe and Secure Payments. Easy returns. 100% Authentic
+                products.</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-sm-6 col-md-2 d-flex">
+            <div class="hdr-img mb-4">
+              <img src="hdr-logo" alt="hdr-logo" />
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="row">
+              <div class="col-3">
+                <ul>
+                  <li><a href="aboutus.html">About Us</a></li>
+                  <li><a href="contact-us.html">Contact Us</a></li>
+                  <li><a href="faq.html">FAQ</a></li>
+                </ul>
+              </div>
+              <div class="col-4">
+                <ul>
+                  <li>
+                    <a href="term-and-condition.html">Terms of Purchase</a>
+                  </li>
+                  <li><a href="item-condition.html">Items Condition</a></li>
+                  <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+              </div>
+              <div class="col-5">
+                <ul class="mailli">
+                  <li>
+                    <a href="tel:1800-419-0431"
+                      ><i class="bi bi-telephone-fill"></i> 1800-419-0431</a
+                    >
+                  </li>
+                  <li>
+                    <a href="mailto: support@b2bstop.com"
+                      ><i class="bi bi-envelope"></i> support@b2bstop.com</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 d-flex">
+            <div class="adrs">
+              <a href="#">
+                <i class="bi bi-geo-alt-fill"></i>
+                No. 565, Axis Pennmark building, 2nd, 3rd & 4th Floor, 9th cross
+                road, Sarakki, 3rd phase, JP Nagar, Bangalore, Karnataka -
+                560078
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="btn-hdng">
+          <p class="text-center">
+            © b2bstop - Trade mark of Green Enabled IT Solutions Pvt. Ltd
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="content/js/jquery.min.js"></script>
+    <script src="content/js/js.cookie.min.js"></script>
+    <script src="content/js/slick.js"></script>
+    <script src="content/js/aos.js"></script>
+    <script src="content/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="content/js/custom.js"></script>
+    <script src="content/js/custom1.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- add new adders -->
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header mdlttl">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              Add a New Address
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-4">
+            <button class="currloc" type="button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                class="da7+UC"
+              >
+                <g fill="none" fill-rule="evenodd">
+                  <path d="M0 0h16v16H0z"></path>
+                  <path
+                    class=""
+                    fill="#fff"
+                    d="M8 5.3a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 1 0 0-5.4zm6 2A6 6 0 0 0 8.7 2V.7H7.3V2A6 6 0 0 0 2 7.3H.7v1.4H2A6 6 0 0 0 7.3 14v1.3h1.4V14A6 6 0 0 0 14 8.7h1.3V7.3H14zm-6 5.4A4.7 4.7 0 0 1 3.3 8 4.7 4.7 0 0 1 8 3.3 4.7 4.7 0 0 1 12.7 8 4.7 4.7 0 0 1 8 12.7z"
+                  ></path>
+                </g></svg
+              >Use my current location
+            </button>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="group">
+                  <input required="" type="text" class="input-focus mb-4" />
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label>Enter Name</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="group">
+                  <input required="" type="text" class="input-focus mb-4" />
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label>Enter Mobile </label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="group">
+                  <input required="" type="text" class="input-focus mb-4" />
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label>Enter Pincode</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="group">
+                  <input required="" type="text" class="input-focus mb-4" />
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label>Locality</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="group">
+                  <input
+                    required=""
+                    type="text"
+                    class="input-focus mb-4 w-100"
+                  />
+                  <span class="highlight"></span>
+                  <span class="bar w-100"></span>
+                  <label>Enter Address</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="group">
+                  <input required="" type="text" class="input-focus mb-4" />
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label>Enter City</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <select
+                  class="form-select"
+                  name="state"
+                  required=""
+                  tabindex="7"
+                >
+                  <option value="" disabled="">--Select State--</option>
+                  <option value="Andaman &amp; Nicobar Islands">
+                    Andaman &amp; Nicobar Islands
+                  </option>
+                  <option value="Andhra Pradesh">Andhra Pradesh</option>
+                  <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                  <option value="Assam">Assam</option>
+                  <option value="Bihar">Bihar</option>
+                  <option value="Chandigarh">Chandigarh</option>
+                  <option value="Chhattisgarh">Chhattisgarh</option>
+                  <option
+                    value="Dadra &amp; Nagar Haveli &amp; Daman &amp; Diu"
+                  >
+                    Dadra &amp; Nagar Haveli &amp; Daman &amp; Diu
+                  </option>
+                  <option value="Delhi">Delhi</option>
+                  <option value="Goa">Goa</option>
+                  <option value="Gujarat">Gujarat</option>
+                  <option value="Haryana">Haryana</option>
+                  <option value="Himachal Pradesh">Himachal Pradesh</option>
+                  <option value="Jammu &amp; Kashmir">
+                    Jammu &amp; Kashmir
+                  </option>
+                  <option value="Jharkhand">Jharkhand</option>
+                  <option value="Karnataka">Karnataka</option>
+                  <option value="Kerala">Kerala</option>
+                  <option value="Ladakh">Ladakh</option>
+                  <option value="Lakshadweep">Lakshadweep</option>
+                  <option value="Madhya Pradesh">Madhya Pradesh</option>
+                  <option value="Maharashtra">Maharashtra</option>
+                  <option value="Manipur">Manipur</option>
+                  <option value="Meghalaya">Meghalaya</option>
+                  <option value="Mizoram">Mizoram</option>
+                  <option value="Nagaland">Nagaland</option>
+                  <option value="Odisha">Odisha</option>
+                  <option value="Puducherry">Puducherry</option>
+                  <option value="Punjab">Punjab</option>
+                  <option value="Rajasthan">Rajasthan</option>
+                  <option value="Sikkim">Sikkim</option>
+                  <option value="Tamil Nadu">Tamil Nadu</option>
+                  <option value="Telangana">Telangana</option>
+                  <option value="Tripura">Tripura</option>
+                  <option value="Uttarakhand">Uttarakhand</option>
+                  <option value="Uttar Pradesh">Uttar Pradesh</option>
+                  <option value="West Bengal">West Bengal</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <div class="group">
+                  <input required="" type="text" class="input-focus mb-4" />
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label>Landmark (Optional)</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="group">
+                  <input required="" type="text" class="input-focus mb-4" />
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label>Alternate Mobile (Optional)</label>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <p class="adrstype">Address Type</p>
+                <div class="form-check mb-3">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault1"
+                    checked
+                  />
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Home (All day delivery)
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div class="form-check mt-4">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault2"
+                  />
+                  <label class="form-check-label" for="flexRadioDefault2">
+                    Work (Delivery between 10 AM - 5 PM)
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <button class="cont-btn deliver">Deliver Here</button>
+              </div>
+              <div class="col-md-6">
+                <p>CANCEL</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

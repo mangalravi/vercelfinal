@@ -1,462 +1,313 @@
-$(document).ready(function () {
-  // Scroll event for navbar
-  $(window).scroll(function () {
-    var scroll = $(window).scrollTop();
-    if (scroll >= 50) {
-      $(".navwhite").addClass("bg-active");
-    } else {
-      $(".navwhite").removeClass("bg-active");
-    }
-  });
+// document.addEventListener("DOMContentLoaded", () => {
+//   const mobileInput = document.getElementById("mobno");
+//   const otpInput = document.getElementById("otp");
+//   const continueButton = document.getElementById("continueButton");
+//   const section2 = document.getElementById("section2");
 
-  // Slick slider initialization
-  $(".projetos-slider").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 1000,
-    arrows: false,
-    dots: false,
-    adaptiveHeight: true,
-    speed: 1500,
-    responsive: [
-      {
-        breakpoint: 1121,
-        settings: {
-          slidesToShow: 1,
-          autoplay: true,
-          adaptiveHeight: true,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          autoplay: true,
-          adaptiveHeight: true,
-        },
-      },
-    ],
-  });
+//   function validateMobileNumber() {
+//     const mobileNumber = mobileInput.value;
+//     const numberRegex = /^\d{10}$/;
 
-  $(".prev-arrow").click(function () {
-    $(".projetos-slider").slick("slickPrev");
-  });
+//     if (numberRegex.test(mobileNumber)) {
+//       otpInput.disabled = false;
+//       validateOtp();
+//     } else {
+//       otpInput.disabled = true;
+//       continueButton.disabled = true;
+//     }
+//   }
 
-  $(".next-arrow").click(function () {
-    $(".projetos-slider").slick("slickNext");
-  });
+//   function validateOtp() {
+//     const otpNumber = otpInput.value;
+//     const numberRegex = /^\d{6}$/;
 
-  // Sidebar dropdown
-  $(".sidebar-dropdown > a").click(function () {
-    $(".sidebar-submenu").slideUp(200);
-    if ($(this).parent().hasClass("active")) {
-      $(".sidebar-dropdown").removeClass("active");
-      $(this).parent().removeClass("active");
-    } else {
-      $(".sidebar-dropdown").removeClass("active");
-      $(this).next(".sidebar-submenu").slideDown(200);
-      $(this).parent().addClass("active");
-    }
-  });
+//     if (numberRegex.test(otpNumber)) {
+//       checkEnableContinueButton();
+//     } else {
+//       continueButton.disabled = true;
+//     }
+//   }
 
-  $(document).ready(function () {
-    var sidebarTimeout;
-    var sidebarCollapsed = true; // Initially collapsed
-    var hoverEffectEnabled = true; // To track if hover effect is enabled
+//   function checkEnableContinueButton() {
+//     const mobileNumber = mobileInput.value;
+//     const otpNumber = otpInput.value;
+//     const mobileRegex = /^\d{10}$/;
+//     const otpRegex = /^\d{6}$/;
 
-    // Function to collapse sidebar
-    function collapseSidebar() {
-      $("#sidebar").addClass("collapsed").css("width", "10px");
-      $(".main-prodlist").css("margin-left", "15px");
-      $("#btn-collapse").css("left", "-18px");
-      sidebarCollapsed = true;
-      hoverEffectEnabled = false; // Disable hover effect after the sidebar collapses to 10px
-    }
+//     if (mobileRegex.test(mobileNumber) && otpRegex.test(otpNumber)) {
+//       continueButton.disabled = false;
+//     } else {
+//       continueButton.disabled = true;
+//     }
+//   }
 
-    // Function to expand sidebar
-    function expandSidebar() {
-      $("#sidebar").removeClass("collapsed").css("width", "250px");
-      $(".main-prodlist").css("margin-left", "250px");
-      $("#btn-collapse").css("left", "215px");
-      sidebarCollapsed = false;
-    }
+//   function disableAccordionSections() {
+//     const sections = document.querySelectorAll(".accordion-item");
+//     sections.forEach((section) => {
+//       if (section.id !== "section1" && section.id !== "section2") {
+//         section.classList.add("disabled");
+//         section.classList.add("dnone"); // Ensure it's hidden
+//         const button = section.querySelector(".accordion-button");
+//         button.setAttribute("disabled", true);
+//         button.setAttribute("aria-expanded", "false");
+//       }
+//     });
+//   }
 
-    // Toggle sidebar collapse on button click
-    $("#btn-collapse").on("click", function () {
-      if (sidebarCollapsed) {
-        expandSidebar();
-      } else {
-        collapseSidebar();
-      }
-      clearTimeout(sidebarTimeout);
-      sidebarTimeout = setTimeout(collapseSidebar, 100000); // Reset the timeout to collapse the sidebar after 100 seconds
-    });
+//   function enableAccordionSections() {
+//     const sections = document.querySelectorAll(".accordion-item.dnone");
+//     sections.forEach((section) => {
+//       if (section.id !== "section2") {
+//         section.classList.remove("dnone");
+//         section.classList.remove("disabled");
+//         const button = section.querySelector(".accordion-button");
+//         button.removeAttribute("disabled");
+//         button.setAttribute("aria-expanded", "false");
+//       }
+//     });
+//   }
 
-    // Add hover event listeners for sidebar
-    $("#sidebar").hover(
-      function () {
-        if (hoverEffectEnabled && sidebarCollapsed) {
-          clearTimeout(sidebarTimeout);
-          expandSidebar();
-        }
-      },
-      function () {
-        if (hoverEffectEnabled && !sidebarCollapsed) {
-          sidebarTimeout = setTimeout(collapseSidebar, 5000); // Collapse the sidebar after 5 seconds
-          hoverEffectEnabled = false; // Disable hover effect after first collapse to 10px
-        }
-      }
-    );
+//   // Handle continue button click
+//   function handleButtonClick() {
+//     if (section2) {
+//       section2.classList.remove("dnone");
+//     }
+//   }
 
-    // Ensure the sidebar collapse state is respected when the page is first loaded
-    // Initial collapse after 5 seconds if no interaction
-    sidebarTimeout = setTimeout(collapseSidebar, 5000);
-
-    // Additional event for the new button to display sidebar
-    $(".navbar-toggler.bfltr.mdlcat").on("click", function () {
-      $("#sidebar").css("display", "block");
-      expandSidebar();
-    });
-
-    // Re-check the screen size on window resize and adjust sidebar accordingly
-    $(window).resize(function () {
-      if ($(window).width() > 991) {
-        if (sidebarCollapsed) {
-          collapseSidebar();
-        } else {
-          expandSidebar();
-        }
-      } else {
-        // If the window is resized to a smaller width, ensure the sidebar is collapsed
-        collapseSidebar();
-      }
-    });
-  });
-
-  // Text animation
-  var spans = $(".new_homebstock-change-title-box").find(
-    ".new_homebstock-amimationText"
-  );
-  var currentIndex = 0;
-
-  function showNextSpan() {
-    spans.eq(currentIndex).removeClass("active");
-    currentIndex = (currentIndex + 1) % spans.length;
-    spans.eq(currentIndex).addClass("active");
-  }
-
-  spans.eq(currentIndex).addClass("active");
-  var interval = setInterval(showNextSpan, 3000);
-
-  $(window).on("unload", function () {
-    clearInterval(interval);
-  });
-
-  // Image hover effect
-  var $bigItem = $(".image-big-list-item");
-  var $smallItem = $(".image-small-list-item");
-
-  $smallItem.on("click mouseenter", function () {
-    $bigItem.removeClass("active");
-    $smallItem.removeClass("active");
-    $bigItem.eq($(this).index()).addClass("active");
-    $smallItem.eq($(this).index()).addClass("active");
-  });
-
-  // Filter toggle
-  $("#clsfltr").click(function () {
-    $("#sidebar").css("display", "none");
-  });
-  $(".mdlcat").click(function () {
-    $("#sidebar").css("display", "block");
-  });
-});
-
-//whatsp chat
-// (function () {
-//   var options = {
-//     whatsapp: "6350428940", // Contact Number
-//     call_to_action: "Wanna Chat With Us !!!",
-//     position: "right",
-//   };
-//   var proto = document.location.protocol,
-//     host = "getbutton.io",
-//     url = proto + "//static." + host;
-//   var s = document.createElement("script");
-//   s.type = "text/javascript";
-//   s.async = true;
-//   s.src = url + "/widget-send-button/js/init.js";
-//   s.onload = function () {
-//     WhWidgetSendButton.init(host, proto, options);
-//   };
-
-//   var x = document.getElementsByTagName("script")[0];
-//   x.parentNode.insertBefore(s, x);
-// })();
-// Google Translate initialization
-var Cookie = {
-  set: function set(name, value, days) {
-    var domain, domainParts, date, expires, host;
-    if (days) {
-      date = new Date();
-      date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-      expires = "; expires=" + date.toGMTString();
-    } else {
-      expires = "";
-    }
-    host = location.host;
-    if (host.split(".").length === 1) {
-      document.cookie = name + "=" + value + expires + "; path=/";
-    } else {
-      domainParts = host.split(".");
-      domainParts.shift();
-      domain = "." + domainParts.join(".");
-      document.cookie =
-        name + "=" + value + expires + "; path=/; domain=" + domain;
-      if (Cookie.get(name) == null || Cookie.get(name) != value) {
-        domain = "." + host;
-        document.cookie =
-          name + "=" + value + expires + "; path=/; domain=" + domain;
-      }
-    }
-  },
-  get: function get(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(";");
-    for (var i = 0; i < ca.length; i++) {
-      var c = ca[i];
-      while (c.charAt(0) == " ") {
-        c = c.substring(1, c.length);
-      }
-      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-    }
-    return null;
-  },
-  erase: function erase(name) {
-    Cookie.set(name, "", -1);
-  },
-};
-
-function googleTranslateElementInit() {
-  var url = new URL(window.location);
-  var lang = url.searchParams.get("lang");
-  if (lang) {
-    console.log(lang);
-    Cookies.set("googtrans", "/en/".concat(lang), {
-      path: "",
-    });
-    Cookie.set("googtrans", "/en/".concat(lang));
-    Cookies.set("googtrans", "/en/".concat(lang), {
-      path: "",
-      domain: location.host,
-    });
-  } else {
-    Cookie.erase("googtrans");
-    Cookies.remove("googtrans", {
-      path: "",
-    });
-  }
-  new google.translate.TranslateElement(
-    {
-      pageLanguage: "en",
-    },
-    "translate"
-  );
-  // add event listener to change url param on language selection change
-  var langSelector = document.querySelector(".goog-te-combo");
-  langSelector.addEventListener("change", function () {
-    var lang = langSelector.value;
-    var newurl =
-      window.location.protocol +
-      "//" +
-      window.location.host +
-      window.location.pathname +
-      "?lang=" +
-      lang;
-    window.history.pushState(
-      {
-        path: newurl,
-      },
-      "",
-      newurl
-    );
-  });
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-  (function () {
-    Cookie.erase("googtrans");
-    var googleTranslateScript = document.createElement("script");
-    googleTranslateScript.type = "text/javascript";
-    googleTranslateScript.async = true;
-    googleTranslateScript.src =
-      "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-    (
-      document.getElementsByTagName("head")[0] ||
-      document.getElementsByTagName("body")[0]
-    ).appendChild(googleTranslateScript);
-  })();
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  var selectElement = document.querySelector(".goog-te-combo");
-  var selectOptions = selectElement.querySelectorAll("option");
-
-  // Remove the <option> with value=""
-  selectOptions.forEach(function (option) {
-    if (option.value === "") {
-      option.remove();
-    }
-  });
-
-  // Add Bootstrap icon inside the <select> element
-  var selectIcon = document.createElement("i");
-  selectIcon.classList.add("bi", "bi-translate"); // Add Bootstrap icon classes
-  selectElement.insertBefore(selectIcon, selectElement.firstChild);
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const slides = document.querySelectorAll(".slide");
-  const tabs = document.querySelectorAll(".tab");
-  let currentIndex = 0;
-  let intervalId;
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle("active", i === index);
-    });
-    tabs.forEach((tab, i) => {
-      tab.classList.toggle("active", i === index);
-    });
-    currentIndex = index;
-  }
-
-  function switchSlide() {
-    const nextIndex = (currentIndex + 1) % slides.length;
-    showSlide(nextIndex);
-  }
-
-  tabs.forEach((tab, index) => {
-    tab.addEventListener("click", function () {
-      clearInterval(intervalId);
-      showSlide(index);
-      intervalId = setInterval(switchSlide, 2000);
-    });
-  });
-
-  intervalId = setInterval(switchSlide, 2000);
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const children = document.querySelectorAll(".ImgContent");
-  let currentIndex = 0;
-
-  function setActive(index) {
-    children.forEach((child, i) => {
-      if (i === index) {
-        child.classList.add("active");
-      } else {
-        child.classList.remove("active");
-      }
-    });
-  }
-
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % children.length;
-    setActive(currentIndex);
-  }
-
-  setInterval(nextSlide, 3000);
-
-  children.forEach((child, index) => {
-    child.addEventListener("mouseenter", () => {
-      setActive(index);
-    });
-    child.addEventListener("mouseleave", () => {
-      setActive(-1);
-    });
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const container = document.getElementById("container");
-  const registerBtn = document.getElementById("register");
-  const loginBtn = document.getElementById("login");
-
-  registerBtn.addEventListener("click", () => {
-    container.classList.add("active");
-  });
-
-  loginBtn.addEventListener("click", () => {
-    container.classList.remove("active");
-  });
-});
-
-$(document).ready(function () {
-  // Open sidebar when clicking the Filter button
-  $(".mdlcat2").click(function () {
-    $("#sidebar").css("display", "block");
-  });
-  // Close sidebar when clicking the close button inside the sidebar
-  $("#clsfltr").click(function () {
-    $("#sidebar").css("display", "none");
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  // Find the select element with class 'goog-te-combo'
-  var selectElement = document.querySelector(".goog-te-combo");
-
-  // Check if the element exists
-  if (selectElement) {
-    // Add the 'selectSearch' class to the element
-    selectElement.classList.add("selectSearch");
-  }
-});
-
-// whatsp chatbot
-// document.addEventListener("DOMContentLoaded", function () {
-//   const chatToggleBtn = document.getElementById("chatToggleBtn");
-//   const chatBody = document.getElementById("chatBody");
-//   const sendBtn = document.getElementById("sendBtn");
-//   const messageInput = document.getElementById("messageInput");
-
-//   chatToggleBtn.addEventListener("click", function () {
-//     chatBody.style.display =
-//       chatBody.style.display === "block" ? "none" : "block";
+//   // Event listeners
+//   mobileInput.addEventListener("input", () => {
+//     const value = mobileInput.value.replace(/\D/g, "");
+//     mobileInput.value = value;
+//     validateMobileNumber();
 //   });
 
-//   sendBtn.addEventListener("click", function () {
-//     const message = messageInput.value.trim();
-//     if (message) {
-//       const phoneNumber = "6350428940"; // Replace with your WhatsApp number
-//       const encodedMessage = encodeURIComponent(message);
-//       const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-//       window.open(whatsappUrl, "_blank");
+//   otpInput.addEventListener("input", () => {
+//     const value = otpInput.value.replace(/\D/g, "");
+//     otpInput.value = value;
+//     validateOtp();
+//   });
+
+//   disableAccordionSections();
+
+//   continueButton.addEventListener("click", () => {
+//     if (!continueButton.disabled) {
+//       handleButtonClick();
+//       enableAccordionSections();
+//     }
+//   });
+
+//   const accordionButtons = document.querySelectorAll(".accordion-button");
+//   accordionButtons.forEach((button) => {
+//     button.addEventListener("click", (event) => {
+//       if (button.hasAttribute("disabled")) {
+//         event.preventDefault();
+//         event.stopPropagation();
+//       }
+//     });
+//   });
+// });
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const viewmore = document.getElementById("viewmore");
+//   const hide = document.getElementById("hide");
+//   const viewmoreText = document.getElementById("viewmore-text");
+
+//   viewmore.addEventListener("click", () => {
+//     if (hide.style.display === "none") {
+//       hide.style.display = "flex";
+//       viewmoreText.textContent = "Hide products";
+//     } else {
+//       hide.style.display = "none";
+//       viewmoreText.textContent = "View all 5 addresses";
 //     }
 //   });
 // });
 
-//whatsp chatbot with roboicon
-document.addEventListener("DOMContentLoaded", function () {
-  const chatToggleBtn = document.getElementById("chatToggleBtn");
-  const chatBody = document.getElementById("chatBody");
-  const sendBtn = document.getElementById("sendBtn");
-  const messageInput = document.getElementById("messageInput");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const parentRadios = document.querySelectorAll(
+//     'input[name="payment-option"]'
+//   );
 
-  chatToggleBtn.addEventListener("click", function () {
-    chatBody.style.display =
-      chatBody.style.display === "block" ? "none" : "block";
+//   const childRadios = document.querySelectorAll(
+//     'input[name="child-payment-option"]'
+//   );
+
+//   function handleChildRadioChange(event) {
+//     const parentLabel = event.target.closest("label").previousElementSibling;
+//     if (parentLabel) {
+//       const parentRadio = parentLabel.querySelector(
+//         'input[name="payment-option"]'
+//       );
+//       if (parentRadio) {
+//         parentRadio.checked = true;
+//       }
+//     }
+//   }
+
+//   function handleParentRadioChange() {
+//     // Uncheck all child radio buttons
+//     childRadios.forEach((child) => (child.checked = false));
+//   }
+
+//   childRadios.forEach((child) => {
+//     child.addEventListener("change", handleChildRadioChange);
+//   });
+
+//   parentRadios.forEach((parent) => {
+//     parent.addEventListener("change", handleParentRadioChange);
+//   });
+// });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const mobileInput = document.getElementById("mobno");
+  const otpInput = document.getElementById("otp");
+  const continueButton = document.getElementById("continueButton");
+  const section1 = document.getElementById("section1");
+  const section2 = document.getElementById("section2");
+
+  function validateMobileNumber() {
+    const mobileNumber = mobileInput.value.replace(/\D/g, "");
+    const numberRegex = /^\d{10}$/;
+
+    if (numberRegex.test(mobileNumber)) {
+      otpInput.disabled = false;
+      validateOtp();
+    } else {
+      otpInput.disabled = true;
+      continueButton.disabled = true;
+    }
+  }
+
+  function validateOtp() {
+    const otpNumber = otpInput.value.replace(/\D/g, "");
+    const numberRegex = /^\d{6}$/;
+
+    if (numberRegex.test(otpNumber)) {
+      checkEnableContinueButton();
+    } else {
+      continueButton.disabled = true;
+    }
+  }
+
+  function checkEnableContinueButton() {
+    const mobileNumber = mobileInput.value.replace(/\D/g, "");
+    const otpNumber = otpInput.value.replace(/\D/g, "");
+    const mobileRegex = /^\d{10}$/;
+    const otpRegex = /^\d{6}$/;
+
+    if (mobileRegex.test(mobileNumber) && otpRegex.test(otpNumber)) {
+      continueButton.disabled = false;
+    } else {
+      continueButton.disabled = true;
+    }
+  }
+
+  function openSection(sectionToOpen) {
+    sectionToOpen.classList.remove("dnone");
+  }
+
+  function closeSection(sectionToClose) {
+    sectionToClose.classList.add("dnone");
+  }
+
+  function handleButtonClick() {
+    if (section1) {
+      closeSection(section1); // Hide section1
+    }
+    if (section2) {
+      openSection(section2); // Show section2
+    }
+  }
+
+  // Event listeners
+  mobileInput.addEventListener("input", () => {
+    const value = mobileInput.value.replace(/\D/g, "");
+    mobileInput.value = value;
+    validateMobileNumber();
   });
 
-  sendBtn.addEventListener("click", function () {
-    const message = messageInput.value.trim();
-    if (message) {
-      const phoneNumber = "6350428940"; // Replace with your WhatsApp number
-      const encodedMessage = encodeURIComponent(message);
-      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-      window.open(whatsappUrl, "_blank");
+  otpInput.addEventListener("input", () => {
+    const value = otpInput.value.replace(/\D/g, "");
+    otpInput.value = value;
+    validateOtp();
+  });
+
+  continueButton.addEventListener("click", () => {
+    if (!continueButton.disabled) {
+      handleButtonClick(); // Hide section1 and show section2
+    }
+  });
+
+  // Initialize sections
+  openSection(section1); // Open section1 by default
+  closeSection(section2); // Ensure section2 is hidden by default
+
+  const accordionButtons = document.querySelectorAll(".accordion-button");
+  accordionButtons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      if (button.hasAttribute("disabled")) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+    });
+  });
+
+  // Handle child and parent radio button logic
+  const parentRadios = document.querySelectorAll(
+    'input[name="payment-option"]'
+  );
+  const childRadios = document.querySelectorAll(
+    'input[name="child-payment-option"]'
+  );
+
+  function handleChildRadioChange(event) {
+    const parentLabel = event.target.closest("label").previousElementSibling;
+    if (parentLabel) {
+      const parentRadio = parentLabel.querySelector(
+        'input[name="payment-option"]'
+      );
+      if (parentRadio) {
+        parentRadio.checked = true;
+      }
+    }
+  }
+
+  function handleParentRadioChange() {
+    // Uncheck all child radio buttons
+    childRadios.forEach((child) => (child.checked = false));
+  }
+
+  childRadios.forEach((child) => {
+    child.addEventListener("change", handleChildRadioChange);
+  });
+
+  parentRadios.forEach((parent) => {
+    parent.addEventListener("change", handleParentRadioChange);
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const viewmore = document.getElementById("viewmore");
+  const hide = document.getElementById("hide");
+  const viewmoreText = document.getElementById("viewmore-text");
+
+  viewmore.addEventListener("click", () => {
+    if (hide.style.display === "none") {
+      hide.style.display = "flex";
+      viewmoreText.textContent = "Hide products";
+    } else {
+      hide.style.display = "none";
+      viewmoreText.textContent = "View all 5 addresses";
     }
   });
 });
+openSection(section1); // Open section1 by default
+closeSection(section2); // Ensure section2 is hidden by default
+function handleButtonClick() {
+  if (section1) {
+    closeSection(section1); // Hide section1
+  }
+  if (section2) {
+    openSection(section2); // Show section2
+  }
+}

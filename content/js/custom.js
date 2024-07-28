@@ -413,6 +413,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add the 'selectSearch' class to the element
     selectElement.classList.add("selectSearch");
   }
+  const radioButton = document.getElementById("flexRadioDefault1");
+  radioButton.checked = true;
 });
 
 // whatsp chatbot
@@ -524,3 +526,5 @@ rightHeading.style.zIndex = "999";
 
 // Initially hide the sign-up form
 signUpForm.style.display = "none";
+
+//today
